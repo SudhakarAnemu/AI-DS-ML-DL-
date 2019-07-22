@@ -3,3 +3,4 @@ jp:Japan
 ca:Canada
 us:America
 cn:China
+uk:england
