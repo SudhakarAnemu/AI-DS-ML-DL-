@@ -3,4 +3,5 @@ jp:Japan
 ca:Canada
 us:America
 cn:China
+co:Coria
 uk:England
