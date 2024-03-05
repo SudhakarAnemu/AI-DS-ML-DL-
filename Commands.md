@@ -33,10 +33,11 @@
 | 6 | git commit -m ".."    |    $1 |
 | 7      | git push | $1600 |
 | 8      | git pull      |   $12 |
-| 9 | git checkout <id     |    Temporarily move to another commit |
+| 9 | git checkout <id>     |    Temporarily move to another commit |
+| 9 | git checkout main     |    Again it will goes to Head -> main branch |
 | 10      | git log | shows history of commit |
-| 11      | comm      |   $12 |
-| 12 | comm     |    $1 |
+| 11      | git revert <id> |Undo commits(Revert changs of commi by creating a new commit |
+| 12 | git reset --hard <id> |Undo changes by deletig all commits since <id> |
 | 13      | comm | $1600 |
 | 14      | comm      |   $12 |
 | 15 | comm     |    $1 |
