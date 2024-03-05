@@ -21,6 +21,26 @@
 | 14      | comm      |   $12 |
 | 15 | comm     |    $1 |
 
+# Git commands (Git and Git actions)
+
+| S.No        | Command          | Description  |
+| ------------- |:-------------:| -----:|
+| 1      | git config --global user.name "your-username" | comm |
+| 2      | git config --global user.email "your-email      |   comm |
+| 3 | git init     |    To create a repo at local system |
+| 4      | git status | $1600 |
+| 5      | git add .  or git add <file1>    |   $12 |
+| 6 | git commit -m ".."    |    $1 |
+| 7      | git push | $1600 |
+| 8      | git pull      |   $12 |
+| 9 | git checkout <id     |    Temporarily move to another commit |
+| 10      | git log | shows history of commit |
+| 11      | comm      |   $12 |
+| 12 | comm     |    $1 |
+| 13      | comm | $1600 |
+| 14      | comm      |   $12 |
+| 15 | comm     |    $1 |
+
 # Kubernets commands
 
 | S.No        | Command          | Description  |
