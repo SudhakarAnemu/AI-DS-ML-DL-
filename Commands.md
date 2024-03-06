@@ -37,7 +37,7 @@
 | 12   | git reset --hard                              | Undo changes by deletig all commits since                              |
 | sno  | .gitignore                                    | A file which has the list of files/folders will be ignore while commit |
 | sno  | git branch \<branch name>                     | Create a new branch                                                    |
-| sno  | git merge \<name>                             | To merge a branch to another branch                                    |
+| sno  | git merge \<branch name>                      | To merge a branch to another branch                                    |
 | sno  | git branch                                    | Lists all existing branches                                            |
 | sno  | git checkout \<branch name>                   | Switch to another branch                                               |
 | sno  | git branch -D \<branch name>                  | To delete a branch                                                     |
