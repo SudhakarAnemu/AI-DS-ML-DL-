@@ -50,6 +50,34 @@
 | sno  | t                                             | c                                                                      |
 | s    |                                               |                                                                        |
 | s    |                                               |                                                                        |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| s    |                                               |                                                                        |
+| s    |                                               |                                                                        |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| s    |                                               |                                                                        |
+| s    |                                               |                                                                        |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| s    |                                               |                                                                        |
+| s    |                                               |                                                                        |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| sno  | t                                             | c                                                                      |
+| s    |                                               |                                                                        |
+| s    |                                               |                                                                        |
 
 # Kubernets commands
 
