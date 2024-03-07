@@ -1,4 +1,4 @@
-# sUrls
+# Urls
 
 | S.No | Command                                                                                                      | Description                |
 | ---- | ------------------------------------------------------------------------------------------------------------ | -------------------------- |
@@ -47,7 +47,7 @@
 | sno  | git pull                                             | c                                                                      |
 | sno  | git push \<origin> main                              | c                                                                      |
 | sno  | git remote set-url origin https://\<username>@\<url> | set for our uid. Initially we will get permission error.               |
-| sno  | git push origin main                                 | Here we have to give token to add / commit.                            |
+| sno  | git push origin main                                 | Here we have to give token to add / commit.                            |
 | s    |                                                      |                                                                        |
 | s    |                                                      |                                                                        |
 | sno  | t                                                    | c                                                                      |
@@ -99,6 +99,10 @@
 | 14   | comm                                      | $12                   |
 | 15   | comm                                      | $1                    |
 
+Paragraph1
+
+\<p>
+
 jssudha@master-node:~$ kubectl apply -f https://raw.githubusercontent.com/SudhakarAnemu/AI-DS-ML-DL-SRE-DRE/master/DevOps/Kbrnts/001deploynginix.yaml  
 deployment.apps/nginx-deployment created
 
@@ -107,7 +111,7 @@ jssudha@master-node:~$ kubectl get pods -n jsmyns~
 ~nginx-deployment-86dcfdf4c6-9zlcb 0/1 ContainerCreating 0 2m7s~  
 ~nginx-deployment-86dcfdf4c6-cgnj5 0/1 ContainerCreating 0 2m7s~  
 ~nginx-deployment-86dcfdf4c6-tt8hh 0/1 ContainerCreating 0 2m7s~  
-~jssudha@master-node:~$
+~jssudha@master-node:~$ \</p>
 
 # Minikube installations logs
 
