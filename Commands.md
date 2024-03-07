@@ -99,9 +99,15 @@
 | 14   | comm                                      | $12                   |
 | 15   | comm                                      | $1                    |
 
-Paragraph1
+jssudha@master-node:~$ kubectl apply -f https://raw.githubusercontent.com/SudhakarAnemu/AI-DS-ML-DL-SRE-DRE/master/DevOps/Kbrnts/001deploynginix.yaml  
+deployment.apps/nginx-deployment created
 
-\<p>
+jssudha@master-node:$ kubectl get pods -n jsmyns  
+NAME READY STATUS RESTARTS AGE  
+nginx-deployment-86dcfdf4c6-9zlcb 0/1 ContainerCreating 0 2m7s  
+nginx-deployment-86dcfdf4c6-cgnj5 0/1 ContainerCreating 0 2m7s  
+nginx-deployment-86dcfdf4c6-tt8hh 0/1 ContainerCreating 0 2m7s  
+jssudha@master-node:$ \</p>
 
 jssudha@master-node:~$ kubectl apply -f https://raw.githubusercontent.com/SudhakarAnemu/AI-DS-ML-DL-SRE-DRE/master/DevOps/Kbrnts/001deploynginix.yaml  
 deployment.apps/nginx-deployment created
