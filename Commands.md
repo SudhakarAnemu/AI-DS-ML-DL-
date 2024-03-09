@@ -48,10 +48,10 @@
 | sno  | git push \<origin> main                              | c                                                                      |
 | sno  | git remote set-url origin https://\<username>@\<url> | set for our uid. Initially we will get permission error.               |
 | sno  | git push origin main                                 | Here we have to give token to add / commit.                            |
-| s    |                                                      |                                                                        |
-| s    |                                                      |                                                                        |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
+| s    | git checkout -b \<branch>                            | create and switch to a branch if it is not exists                      |
+| s    | git push origin \<branch name>                       |                                                                        |
+| sno  | git checkout main -> git merge \<branch>             | c                                                                      |
+| sno  |                                                      | c                                                                      |
 | sno  | t                                                    | c                                                                      |
 | sno  | t                                                    | c                                                                      |
 | sno  | t                                                    | c                                                                      |
@@ -109,7 +109,6 @@ nginx-deployment-86dcfdf4c6-cgnj5 0/1 ContainerCreating 0 2m7s
 nginx-deployment-86dcfdf4c6-tt8hh 0/1 ContainerCreating 0 2m7s  
 jssudha@master-node:$ \</p>
 
-
 Minikube installation logs :
 
 jssudha@minikube:$ history ----> History of jssudha id.  
@@ -117,7 +116,7 @@ jssudha@minikube:$ history ----> History of jssudha id.
 2 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64  
 3 sudo install minikube-linux-amd64 /usr/local/bin/minikube  
 4 minikube version  
-5 curl -LO https://storage.googleapis.com/kubernetes-release/release/~`~curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt~`~/bin/linux/amd64/kubectl  
+5 curl -LO https://storage.googleapis.com/kubernetes-release/release/~\`~curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt~\`~/bin/linux/amd64/kubectl  
 6 chmod +x kubectl  
 7 sudo mv kubectl /usr/local/bin/  
 8 kubectl version -o yaml  
@@ -150,4 +149,4 @@ root@minikube:# history
 11 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin  
 12 exit  
 13 history  
-root@minikube:#eleteI
+root@minikube:#eleteI\<b
