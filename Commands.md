@@ -25,11 +25,11 @@
 | 1    | git config --global user.name "your-username"        | comm                                                                   |
 | 2    | git config --global user.email "your-email           | comm                                                                   |
 | 3    | git init                                             | To create a repo at local system                                       |
-| 4    | git status                                           | $1600                                                                  |
-| 5    | git add . or git add                                 | $12                                                                    |
-| 6    | git commit -m ".."                                   | $1                                                                     |
-| 7    | git push                                             | $1600                                                                  |
-| 8    | git pull                                             | $12                                                                    |
+| 4    | git status                                           | Shows the staged data                                                  |
+| 5    | git add . or git add                                 | Staging : add updted files.                                            |
+| 6    | git commit -m ".."                                   | Ssve all changes to git hub                                            |
+| 7    | git push                                             | Push from local to remote                                              |
+| 8    | git pull                                             | Download from remote to local                                          |
 | 9    | git checkout \<commit id>                            | Temporarily move to another commit                                     |
 | 9    | git checkout main                                    | Again it will goes to Head -> main branch                              |
 | 10   | git log                                              | shows history of commit                                                |
@@ -51,11 +51,11 @@
 | s    | git checkout -b \<branch>                            | create and switch to a branch if it is not exists                      |
 | s    | git push origin \<branch name>                       |                                                                        |
 | sno  | git checkout main -> git merge \<branch>             | c                                                                      |
-| sno  |                                                      | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| s    |                                                      |                                                                        |
+| sno  | git clone \<repo url"                                | c                                                                      |
+| sno  | git remote                                           | Shows all connected remote repo's                                      |
+| sno  | git remote get-url --all origin                      | Shows the origin of the git repository                                 |
+| sno  | git remote set-url origin \<full path of the URL"    | Configure an url                                                       |
+| s    | continue from vid - 30                               |                                                                        |
 | s    |                                                      |                                                                        |
 | sno  | t                                                    | c                                                                      |
 | sno  | t                                                    | c                                                                      |
@@ -79,7 +79,7 @@
 | s    |                                                      |                                                                        |
 | s    |                                                      |                                                                        |
 
-# Kubernets commands
+# cloenKubernets commands
 
 | S.No | Command                                   | Description           |
 | ---- | ----------------------------------------- | --------------------- |
@@ -149,4 +149,4 @@ root@minikube:# history
 11 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin  
 12 exit  
 13 history  
-root@minikube:#eleteI\<b
+root@minikube:#eleteI\<bchangnne
