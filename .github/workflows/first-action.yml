@@ -6,5 +6,9 @@ jobs:
         steps:
             - name: Print greeting
               run: echo "JS - Hello Sudha - Hello World"
+            - name : Print multiple lines
+              run: |
+                   echo "First line -- hello"
+                   echo "Second line -- h r u"
             - name : Print goodbye
               run: echo "Done -- Bye!"
