@@ -1,4 +1,4 @@
-# Urls
+# httUrls
 
 | S.No | Command                                                                                                      | Description                |
 | ---- | ------------------------------------------------------------------------------------------------------------ | -------------------------- |
@@ -57,9 +57,9 @@
 | sno  | git remote set-url origin \<full path of the URL"    | Configure an url                                                                      |
 | s    | git clone \<url> RepoName                            |                                                                                       |
 | sno  | GitHub Actions - GitHubActions                       | GitHub Actions                                                                        |
-| sno  | t                                                    | c                                                                                     |
-| sno  | t                                                    | c                                                                                     |
-| sno  | t                                                    | c                                                                                     |
+| sno  | git remote add origin https://\<username>@\<gitUrl>  | By this, we can push our code to this repo                                            |
+| sno  | git push --set-upstream origin main                  | Push to remote repo                                                                   |
+| sno  | Contiune from 40th slide                             | c                                                                                     |
 | sno  | t                                                    | c                                                                                     |
 | s    |                                                      |                                                                                       |
 | s    |                                                      |                                                                                       |
@@ -148,4 +148,4 @@ root@minikube:# history
 11 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin  
 12 exit  
 13 history  
-root@minikube:#eleteI\<bchangnne\<ur- G
+root@minikube:#eleteI\<bchangnne\<ur- G--
