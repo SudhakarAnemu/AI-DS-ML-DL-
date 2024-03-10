@@ -20,64 +20,63 @@
 
 # Git commands (Git and Git actions)
 
-| S.No | Command                                              | Description                                                            |
-| ---- | ---------------------------------------------------- | ---------------------------------------------------------------------- |
-| 1    | git config --global user.name "your-username"        | comm                                                                   |
-| 2    | git config --global user.email "your-email           | comm                                                                   |
-| 3    | git init                                             | To create a repo at local system                                       |
-| 4    | git status                                           | Shows the staged data                                                  |
-| 5    | git add . or git add                                 | Staging : add updted files.                                            |
-| 6    | git commit -m ".."                                   | Ssve all changes to git hub                                            |
-| 7    | git push                                             | Push from local to remote                                              |
-| 8    | git pull                                             | Download from remote to local                                          |
-| 9    | git checkout \<commit id>                            | Temporarily move to another commit                                     |
-| 9    | git checkout main                                    | Again it will goes to Head -> main branch                              |
-| 10   | git log                                              | shows history of commit                                                |
-| 11   | git revert                                           | Undo commits(Revert changs of commi by creating a new commit           |
-| 12   | git reset --hard                                     | Undo changes by deletig all commits since                              |
-| sno  | .gitignore                                           | A file which has the list of files/folders will be ignore while commit |
-| sno  | git branch \<branch name>                            | Create a new branch                                                    |
-| sno  | git merge \<branch name>                             | To merge a branch to another branch                                    |
-| sno  | git branch                                           | Lists all existing branches                                            |
-| sno  | git checkout \<branch name>                          | Switch to another branch                                               |
-| sno  | git branch -D \<branch name>                         | To delete a branch                                                     |
-| sno  | git branch -b \<branch name>                         | Create a branch with full data of the Main branch                      |
-| sno  | git remote add origin/any name \<url>                | Connected to local Git repos via this command                          |
-| sno  | git push --set-upstream origin main                  | Set the remote as upstream                                             |
-| sno  | git pull                                             | c                                                                      |
-| sno  | git push \<origin> main                              | c                                                                      |
-| sno  | git remote set-url origin https://\<username>@\<url> | set for our uid. Initially we will get permission error.               |
-| sno  | git push origin main                                 | Here we have to give token to add / commit.                            |
-| s    | git checkout -b \<branch>                            | create and switch to a branch if it is not exists                      |
-| s    | git push origin \<branch name>                       |                                                                        |
-| sno  | git checkout main -> git merge \<branch>             | c                                                                      |
-| sno  | git clone \<repo url"                                | c                                                                      |
-| sno  | git remote                                           | Shows all connected remote repo's                                      |
-| sno  | git remote get-url --all origin                      | Shows the origin of the git repository                                 |
-| sno  | git remote set-url origin \<full path of the URL"    | Configure an url                                                       |
-| s    | continue from vid - 30                               |                                                                        |
-| s    |                                                      |                                                                        |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| s    |                                                      |                                                                        |
-| s    |                                                      |                                                                        |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| s    |                                                      |                                                                        |
-| s    |                                                      |                                                                        |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| sno  | t                                                    | c                                                                      |
-| s    |                                                      |                                                                        |
-| s    |                                                      |                                                                        |
+| S.No | Command                                              | Description                                                                           |
+| ---- | ---------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| 1    | git config --global user.name "your-username"        | comm                                                                                  |
+| 2    | git config --global user.email "your-email           | comm                                                                                  |
+| 3    | git init                                             | To create a repo at local system                                                      |
+| 4    | git status                                           | Shows the staged data                                                                 |
+| 5    | git add . or git add                                 | Staging : add updted files.                                                           |
+| 6    | git commit -m ".."                                   | Ssve all changes to git hub                                                           |
+| 7    | git push                                             | Push from local to remote                                                             |
+| 8    | git pull                                             | Download from remote to local                                                         |
+| 9    | git checkout \<commit id>                            | Temporarily move to another commit                                                    |
+| 9    | git checkout main                                    | Again it will goes to Head -> main branch                                             |
+| 10   | git log                                              | shows history of commit                                                               |
+| 11   | git revert                                           | Undo commits(Revert changs of commi by creating a new commit                          |
+| 12   | git reset --hard                                     | Undo changes by deletig all commits since                                             |
+| sno  | .gitignore                                           | A file which has the list of files/folders will be ignore while commit                |
+| sno  | git branch \<branch name>                            | Create a new branch                                                                   |
+| sno  | git merge \<branch name>                             | To merge a branch to another branch                                                   |
+| sno  | git branch                                           | Lists all existing branches                                                           |
+| sno  | git checkout \<branch name>                          | Switch to another branch                                                              |
+| sno  | git branch -D \<branch name>                         | To delete a branch                                                                    |
+| sno  | git branch -b \<branch name>                         | Create a branch with full data of the Main branch                                     |
+| sno  | git remote add origin/any name \<url>                | Connected to local Git repos via this command. Then new commits will goes to new Repo |
+| sno  | git push --set-upstream origin main                  | Set the remote as upstream                                                            |
+| sno  | git pull                                             | c                                                                                     |
+| sno  | git push \<origin> main                              | c                                                                                     |
+| sno  | git remote set-url origin https://\<username>@\<url> | set for our uid. Initially we will get permission error.                              |
+| sno  | git push origin main                                 | Here we have to give token to add / commit.                                           |
+| s    | git checkout -b \<branch>                            | create and switch to a branch if it is not exists                                     |
+| s    | git push origin \<branch name>                       |                                                                                       |
+| sno  | git checkout main -> git merge \<branch>             | c                                                                                     |
+| sno  | git clone \<repo url"                                | c                                                                                     |
+| sno  | git remote                                           | Shows all connected remote repo's                                                     |
+| sno  | git remote get-url --all origin                      | Shows the origin of the git repository                                                |
+| sno  | git remote set-url origin \<full path of the URL"    | Configure an url                                                                      |
+| s    | git clone \<url> RepoName                            |                                                                                       |
+| sno  | GitHub Actions - GitHubActions                       | GitHub Actions                                                                        |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| s    |                                                      |                                                                                       |
+| s    |                                                      |                                                                                       |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| s    |                                                      |                                                                                       |
+| s    |                                                      |                                                                                       |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| sno  | t                                                    | c                                                                                     |
+| s    |                                                      |                                                                                       |
+| s    |                                                      |                                                                                       |
 
 # cloenKubernets commands
 
@@ -149,4 +148,4 @@ root@minikube:# history
 11 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin  
 12 exit  
 13 history  
-root@minikube:#eleteI\<bchangnne
+root@minikube:#eleteI\<bchangnne\<ur- G
