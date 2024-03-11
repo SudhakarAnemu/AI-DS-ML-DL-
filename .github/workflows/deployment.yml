@@ -5,11 +5,17 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Get code - for teting 
-              uses: actions/checkout@v3
+              run: echo "Executing the Job - Testing"
     deploy: #we can give any name
         needs: test #This way it will sequentially exectues. Else parallel
         # Here, we can give multiple jobs too. [test1, test2]
         runs-on: ubuntu-latest
         steps:
             - name: Get code - for deployment
-              uses: actions/checkout@v3
+              run: echo "Executing the Job - deployment"
+    info:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Output Github context
+              run: echo "${{toJson(github)}}"
+    
