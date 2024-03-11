@@ -1,0 +1,13 @@
+name: Deploy Project
+on: push
+jobs:
+    test: #name can be anything. 
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code - for teting 
+              uses: actions/checkout@v3
+    deploy: #we can give any name
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code - for deployment
+              uses: actions/checkout@v3
