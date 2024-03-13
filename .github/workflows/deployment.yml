@@ -12,7 +12,7 @@ jobs:
         # Here, we can give multiple jobs too. [test1, test2]
         runs-on: ubuntu-latest
         steps:
-            - name1: Get code - for deployment
+            - name: Get code - for deployment
               run: echo "Executing the Job - deployment"
     info:
         runs-on: ubuntu-latest
