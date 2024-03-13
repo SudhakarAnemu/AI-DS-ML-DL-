@@ -6,6 +6,7 @@ jobs:
         steps:
             - name: Get code - for teting 
               run: echo "Executing the Job - Testing"
+              #uses: actions:checkout@v3
     deploy: #we can give any name
         needs: test #This way it will sequentially exectues. Else parallel
         # Here, we can give multiple jobs too. [test1, test2]
