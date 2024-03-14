@@ -40,62 +40,62 @@ Sample
 
 Minikube :
 
-| S.No | Command                                                           | Description          |
-| ---- | ----------------------------------------------------------------- | -------------------- |
-| 1    | /usr/local/bin/minikube profile list                              | List out the profile |
-| 2    | minikube start --nodes 2                                          |                      |
-| 3    | minikube start --driver=docker                                    |                      |
-| 4    | minikube status                                                   |                      |
-| 5    | minikube stop                                                     |                      |
-| 6    | kubectl describe node minikube                                    |                      |
-| 7    | kubectl get pods -A                                               |                      |
-| 8    | kubectl logs pod/\<pod name> -n dev                               |                      |
-| 9    | kubectl describe pod/\<pod name> -n dev                           |                      |
-| 10   | kubectl delete pod/\<name> -n dev                                 |                      |
-| 11   | sudo kubectl api-resources                                        |                      |
-| 12   | sudo kubectl describe pod/coredns-5dd5756b68-7w466 -n kube-system |                      |
-| 13   | sudo kubectl logs pod/coredns-5dd5756b68-7w466 -n kube-system     |                      |
-| 14   | kubectl edit pod/coredns-5dd5756b68-7w466 -n kube-system          |                      |
-| 15   |                                                                   |                      |
-| 3    |         |             |
-| 4    |         |             |
-| 5    |         |             |
-| 6    |         |             |
-| 7    |         |             |
-| 8    |         |             |
-| 9    |         |             |
-| 10   |         |             |
-| 11   |         |             |
-| 12   |         |             |
-| 13   |         |             |
-| 14   |         |             |
-| 15   |         |             |
-| 3    |         |             |
-| 4    |         |             |
-| 5    |         |             |
-| 6    |         |             |
-| 7    |         |             |
-| 8    |         |             |
-| 9    |         |             |
-| 10   |         |             |
-| 11   |         |             |
-| 12   |         |             |
-| 13   |         |             |
-| 14   |         |             |
-| 15   |         |             |
-| 3    |         |             |
-| 4    |         |             |
-| 5    |         |             |
-| 6    |         |             |
-| 7    |         |             |
-| 8    |         |             |
-| 9    |         |             |
-| 10   |         |             |
-| 11   |         |             |
-| 12   |         |             |
-| 13   |         |             |
-| 14   |         |             |
-| 15   |         |             |
+| S.No | Command                                                                  | Description          |
+| ---- | ------------------------------------------------------------------------ | -------------------- |
+| 1    | /usr/local/bin/minikube profile list                                     | List out the profile |
+| 2    | minikube start --nodes 2                                                 |                      |
+| 3    | minikube start --driver=docker                                           |                      |
+| 4    | minikube status                                                          |                      |
+| 5    | minikube stop                                                            |                      |
+| 6    | kubectl describe node minikube                                           |                      |
+| 7    | kubectl get pods -A                                                      |                      |
+| 8    | kubectl logs pod/\<pod name> -n dev                                      |                      |
+| 9    | kubectl describe pod/\<pod name> -n dev                                  |                      |
+| 10   | kubectl delete pod/\<name> -n dev                                        |                      |
+| 11   | sudo kubectl api-resources                                               |                      |
+| 12   | sudo kubectl describe pod/coredns-5dd5756b68-7w466 -n kube-system        |                      |
+| 13   | sudo kubectl logs pod/coredns-5dd5756b68-7w466 -n kube-system            |                      |
+| 14   | kubectl edit pod/coredns-5dd5756b68-7w466 -n kube-system                 |                      |
+| 15   | sudo kubectl edit pod/coredns-5dd5756b68-7w466 -n kube-system            |                      |
+| 3    | sudo kubectl logs pod/coredns-5dd5756b68-7w466 -c coredns -n kube-system |                      |
+| 4    | sudo kubectl describe node minikube                                      |                      |
+| 5    | kubectl get namespace                                                    |                      |
+| 6    | kubectl create namespace dev                                             |                      |
+| 7    |                                                                          |                      |
+| 8    |                                                                          |                      |
+| 9    |                                                                          |                      |
+| 10   |                                                                          |                      |
+| 11   |                                                                          |                      |
+| 12   |                                                                          |                      |
+| 13   |                                                                          |                      |
+| 14   |                                                                          |                      |
+| 15   |                                                                          |                      |
+| 3    |                                                                          |                      |
+| 4    |                                                                          |                      |
+| 5    |                                                                          |                      |
+| 6    |                                                                          |                      |
+| 7    |                                                                          |                      |
+| 8    |                                                                          |                      |
+| 9    |                                                                          |                      |
+| 10   |                                                                          |                      |
+| 11   |                                                                          |                      |
+| 12   |                                                                          |                      |
+| 13   |                                                                          |                      |
+| 14   |                                                                          |                      |
+| 15   |                                                                          |                      |
+| 3    |                                                                          |                      |
+| 4    |                                                                          |                      |
+| 5    |                                                                          |                      |
+| 6    |                                                                          |                      |
+| 7    |                                                                          |                      |
+| 8    |                                                                          |                      |
+| 9    |                                                                          |                      |
+| 10   |                                                                          |                      |
+| 11   |                                                                          |                      |
+| 12   |                                                                          |                      |
+| 13   |                                                                          |                      |
+| 14   |                                                                          |                      |
+| 15   |                                                                          |                      |
 
 # Git commands (Git and Git actions)
 
