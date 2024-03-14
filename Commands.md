@@ -18,6 +18,47 @@
 | 14   | comm                                                                                                         | $12                        |
 | 15   | comm                                                                                                         | $1                         |
 
+Sample 
+| S.No | Command                                                                                                      | Description                |
+| ---- | ------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| 1    |  |  |
+| 2    |||
+| 3    ||                        |
+| 4    ||                       |
+| 5    |                                                                                                          |                        |
+| 6    |                                                                                                          |                        |
+| 7    |                                                                                                          |                       |
+| 8    |                                                                                                          |                       |
+| 9    |                                                                                                          |                       |
+| 10   |                                                                                                          |                     |
+| 11   |                                                                                                          |                    |
+| 12   |                                                                                                          |                       |
+| 13   |                                                                                                          |                     |
+| 14   |                                                                                                          |                     |
+| 15   |                                                                                                          |                       |
+
+Minikube : 
+
+| S.No | Command                                                                                                      | Description                |
+| ---- | ------------------------------------------------------------------------------------------------------------ | -------------------------- |
+| 1    | /usr/local/bin/minikube profile list | List out the profile |
+| 2    |    minikube start --nodes 2                                                                                                      |                        |
+| 3    |     minikube start --driver=docker                                                                                                     |                        |
+| 4    |    minikube status                                                                                                      |                       |
+| 5    |   minikube stop                                                                                                       |                        |
+| 6    |   kubectl describe node minikube                                                                                                       |                        |
+| 7    |                                                                                                          |                       |
+| 8    |                                                                                                          |                       |
+| 9    |                                                                                                          |                       |
+| 10   |                                                                                                          |                     |
+| 11   |                                                                                                          |                    |
+| 12   |                                                                                                          |                       |
+| 13   |                                                                                                          |                     |
+| 14   |                                                                                                          |                     |
+| 15   |                                                                                                          |                       |
+
+
+
 # Git commands (Git and Git actions)
 
 | S.No | Command                                              | Description                                                                           |
