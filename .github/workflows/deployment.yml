@@ -1,5 +1,9 @@
 name: Deploy Project
-on: [push, workflow_dispatch] #workflow_dispatch : it allows us to manually trigger
+#on: [push, workflow_dispatch] #workflow_dispatch : it allows us to manually trigger
+on: 
+    pull_request: #event
+        types: [opened, edited] #activity
+    workflow_dispatch:
 jobs:
     test: #name can be anything. 
         runs-on: ubuntu-latest
