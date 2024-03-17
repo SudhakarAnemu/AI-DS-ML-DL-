@@ -1,22 +1,22 @@
 # httUrls
 
-| S.No | Command                                                                                                      | Description                |
-| ---- | ------------------------------------------------------------------------------------------------------------ | -------------------------- |
-| 1    | [kubectl get pods --all-namespaces](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables) | Cheatsheet of md(markdown) |
-| 2    | comm                                                                                                         | comm                       |
-| 3    | comm                                                                                                         | comm                       |
-| 4    | comm                                                                                                         | $1600                      |
-| 5    | comm                                                                                                         | $12                        |
-| 6    | comm                                                                                                         | $1                         |
-| 7    | comm                                                                                                         | $1600                      |
-| 8    | comm                                                                                                         | $12                        |
-| 9    | comm                                                                                                         | $1                         |
-| 10   | comm                                                                                                         | $1600                      |
-| 11   | comm                                                                                                         | $12                        |
-| 12   | comm                                                                                                         | $1                         |
-| 13   | comm                                                                                                         | $1600                      |
-| 14   | comm                                                                                                         | $12                        |
-| 15   | comm                                                                                                         | $1                         |
+| S.No | Command                                                                                                      | Description                          |
+| ---- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------ |
+| 1    | [kubectl get pods --all-namespaces](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables) | Cheatsheet of md(markdown)           |
+| 2    | https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac                                       | npm, nodejs installations on windows |
+| 3    | comm                                                                                                         | comm                                 |
+| 4    | comm                                                                                                         | $1600                                |
+| 5    | comm                                                                                                         | $12                                  |
+| 6    | comm                                                                                                         | $1                                   |
+| 7    | comm                                                                                                         | $1600                                |
+| 8    | comm                                                                                                         | $12                                  |
+| 9    | comm                                                                                                         | $1                                   |
+| 10   | comm                                                                                                         | $1600                                |
+| 11   | comm                                                                                                         | $12                                  |
+| 12   | comm                                                                                                         | $1                                   |
+| 13   | comm                                                                                                         | $1600                                |
+| 14   | comm                                                                                                         | $12                                  |
+| 15   | comm                                                                                                         | $1                                   |
 
 Sample
 
@@ -227,4 +227,4 @@ root@minikube:# history
 11 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin  
 12 exit  
 13 history  
-root@minikube:#eleteI\<bchangnne\<ur- G--
+root@minikube:#eleteI\<bchangnne\<ur- G--m, nodejsWindow
