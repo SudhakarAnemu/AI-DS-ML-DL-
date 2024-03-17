@@ -38,6 +38,28 @@ Sample
 | 14   |         |             |
 | 15   |         |             |
 
+
+npm
+
+| S.No | Command | Description |
+| ---- | ------- | ----------- |
+| 1    |npm      |             |
+| 2    |npm ci   |             |
+| 3    |npm run lint     |             |
+| 4    |npm run build    |             |
+| 5    |         |             |
+| 6    |         |             |
+| 7    |         |             |
+| 8    |         |             |
+| 9    |         |             |
+| 10   |         |             |
+| 11   |         |             |
+| 12   |         |             |
+| 13   |         |             |
+| 14   |         |             |
+| 15   |         |             |
+
+
 Minikube :
 
 | S.No | Command                                                                  | Description          |
