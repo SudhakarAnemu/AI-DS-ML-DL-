@@ -9,5 +9,13 @@ root@master:~#
 
 - 2
 
-- dsf
-- s
+root@master:~\# kubectl create -f ns.yml~  
+~namespace/dev created~  
+~root@master:~\# kubectl get ns  
+NAME              STATUS   AGE  
+default           Active   122m  
+dev               Active   6s  
+kube-node-lease   Active   122m  
+kube-public       Active   122m  
+kube-system       Active   122m  
+root@master:~#
