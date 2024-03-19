@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-headless
+  namespace: dev
+spec:
+  clusterIP: None # This creates a headless service
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
+    # only pursose is to use in the statefulset
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: nginx-statefulset
+  namespace: dev
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  serviceName: nginx-headless
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: ngnix
+        image: nginx
+        ports:
+        - containerPort: 80
+          name: web
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html # the path inside the pod/container
+      volumes:
+      - name: www
+        persistentVolumeClaim:
+          claimName: nginx-pvc
+  # CSI -> Container Storage Interface --> Minikube CSI
+# CNI -> Container Netwroking Interface -->Kube-Network
+# CRI -> Container Runtime Interface --> Docker Container Runtime
