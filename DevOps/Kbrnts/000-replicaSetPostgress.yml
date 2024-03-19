@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: postgresql
-  #namespace: dev
 spec:
   replicas: 3
   selector:
@@ -10,7 +9,6 @@ spec:
       app: postgresql
   template:
     metadata:
-      #namespace: dev
       labels:
         app: postgresql
     spec:
@@ -21,15 +19,14 @@ spec:
         - containerPort: 5432
         env:
         - name: POSTGRES_USER
-          value: "your_username"
+          value: "sudhauid"
         - name: POSTGRES_PASSWORD
-          value: "your_password"
+          value: "sudhapwd"
         - name: POSTGRES_DB
-          value: "your_database_name"
+          value: "sudhadb"
         volumeMounts:
         - name: postgresql-persistent-storage
           mountPath: /var/lib/postgresql/data
       volumes:
       - name: postgresql-persistent-storage
-        persistentVolumeClaim:
-          claimName: postgresql-pvc
+        emptyDir: {}
