@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: postgresql
+  #namespace: dev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: postgresql
+  template:
+    metadata:
+      #namespace: dev
+      labels:
+        app: postgresql
+    spec:
+      containers:
+      - name: postgresql
+        image: postgres:latest
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_USER
+          value: "your_username"
+        - name: POSTGRES_PASSWORD
+          value: "your_password"
+        - name: POSTGRES_DB
+          value: "your_database_name"
+        volumeMounts:
+        - name: postgresql-persistent-storage
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: postgresql-persistent-storage
+        persistentVolumeClaim:
+          claimName: postgresql-pvc
