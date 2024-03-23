@@ -87,10 +87,10 @@
 | 9    | docker system df                            |                                              |
 | 10   | docker search jenkins                       |                                              |
 | 11   | docker search -- limit 5                    |                                              |
-| 12   |                                             |                                              |
-| 13   |                                             |                                              |
-| 14   |                                             |                                              |
-| 15   |                                             |                                              |
+| 12   | docker run -itd --name=web debian           |                                              |
+| 13   | docker ps -l                                | Shows latest container                       |
+| 14   | docker stop, start                          |                                              |
+| 15   | docker rm \<container number>               |                                              |
 
 # npm
 
