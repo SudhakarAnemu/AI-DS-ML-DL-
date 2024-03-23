@@ -61,7 +61,7 @@
 # Docker
 
 | S.No | Command                          | Description |
-| ---- | -------------------------------- | ----------- | ------------ | --- |
+| ---- | -------------------------------- | ----------- |
 | 1    | /var/lib/docker                  | Working dir |
 | 2    | systemctl enable docker          |             |
 | 3    | systemctl start docker           |             |
