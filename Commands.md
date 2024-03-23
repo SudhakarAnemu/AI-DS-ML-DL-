@@ -18,6 +18,10 @@ Sample
 | 14   |         |             |
 | 15   |         |             |
 
+# Linux :
+
+<table><tbody><tr><td>1</td><td>diff -wsru &lt;new file&gt; &lt;old file&gt;</td><td>Diff between two files</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>7</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>9</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>10</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>11</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>
+
 # httUrls
 
 | S.No | Command                                                                                                      | Description                          |
@@ -40,45 +44,43 @@ Sample
 
 Docker
 
-| S.No | Command | Description |
-| ---- | ------- | ----------- |
-| 1    |/var/lib/docker       |    Working dir         |
-| 2    |systemctl enable docker      |             |
-| 3    |systemctl start docker      |             |
-| 4    |systemctl stop docker     |             |
-| 5    |docker version     |             |
-| 6    |         |             |
-| 7    |         |             |
-| 8    |         |             |
-| 9    |         |             |
-| 10   |         |             |
-| 11   |         |             |
-| 12   |         |             |
-| 13   |         |             |
-| 14   |         |             |
-| 15   |         |             |
-
+| S.No | Command                          | Description |
+| ---- | -------------------------------- | ----------- | ------------ | --- |
+| 1    | /var/lib/docker                  | Working dir |
+| 2    | systemctl enable docker          |             |
+| 3    | systemctl start docker           |             |
+| 4    | systemctl stop docker            |             |
+| 5    | docker version                   |             |
+| 6    | docker run -itd debian           |             |
+| 7    | docker ps                        |             | docker ps -a |     |
+| 8    | docker stop \<container id>      |             |
+| 9    | docker ps -a                     |             |
+| 10   | docker run debian (will die)     |             |
+| 11   | docker images                    |             |
+| 12   | docker inspect \<container id>   |             |
+| 13   |  docker -help                    |             |
+| 14   |                                  |             |
+| 15   |                                  |             |
 
 npm
 
-| S.No | Command | Description |
-| ---- | ------- | ----------- |
-| 1    |npm      |             |
-| 2    |npm ci   |             |
-| 3    |npm run lint     |             |
-| 4    |npm run build    |             |
-| 5    |         |             |
-| 6    |         |             |
-| 7    |         |             |
-| 8    |         |             |
-| 9    |         |             |
-| 10   |         |             |
-| 11   |         |             |
-| 12   |         |             |
-| 13   |         |             |
-| 14   |         |             |
-| 15   |         |             |
-
+| S.No | Command       | Description |
+| ---- | ------------- | ----------- |
+| 1    | npm           |             |
+| 2    | npm ci        |             |
+| 3    | npm run lint  |             |
+| 4    | npm run build |             |
+| 5    |               |             |
+| 6    |               |             |
+| 7    |               |             |
+| 8    |               |             |
+| 9    |               |             |
+| 10   |               |             |
+| 11   |               |             |
+| 12   |               |             |
+| 13   |               |             |
+| 14   |               |             |
+| 15   |               |             |
 
 Minikube :
 
@@ -269,4 +271,4 @@ root@minikube:# history
 11 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin  
 12 exit  
 13 history  
-root@minikube:#eleteI\<bchangnne\<ur- G--m, nodejsWindow
+root@minikube:#eleteI\<bchangnne\<ur- G--m, nodejsWindow9
