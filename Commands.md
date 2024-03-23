@@ -42,11 +42,11 @@ Docker
 
 | S.No | Command | Description |
 | ---- | ------- | ----------- |
-| 1    |         |             |
-| 2    |         |             |
-| 3    |         |             |
-| 4    |         |             |
-| 5    |         |             |
+| 1    |   /var/lib/docker       |    Working dir         |
+| 2    |   systemctl enable docker      |             |
+| 3    |   systemctl start docker      |             |
+| 4    |   systemctl stop docker     |             |
+| 5    |    docker version     |             |
 | 6    |         |             |
 | 7    |         |             |
 | 8    |         |             |
