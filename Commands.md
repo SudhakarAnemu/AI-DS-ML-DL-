@@ -61,14 +61,14 @@
 # Docker
 
 | S.No | Command                          | Description |
-| ---- | -------------------------------- | ----------- |
+| ---- | -------------------------------- | ----------- | --- |
 | 1    | /var/lib/docker                  | Working dir |
 | 2    | systemctl enable docker          |             |
 | 3    | systemctl start docker           |             |
 | 4    | systemctl stop docker            |             |
 | 5    | docker version                   |             |
 | 6    | docker run -itd debian           |             |
-| 7    | docker ps, docker ps -a   | |     
+| 7    | docker ps, docker ps -a          |             |     |
 | 8    | docker stop \<container id>      |             |
 | 9    | docker ps -a                     |             |
 | 10   | docker run debian (will die)     |             |
