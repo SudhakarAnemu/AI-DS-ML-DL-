@@ -20,8 +20,6 @@ Sample
 
 # Linux :
 
-<table><tbody><tr><td>1</td><td>diff -wsru &lt;new file&gt; &lt;old file&gt;</td><td>Diff between two files</td></tr><tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>3</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>4</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>5</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>6</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>7</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>9</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>10</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>11</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>
-
 # httUrls
 
 | S.No | Command                                                                                                      | Description                          |
