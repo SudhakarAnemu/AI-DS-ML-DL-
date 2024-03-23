@@ -154,7 +154,7 @@
 | 14   |               |             |
 | 15   |               |             |
 
-Minikube :
+# Minikube :
 
 | S.No | Command                                                                  | Description          |
 | ---- | ------------------------------------------------------------------------ | -------------------- |
@@ -273,7 +273,7 @@ Minikube :
 | s    |                                                      |                                                                                       |
 | s    |                                                      |                                                                                       |
 
-# cloenKubernets commands
+# Kubernets commands
 
 | S.No | Command                                   | Description           |
 | ---- | ----------------------------------------- | --------------------- |
