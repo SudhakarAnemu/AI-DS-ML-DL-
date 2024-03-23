@@ -75,8 +75,22 @@
 | 11   | docker images                    |             |
 | 12   | docker inspect \<container id>   |             |
 | 13   |  docker -help                    |             |
-| 14   |                                  |             |
+| 14   | docker pull nginx                                |             |
 | 15   |                                  |             |
+| 2    |         |             |
+| 3    |         |             |
+| 4    |         |             |
+| 5    |         |             |
+| 6    |         |             |
+| 7    |         |             |
+| 8    |         |             |
+| 9    |         |             |
+| 10   |         |             |
+| 11   |         |             |
+| 12   |         |             |
+| 13   |         |             |
+| 14   |         |             |
+| 15   |         |             |
 
 # npm
 
