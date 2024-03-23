@@ -60,37 +60,37 @@
 
 # Docker
 
-| S.No | Command                          | Description |
-| ---- | -------------------------------- | ----------- |
-| 1    | /var/lib/docker                  | Working dir |
-| 2    | systemctl enable docker          |             |
-| 3    | systemctl start docker           |             |
-| 4    | systemctl stop docker            |             |
-| 5    | docker version                   |             |
-| 6    | docker run -itd debian           |             |
-| 7    | docker ps, docker ps -a          |             |  
-| 8    | docker stop \<container id>      |             |
-| 9    | docker ps -a                     |             |
-| 10   | docker run debian (will die)     |             |
-| 11   | docker images                    |             |
-| 12   | docker inspect \<container id>   |             |
-| 13   |  docker -help                    |             |
-| 14   | docker pull nginx                |             |
-| 15   | docker history nginx             |             |
-| 2    | docker images --no-trunc         |             |
-| 3    | docker tag nginx:latest nginx:myblog_stable                              |             |
-| 4    |                                  |             |
-| 5    |                                  |             |
-| 6    |                                  |             |
-| 7    |                                  |             |
-| 8    |                                  |             |
-| 9    |                                  |             |
-| 10   |                                  |             |
-| 11   |                                  |             |
-| 12   |                                  |             |
-| 13   |                                  |             |
-| 14   |                                  |             |
-| 15   |                                  |             |
+| S.No | Command                                     | Description                                  |
+| ---- | ------------------------------------------- | -------------------------------------------- |
+| 1    | /var/lib/docker                             | Working dir                                  |
+| 2    | systemctl enable docker                     |                                              |
+| 3    | systemctl start docker                      |                                              |
+| 4    | systemctl stop docker                       |                                              |
+| 5    | docker version                              |                                              |
+| 6    | docker run -itd debian                      |                                              |
+| 7    | docker ps, docker ps -a                     |                                              |
+| 8    | docker stop \<container id>                 |                                              |
+| 9    | docker ps -a                                |                                              |
+| 10   | docker run debian (will die)                |                                              |
+| 11   | docker images                               |                                              |
+| 12   | docker inspect \<container id>              |                                              |
+| 13   | docker -help                                |                                              |
+| 14   | docker pull nginx                           |                                              |
+| 15   | docker history nginx                        |                                              |
+| 16   | docker images --no-trunc                    |                                              |
+| 17   | docker tag nginx:latest nginx:myblog_stable |                                              |
+| 18   | docker build -t mynginx .                   | Build an image by using docker file          |
+| 19   | docker rmi nginx:myblog                     | Remove an image                              |
+| 20   | docker rmi -f \<name of the image>          |                                              |
+| 7    | docker image prune                          | delete images which does not have containers |
+| 8    | docker system prune -a                      |                                              |
+| 9    | docker system df                            |                                              |
+| 10   | docker search jenkins                       |                                              |
+| 11   | docker search -- limit 5                    |                                              |
+| 12   |                                             |                                              |
+| 13   |                                             |                                              |
+| 14   |                                             |                                              |
+| 15   |                                             |                                              |
 
 # npm
 
@@ -301,4 +301,4 @@ root@minikube:# history
 11 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin  
 12 exit  
 13 history  
-root@minikube:#eleteI\<bchangnne\<ur- G--m, nodejsWindow9
+root@minikube:#eleteI\<bchangnne\<ur- G--m, nodejsWindow9doc prprsear----li
