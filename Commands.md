@@ -20,23 +20,23 @@
 
 # Linux :
 
-| S.No | Command | Description |
-| ---- | ------- | ----------- |
-| 1    |   diff -wsru <new file> <old file>      |   Diff between old and new files         |
-| 2    |         |             |
-| 3    |         |             |
-| 4    |         |             |
-| 5    |         |             |
-| 6    |         |             |
-| 7    |         |             |
-| 8    |         |             |
-| 9    |         |             |
-| 10   |         |             |
-| 11   |         |             |
-| 12   |         |             |
-| 13   |         |             |
-| 14   |         |             |
-| 15   |         |             |
+| S.No | Command    | Description                    |
+| ---- | ---------- | ------------------------------ |
+| 1    | diff -wsru | Diff between old and new files |
+| 2    |            |                                |
+| 3    |            |                                |
+| 4    |            |                                |
+| 5    |            |                                |
+| 6    |            |                                |
+| 7    |            |                                |
+| 8    |            |                                |
+| 9    |            |                                |
+| 10   |            |                                |
+| 11   |            |                                |
+| 12   |            |                                |
+| 13   |            |                                |
+| 14   |            |                                |
+| 15   |            |                                |
 
 # httUrls
 
@@ -75,22 +75,22 @@
 | 11   | docker images                    |             |
 | 12   | docker inspect \<container id>   |             |
 | 13   |  docker -help                    |             |
-| 14   | docker pull nginx                                |             |
+| 14   | docker pull nginx                |             |
+| 15   | docker history nginx             |             |
+| 2    | docker images --no-trunc         |             |
+| 3    |                                  |             |
+| 4    |                                  |             |
+| 5    |                                  |             |
+| 6    |                                  |             |
+| 7    |                                  |             |
+| 8    |                                  |             |
+| 9    |                                  |             |
+| 10   |                                  |             |
+| 11   |                                  |             |
+| 12   |                                  |             |
+| 13   |                                  |             |
+| 14   |                                  |             |
 | 15   |                                  |             |
-| 2    |         |             |
-| 3    |         |             |
-| 4    |         |             |
-| 5    |         |             |
-| 6    |         |             |
-| 7    |         |             |
-| 8    |         |             |
-| 9    |         |             |
-| 10   |         |             |
-| 11   |         |             |
-| 12   |         |             |
-| 13   |         |             |
-| 14   |         |             |
-| 15   |         |             |
 
 # npm
 
