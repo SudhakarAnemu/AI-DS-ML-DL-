@@ -60,79 +60,79 @@
 
 # Docker
 
-| S.No | Command                                                | Description                                  |
-| ---- | ------------------------------------------------------ | -------------------------------------------- |
-| 1    | /var/lib/docker                                        | Working dir                                  |
-| 2    | systemctl enable docker                                |                                              |
-| 3    | systemctl start docker                                 |                                              |
-| 4    | systemctl stop docker                                  |                                              |
-| 5    | docker version                                         |                                              |
-| 6    | docker run -itd debian                                 |                                              |
-| 7    | docker ps, docker ps -a                                |                                              |
-| 8    | docker stop \<container id>                            |                                              |
-| 9    | docker ps -a                                           |                                              |
-| 10   | docker run debian (will die)                           |                                              |
-| 11   | docker images                                          |                                              |
-| 12   | docker inspect \<container id>                         |                                              |
-| 13   | docker -help                                           |                                              |
-| 14   | docker pull nginx                                      |                                              |
-| 15   | docker history nginx                                   |                                              |
-| 16   | docker images --no-trunc                               |                                              |
-| 17   | docker tag nginx:latest nginx:myblog_stable            |                                              |
-| 18   | docker build -t mynginx .                              | Build an image by using docker file          |
-| 19   | docker rmi nginx:myblog                                | Remove an image                              |
-| 20   | docker rmi -f \<name of the image>                     |                                              |
-| 7    | docker image prune                                     | delete images which does not have containers |
-| 8    | docker system prune -a                                 |                                              |
-| 9    | docker system df                                       |                                              |
-| 10   | docker search jenkins                                  |                                              |
-| 11   | docker search -- limit 5                               |                                              |
-| 12   | docker run -itd --name=web debian                      |                                              |
-| 13   | docker ps -l                                           | Shows latest container                       |
-| 14   | docker stop, start                                     |                                              |
-| 15   | docker rm \<container number>                          |                                              |
-| 2    | docker run -itd -restart=always --name=fourthcontainer | To restart automatically when it is stop     |
-| 3    |                                                        |                                              |
-| 4    |                                                        |                                              |
-| 5    |                                                        |                                              |
-| 6    |                                                        |                                              |
-| 7    |                                                        |                                              |
-| 8    |                                                        |                                              |
-| 9    |                                                        |                                              |
-| 10   |                                                        |                                              |
-| 11   |                                                        |                                              |
-| 12   |                                                        |                                              |
-| 13   |                                                        |                                              |
-| 14   |                                                        |                                              |
-| 15   |                                                        |                                              |
-| 2    |                                                        |                                              |
-| 3    |                                                        |                                              |
-| 4    |                                                        |                                              |
-| 5    |                                                        |                                              |
-| 6    |                                                        |                                              |
-| 7    |                                                        |                                              |
-| 8    |                                                        |                                              |
-| 9    |                                                        |                                              |
-| 10   |                                                        |                                              |
-| 11   |                                                        |                                              |
-| 12   |                                                        |                                              |
-| 13   |                                                        |                                              |
-| 14   |                                                        |                                              |
-| 15   |                                                        |                                              |
-| 2    |                                                        |                                              |
-| 3    |                                                        |                                              |
-| 4    |                                                        |                                              |
-| 5    |                                                        |                                              |
-| 6    |                                                        |                                              |
-| 7    |                                                        |                                              |
-| 8    |                                                        |                                              |
-| 9    |                                                        |                                              |
-| 10   |                                                        |                                              |
-| 11   |                                                        |                                              |
-| 12   |                                                        |                                              |
-| 13   |                                                        |                                              |
-| 14   |                                                        |                                              |
-| 15   |                                                        |                                              |
+| S.No | Command                                                                                      | Description                                                                                              |
+| ---- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 1    | /var/lib/docker                                                                              | Working dir                                                                                              |
+| 2    | systemctl enable docker                                                                      |                                                                                                          |
+| 3    | systemctl start docker                                                                       |                                                                                                          |
+| 4    | systemctl stop docker                                                                        |                                                                                                          |
+| 5    | docker version                                                                               |                                                                                                          |
+| 6    | docker run -itd debian                                                                       |                                                                                                          |
+| 7    | docker ps, docker ps -a                                                                      |                                                                                                          |
+| 8    | docker stop \<container id>                                                                  |                                                                                                          |
+| 9    | docker ps -a                                                                                 |                                                                                                          |
+| 10   | docker run debian (will die)                                                                 |                                                                                                          |
+| 11   | docker images                                                                                |                                                                                                          |
+| 12   | docker inspect \<container id>                                                               |                                                                                                          |
+| 13   | docker -help                                                                                 |                                                                                                          |
+| 14   | docker pull nginx                                                                            |                                                                                                          |
+| 15   | docker history nginx                                                                         |                                                                                                          |
+| 16   | docker images --no-trunc                                                                     |                                                                                                          |
+| 17   | docker tag nginx:latest nginx:myblog_stable                                                  |                                                                                                          |
+| 18   | docker build -t mynginx .                                                                    | Build an image by using docker file                                                                      |
+| 19   | docker rmi nginx:myblog                                                                      | Remove an image                                                                                          |
+| 20   | docker rmi -f \<name of the image>                                                           |                                                                                                          |
+| 7    | docker image prune                                                                           | delete images which does not have containers                                                             |
+| 8    | docker system prune -a                                                                       |                                                                                                          |
+| 9    | docker system df                                                                             |                                                                                                          |
+| 10   | docker search jenkins                                                                        |                                                                                                          |
+| 11   | docker search -- limit 5                                                                     |                                                                                                          |
+| 12   | docker run -itd --name=web debian                                                            |                                                                                                          |
+| 13   | docker ps -l                                                                                 | Shows latest container                                                                                   |
+| 14   | docker stop, start                                                                           |                                                                                                          |
+| 15   | docker rm \<container number>                                                                |                                                                                                          |
+| 2    | docker run -itd --restart=always --name=web debian                                           | To restart automatically when it is stop,Restart policy will be configured. When the system got rebooted |
+| 3    | docker kill \<container id>                                                                  | Forcibly stop a container                                                                                |
+| 4    | docker run -rm hello-world                                                                   | Automatically delete the docker once it stops                                                            |
+| 5    | docker logs -t \<cont id>                                                                    |                                                                                                          |
+| 6    | docker logs -tf \<cont id>                                                                   |                                                                                                          |
+| 7    | docker run --name ournginx -d -p 8080:80 nginx                                               | export the port of 80 container to outside 8080                                                          |
+| 8    | curl http://localhost:8080                                                                   |                                                                                                          |
+| 9    | docker run -p 8080:80 --name web_nginx2 -v ${PWD}/webpages:/usr/share/nginx/html:ro -d nginx | dash v is for the volume                                                                                 |
+| 10   |                                                                                              |                                                                                                          |
+| 11   |                                                                                              |                                                                                                          |
+| 12   |                                                                                              |                                                                                                          |
+| 13   |                                                                                              |                                                                                                          |
+| 14   |                                                                                              |                                                                                                          |
+| 15   |                                                                                              |                                                                                                          |
+| 2    |                                                                                              |                                                                                                          |
+| 3    |                                                                                              |                                                                                                          |
+| 4    |                                                                                              |                                                                                                          |
+| 5    |                                                                                              |                                                                                                          |
+| 6    |                                                                                              |                                                                                                          |
+| 7    |                                                                                              |                                                                                                          |
+| 8    |                                                                                              |                                                                                                          |
+| 9    |                                                                                              |                                                                                                          |
+| 10   |                                                                                              |                                                                                                          |
+| 11   |                                                                                              |                                                                                                          |
+| 12   |                                                                                              |                                                                                                          |
+| 13   |                                                                                              |                                                                                                          |
+| 14   |                                                                                              |                                                                                                          |
+| 15   |                                                                                              |                                                                                                          |
+| 2    |                                                                                              |                                                                                                          |
+| 3    |                                                                                              |                                                                                                          |
+| 4    |                                                                                              |                                                                                                          |
+| 5    |                                                                                              |                                                                                                          |
+| 6    |                                                                                              |                                                                                                          |
+| 7    |                                                                                              |                                                                                                          |
+| 8    |                                                                                              |                                                                                                          |
+| 9    |                                                                                              |                                                                                                          |
+| 10   |                                                                                              |                                                                                                          |
+| 11   |                                                                                              |                                                                                                          |
+| 12   |                                                                                              |                                                                                                          |
+| 13   |                                                                                              |                                                                                                          |
+| 14   |                                                                                              |                                                                                                          |
+| 15   |                                                                                              |                                                                                                          |
 
 # npm
 
@@ -275,21 +275,4 @@
 
 # Kubernets commands
 
-| S.No | Command                                   | Description           |
-| ---- | ----------------------------------------- | --------------------- |
-| 1    | kubectl get pods --all-namespaces         | Get pod details       |
-| 2    | kubectl get pods --all-namespaces -o wide | Full details of Pod   |
-| 3    | kubectl get nodes                         | List out nodes        |
-| 4    | kubectl create ns jsmyns                  | Create a name space   |
-| 5    | kubectl get ns                            | Display all ns        |
-| 6    | kubectl apply or create -f yaml           | run yaml file         |
-| 7    | kubectl get pods -n                       | Get pods by Namespace |
-| 8    | kubectl describe pod -n                   | describe pod          |
-| 9    | comm                                      | $1                    |
-| 10   | comm                                      | $1600                 |
-| 11   | comm                                      | $12                   |
-| 12   | comm                                      | $1                    |
-| 13   | comm                                      | $1600                 |
-| 14   | comm                                      | $12                   |
-| 15   | comm                                      | $1                    |
-
+runheof 808080is for thvolume
