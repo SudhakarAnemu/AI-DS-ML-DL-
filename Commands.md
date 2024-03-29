@@ -22,18 +22,18 @@
 
 | S.No | Command                  | Description |
 | ---- | ------------------------ | ----------- |
-| 1    | /etc/ansible/ansible.cfg |             |
-| 2    |                          |             |
-| 3    |                          |             |
-| 4    |                          |             |
-| 5    |                          |             |
-| 6    |                          |             |
-| 7    |                          |             |
-| 8    |                          |             |
-| 9    |                          |             |
-| 10   |                          |             |
-| 11   |                          |             |
-| 12   |                          |             |
+| 1    | /etc/ansible/ansible.cfg |   default config file          |
+| 2    |  $ANSIBLE_CONFIG=/opt/ansible-web.cfg ansible-playbook playbook.yml                        |  User defined config path           |
+| 3    | Sequence of config files                        |             |
+| 4    | a. /opt/ansible-web.cfg                         |             |
+| 5    | b. /opt/web-playbooks/ansible.cfg                         |             |
+| 6    | c. .ansible.cfg                         |             |
+| 7    | d. /etc/ansible/ansible.cfg                        |             |
+| 8    | Env varibales. ex : gathering=implicit| ANSIBLE_GATHERING=explicit         |
+| 9    |for global : export ANSIBLE_GATHERING=explicit                          |             |
+| 10   |ansible-config list                          | Lists all configurations            |
+| 11   |ansible-config view| shows the current config file            |
+| 12   |ansible-config dump| shows the current settings            |
 | 13   |                          |             |
 | 14   |                          |             |
 | 15   |                          |             |
