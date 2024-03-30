@@ -37,8 +37,8 @@
 | 13   |/etc/ansible/hosts                          | Default location of the inventory file          |
 | 14   |Inventory parameters| ansible_connection - ssh/winrm/localhost, ansible_port-22/5986 ansible_user-root/admin ansible_ssh_pass-Password            |
 | 15   |For linux : ansible_ssh_pass, For windows : ansible_password                          |             |
-| 1    |[db] web1 [all_servers:children] db                          |             |
-| 2    |                          |             |
+| 16    |[db] web1 [all_servers:children] db                          |             |
+| 17    |                          |             |
 | 3    |                          |             |
 | 4    |                          |             |
 | 5    |                          |             |
