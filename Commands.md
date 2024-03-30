@@ -34,10 +34,10 @@
 | 10   |ansible-config list                          | Lists all configurations            |
 | 11   |ansible-config view| shows the current config file            |
 | 12   |ansible-config dump| shows the current settings            |
-| 13   |                          |             |
-| 14   |                          |             |
-| 15   |                          |             |
-| 1    |                          |             |
+| 13   |/etc/ansible/hosts                          | Default location of the inventory file          |
+| 14   |Inventory parameters| ansible_connection - ssh/winrm/localhost, ansible_port-22/5986 ansible_user-root/admin ansible_ssh_pass-Password            |
+| 15   |For linux : ansible_ssh_pass, For windows : ansible_password                          |             |
+| 1    |[db] web1 [all_servers:children] db                          |             |
 | 2    |                          |             |
 | 3    |                          |             |
 | 4    |                          |             |
