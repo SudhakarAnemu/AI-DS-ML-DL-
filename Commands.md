@@ -47,9 +47,9 @@
 |23|Magic variables - hostvars['web2'].dns_server|using hostvars, we can call variables in other set|
 |24|Magic variables - group_names||
 |25|Magic variables - inventory_hostname||
-|26|                          |             |
-| 12   |                          |             |
-| 13   |                          |             |
+|26|ansible_os_family|It has the OS of the host|
+| 27 |loop: "{{ packages }}"|Repeats the content of the packages|
+| 28   |ansible_facts['os_family']|System specific variables|
 | 14   |                          |             |
 | 15   |                          |             |
 | 1    |                          |             |
