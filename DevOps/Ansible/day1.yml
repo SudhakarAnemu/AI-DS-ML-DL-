@@ -42,3 +42,34 @@
           #recurse: yes
 
 
+---
+- name: Install Nginx
+  hosts: all
+  become: yes 
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+
+---
+- name: UnInstall Nginx
+  hosts: all
+  become: yes 
+
+  tasks:
+    - name: UnInstall Nginx
+      apt:
+        name: nginx
+        state: absent
+
+    - name: Remove Nginx configuration files
+      file:
+        path: "{{ item }}"
+        state: absent
+      with_items:
+        - /etc/nginx
+        - /var/log/nginx
+        - /var/cache/nginx
+        - /var/www/html
