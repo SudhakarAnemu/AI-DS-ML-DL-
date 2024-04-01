@@ -20,98 +20,98 @@
 
 # Ansible
 
-| S.No | Command                  | Description |
-| ---- | ------------------------ | ----------- |
-| 1| /etc/ansible/ansible.cfg |   default config file          |
-| 2|  $ANSIBLE_CONFIG=/opt/ansible-web.cfg ansible-playbook playbook.yml                        |  User defined config path           |
-| 3| Sequence of config files                        |             |
-| 4    | a. /opt/ansible-web.cfg                         |             |
-| 5    | b. /opt/web-playbooks/ansible.cfg                         |             |
-| 6    | c. .ansible.cfg                         |             |
-| 7    | d. /etc/ansible/ansible.cfg                        |             |
-| 8    | Env varibales. ex : gathering=implicit| ANSIBLE_GATHERING=explicit         |
-| 9    |for global : export ANSIBLE_GATHERING=explicit                          |             |
-| 10   |ansible-config list                          | Lists all configurations            |
-| 11   |ansible-config view| shows the current config file            |
-| 12   |ansible-config dump| shows the current settings            |
-| 13   |/etc/ansible/hosts                          | Default location of the inventory file          |
-| 14   |Inventory parameters| ansible_connection - ssh/winrm/localhost, ansible_port-22/5986 ansible_user-root/admin ansible_ssh_pass-Password            |
-| 15   |For linux : ansible_ssh_pass, For windows : ansible_password                          |             |
-| 16    |[db] web1 [all_servers:children] db                          |             |
-| 17    |/etc/ansible/hosts|This hosts file, obj's will be created in memory on the run time|
-| 18|Precedence of variables|1. Extra 2. Play 3. Host 4. Group|
-| 19|register: result, result.rc, result.stdout has its own data|result can be pass from one block to another|
-| 20|debug - module|Display the output in the console|
-| 21|ansible-playbook -i inventory playbook.yml -v|Shows the output in the console while it runs|
-|22|Variable scope : host, play and global(sent via extra)|             |
-|23|Magic variables - hostvars['web2'].dns_server|using hostvars, we can call variables in other set|
-|24|Magic variables - group_names||
-|25|Magic variables - inventory_hostname||
-|26|ansible_os_family|It has the OS of the host|
-| 27 |loop: "{{ packages }}"|Repeats the content of the packages|
-| 28   |ansible_facts['os_family']|System specific variables|
-| 14   |                          |             |
-| 15   |                          |             |
-| 1    |                          |             |
-| 2    |                          |             |
-| 3    |                          |             |
-| 4    |                          |             |
-| 5    |                          |             |
-| 6    |                          |             |
-| 7    |                          |             |
-| 8    |                          |             |
-| 9    |                          |             |
-| 10   |                          |             |
-| 11   |                          |             |
-| 12   |                          |             |
-| 13   |                          |             |
-| 14   |                          |             |
-| 15   |                          |             |
-| 1    |                          |             |
-| 2    |                          |             |
-| 3    |                          |             |
-| 4    |                          |             |
-| 5    |                          |             |
-| 6    |                          |             |
-| 7    |                          |             |
-| 8    |                          |             |
-| 9    |                          |             |
-| 10   |                          |             |
-| 11   |                          |             |
-| 12   |                          |             |
-| 13   |                          |             |
-| 14   |                          |             |
-| 15   |                          |             |
-| 1    |                          |             |
-| 2    |                          |             |
-| 3    |                          |             |
-| 4    |                          |             |
-| 5    |                          |             |
-| 6    |                          |             |
-| 7    |                          |             |
-| 8    |                          |             |
-| 9    |                          |             |
-| 10   |                          |             |
-| 11   |                          |             |
-| 12   |                          |             |
-| 13   |                          |             |
-| 14   |                          |             |
-| 15   |                          |             |
-| 1    |                          |             |
-| 2    |                          |             |
-| 3    |                          |             |
-| 4    |                          |             |
-| 5    |                          |             |
-| 6    |                          |             |
-| 7    |                          |             |
-| 8    |                          |             |
-| 9    |                          |             |
-| 10   |                          |             |
-| 11   |                          |             |
-| 12   |                          |             |
-| 13   |                          |             |
-| 14   |                          |             |
-| 15   |                          |             |
+| S.No | Command                                                            | Description                                                                                                      |
+| ---- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| 1    | /etc/ansible/ansible.cfg                                           | default config file                                                                                              |
+| 2    | $ANSIBLE_CONFIG=/opt/ansible-web.cfg ansible-playbook playbook.yml | User defined config path                                                                                         |
+| 3    | Sequence of config files                                           |                                                                                                                  |
+| 4    | a. /opt/ansible-web.cfg                                            |                                                                                                                  |
+| 5    | b. /opt/web-playbooks/ansible.cfg                                  |                                                                                                                  |
+| 6    | c. .ansible.cfg                                                    |                                                                                                                  |
+| 7    | d. /etc/ansible/ansible.cfg                                        |                                                                                                                  |
+| 8    | Env varibales. ex : gathering=implicit                             | ANSIBLE_GATHERING=explicit                                                                                       |
+| 9    | for global : export ANSIBLE_GATHERING=explicit                     |                                                                                                                  |
+| 10   | ansible-config list                                                | Lists all configurations                                                                                         |
+| 11   | ansible-config view                                                | shows the current config file                                                                                    |
+| 12   | ansible-config dump                                                | shows the current settings                                                                                       |
+| 13   | /etc/ansible/hosts                                                 | Default location of the inventory file                                                                           |
+| 14   | Inventory parameters                                               | ansible_connection - ssh/winrm/localhost, ansible_port-22/5986 ansible_user-root/admin ansible_ssh_pass-Password |
+| 15   | For linux : ansible_ssh_pass, For windows : ansible_password       |                                                                                                                  |
+| 16   | \[db\] web1 \[all_servers:children\] db                            |                                                                                                                  |
+| 17   | /etc/ansible/hosts                                                 | This hosts file, obj's will be created in memory on the run time                                                 |
+| 18   | Precedence of variables                                            | 1\. Extra 2. Play 3. Host 4. Group                                                                               |
+| 19   | register: result, result.rc, result.stdout has its own data        | result can be pass from one block to another                                                                     |
+| 20   | debug - module                                                     | Display the output in the console                                                                                |
+| 21   | ansible-playbook -i inventory playbook.yml -v                      | Shows the output in the console while it runs                                                                    |
+| 22   | Variable scope : host, play and global(sent via extra)             |                                                                                                                  |
+| 23   | Magic variables - hostvars\['web2'\].dns_server                    | using hostvars, we can call variables in other set                                                               |
+| 24   | Magic variables - group_names                                      |                                                                                                                  |
+| 25   | Magic variables - inventory_hostname                               |                                                                                                                  |
+| 26   | ansible_os_family                                                  | It has the OS of the host                                                                                        |
+| 27   | loop: "{{ packages }}"                                             | Repeats the content of the packages                                                                              |
+| 28   | ansible_facts\['os_family'\]                                       | System specific variables                                                                                        |
+| 14   | ansible-playbook --syntax-check cratafl.yml                        | Verify the syntex                                                                                                |
+| 15   | ansible-playbook --check cratafl.yml                               | pre run                                                                                                          |
+| 1    |                                                                    |                                                                                                                  |
+| 2    |                                                                    |                                                                                                                  |
+| 3    |                                                                    |                                                                                                                  |
+| 4    |                                                                    |                                                                                                                  |
+| 5    |                                                                    |                                                                                                                  |
+| 6    |                                                                    |                                                                                                                  |
+| 7    |                                                                    |                                                                                                                  |
+| 8    |                                                                    |                                                                                                                  |
+| 9    |                                                                    |                                                                                                                  |
+| 10   |                                                                    |                                                                                                                  |
+| 11   |                                                                    |                                                                                                                  |
+| 12   |                                                                    |                                                                                                                  |
+| 13   |                                                                    |                                                                                                                  |
+| 14   |                                                                    |                                                                                                                  |
+| 15   |                                                                    |                                                                                                                  |
+| 1    |                                                                    |                                                                                                                  |
+| 2    |                                                                    |                                                                                                                  |
+| 3    |                                                                    |                                                                                                                  |
+| 4    |                                                                    |                                                                                                                  |
+| 5    |                                                                    |                                                                                                                  |
+| 6    |                                                                    |                                                                                                                  |
+| 7    |                                                                    |                                                                                                                  |
+| 8    |                                                                    |                                                                                                                  |
+| 9    |                                                                    |                                                                                                                  |
+| 10   |                                                                    |                                                                                                                  |
+| 11   |                                                                    |                                                                                                                  |
+| 12   |                                                                    |                                                                                                                  |
+| 13   |                                                                    |                                                                                                                  |
+| 14   |                                                                    |                                                                                                                  |
+| 15   |                                                                    |                                                                                                                  |
+| 1    |                                                                    |                                                                                                                  |
+| 2    |                                                                    |                                                                                                                  |
+| 3    |                                                                    |                                                                                                                  |
+| 4    |                                                                    |                                                                                                                  |
+| 5    |                                                                    |                                                                                                                  |
+| 6    |                                                                    |                                                                                                                  |
+| 7    |                                                                    |                                                                                                                  |
+| 8    |                                                                    |                                                                                                                  |
+| 9    |                                                                    |                                                                                                                  |
+| 10   |                                                                    |                                                                                                                  |
+| 11   |                                                                    |                                                                                                                  |
+| 12   |                                                                    |                                                                                                                  |
+| 13   |                                                                    |                                                                                                                  |
+| 14   |                                                                    |                                                                                                                  |
+| 15   |                                                                    |                                                                                                                  |
+| 1    |                                                                    |                                                                                                                  |
+| 2    |                                                                    |                                                                                                                  |
+| 3    |                                                                    |                                                                                                                  |
+| 4    |                                                                    |                                                                                                                  |
+| 5    |                                                                    |                                                                                                                  |
+| 6    |                                                                    |                                                                                                                  |
+| 7    |                                                                    |                                                                                                                  |
+| 8    |                                                                    |                                                                                                                  |
+| 9    |                                                                    |                                                                                                                  |
+| 10   |                                                                    |                                                                                                                  |
+| 11   |                                                                    |                                                                                                                  |
+| 12   |                                                                    |                                                                                                                  |
+| 13   |                                                                    |                                                                                                                  |
+| 14   |                                                                    |                                                                                                                  |
+| 15   |                                                                    |                                                                                                                  |
 
 # Linux :
 
@@ -139,7 +139,7 @@
 | ---- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------ |
 | 1    | [kubectl get pods --all-namespaces](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables) | Cheatsheet of md(markdown)           |
 | 2    | https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac                                       | npm, nodejs installations on windows |
-| 3    | {{ }}| Jinja2 templating|
+| 3    | {{ }}                                                                                                        | Jinja2 templating                    |
 | 4    | comm                                                                                                         | $1600                                |
 | 5    | comm                                                                                                         | $12                                  |
 | 6    | comm                                                                                                         | $1                                   |
@@ -370,4 +370,4 @@
 
 # Kubernets commands
 
-runheof 808080is for thvolumeansibl/
+runheof 808080is for thvolumeansibl/ynt

@@ -20,6 +20,25 @@
           state: directory
           mode: '0755'
 
+----------------------> cratafl.yml
 
+- name: Create a file under tmp
+  hosts: all
+  tasks:
+     - name: Create a file
+       file:
+          path: /tmp/jssudha.txt
+          state: touch
+
+
+- name: del dir
+  become: true
+  hosts: all
+  tasks:
+     - name: Del dir
+       file:
+          path: /tmp/js
+          state: absent
+          #recurse: yes
 
 
