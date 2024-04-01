@@ -50,10 +50,10 @@
 | 26   | ansible_os_family                                                  | It has the OS of the host                                                                                        |
 | 27   | loop: "{{ packages }}"                                             | Repeats the content of the packages                                                                              |
 | 28   | ansible_facts\['os_family'\]                                       | System specific variables                                                                                        |
-| 14   | ansible-playbook --syntax-check cratafl.yml                        | Verify the syntex                                                                                                |
-| 15   | ansible-playbook --check cratafl.yml                               | pre run                                                                                                          |
-| 1    |                                                                    |                                                                                                                  |
-| 2    |                                                                    |                                                                                                                  |
+| 29   | ansible-playbook --syntax-check cratafl.yml                        | Verify the syntex                                                                                                |
+| 30   | ansible-playbook --check cratafl.yml                               | pre run                                                                                                          |
+| 31   |web1 ansible_host=ip.. ansible_connection=ssh ansible_ssh_pass=P@sws|Entry at the Inventory file|
+| 32   |vars: dns: 10.2  'nameserver {{ dns }}'|Define variables and calling it|
 | 3    |                                                                    |                                                                                                                  |
 | 4    |                                                                    |                                                                                                                  |
 | 5    |                                                                    |                                                                                                                  |
