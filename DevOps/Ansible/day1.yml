@@ -1,0 +1,25 @@
+- name: Just ping and print
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Ping my hosts
+      ansible.builtin.ping:
+    - name: Print message
+      ansible.builtin.debug:
+        msg: Hello world
+
+
+- name: Example ansible playbook
+  hosts: all
+  # become: true
+  tasks:
+     - name: Creates directory structure
+       ansible.builtin.file:
+          path: ~/ansible-practice/day/jai-test
+          #   path: /tmp/jai-test5
+          state: directory
+          mode: '0755'
+
+
+
+
