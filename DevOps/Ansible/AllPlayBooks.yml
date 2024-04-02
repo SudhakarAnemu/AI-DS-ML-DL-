@@ -89,3 +89,85 @@
       state: started
       enabled: yes
 
+
+---
+- name: Installing java on Node1
+  hosts: sudha #node1
+  become_user: root
+    #become: yes
+  tasks:
+      - name: Installing java on my server
+        apt:
+          name: openjdk-11-jdk
+          update-cache: true
+
+
+- name: Installing mysql on Node2
+  hosts: sudha
+  become_user: root
+  tasks:
+      - name: Installing MYSQL on Node2
+        apt:
+            name: mysql-server
+            update-cache: true
+
+#----------------------------------------------------------------------------------------------------------------
+- name: Installing Java and mysql
+  hosts: all
+  become_user: root
+  tasks:
+      - name: Installing java on my server
+        hosts: java 
+        apt:
+           name: openjdk-11-jdk
+           update-cache: true
+
+           
+		  
+	  - name: Installing mysql on my server
+	    hosts: mysql
+      apt:
+        name: mysql-server
+        update-cache: true
+
+
+#----------------------------------------------------------------------------------------------------------------
+
+- name: Install Apache
+  hosts: sudha
+  become: true
+  tasks:
+  - name: Install Apache
+    apt:
+      name: apache2
+      state: latest
+    notify:
+      - restart web service
+  handlers:
+  - name: restart web service
+    service:
+      name: apache2
+      state: restarted
+      enabled: yes
+
+
+
+# main.yml file 
+
+---
+- name: Update apt cache and install Nginx
+  ansible.builtin.apt:
+    name: nginx
+    update_cache: true
+- name: Copy index.html
+  ansible.builtin.template:
+    src: index.html
+    dest: /var/www/html/index.nginx-debian.html
+    mode: u=rwx,go=r
+- name: Copy updated.html
+  ansible.builtin.template:
+    src: updated.html
+    dest: /var/www/html/index.nginx-debian.html
+    mode: u=rwx,go=r
+  notify:
+    - Restart Nginx
