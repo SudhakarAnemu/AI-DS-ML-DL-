@@ -152,8 +152,47 @@
 
 
 
-# main.yml file 
+#------------------------------------------------------------------- : Using handlers
 
+
+# sudhakar@vm-w-2:~/ansible/ansible-handlers$ cat playbook.yml
+# for all hosts 
+---
+- name: Example Ansible playbook for Handlers
+  hosts: all
+  become: true
+  remote_user: ubuntu
+  roles:
+    - handlers
+
+  handlers:
+    - name: Restart Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
+
+# below one is to run on the local host. 
+
+ubuntu@ip-172-31-88-43:~/ansible-handler$ cat playbook.yml
+---
+- name: Example Ansible playbook for Handlers
+  hosts: localhost
+  become: true
+  remote_user: ubuntu
+  roles:
+    - handlers
+
+  handlers:
+    - name: Restart Nginx
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
+
+ubuntu@ip-172-31-88-43:~/ansible-handler$
+
+# main program. 
+
+sudhakar@vm-w-2:~/ansible/ansible-handlers/roles/handlers/tasks$ cat main.yml
 ---
 - name: Update apt cache and install Nginx
   ansible.builtin.apt:
@@ -171,3 +210,10 @@
     mode: u=rwx,go=r
   notify:
     - Restart Nginx
+sudhakar@vm-w-2:~/ansible/ansible-handlers/roles/handlers/tasks$
+
+# How to test - name: 
+1. check the OUTPUT via browser. 
+2. update the updated file. 
+3. re run the ansible program. 
+4. refresh the page.. 
