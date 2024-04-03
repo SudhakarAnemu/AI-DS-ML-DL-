@@ -74,7 +74,7 @@
 | 5    |                                                                      |                                                                                                                  |
 | 6    |                                                                      |                                                                                                                  |
 | 7    |                                                                      |                                                                                                                  |
-| 8    |galaxy creates empty role|ansible-galaxy init testing|
+| 8    |galaxy creates empty role, folder structure|ansible-galaxy init testing|
 | 9    |ansible-galaxy search elasticsearch|                                                                                                                  |
 | 10   |ansible-galaxy install geerling|It download entire playbook and store it in the local|
 | 11   |Install path|root .ansible roles folder or files|
