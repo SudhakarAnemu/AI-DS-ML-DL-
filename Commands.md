@@ -74,11 +74,11 @@
 | 5    |                                                                      |                                                                                                                  |
 | 6    |                                                                      |                                                                                                                  |
 | 7    |                                                                      |                                                                                                                  |
-| 8    |                                                                      |                                                                                                                  |
-| 9    |                                                                      |                                                                                                                  |
-| 10   |                                                                      |                                                                                                                  |
-| 11   |                                                                      |                                                                                                                  |
-| 12   |                                                                      |                                                                                                                  |
+| 8    |galaxy creates empty role|ansible-galaxy init testing|
+| 9    |ansible-galaxy search elasticsearch|                                                                                                                  |
+| 10   |ansible-galaxy install geerling|It download entire playbook and store it in the local|
+| 11   |Install path|root .ansible roles folder or files|
+| 12   |ansible-galaxy info user or rolename|                                                                                                                  |
 | 13   |                                                                      |                                                                                                                  |
 | 14   |                                                                      |                                                                                                                  |
 | 15   |                                                                      |                                                                                                                  |
