@@ -1,4 +1,7 @@
-# Prometheus 
+# Prometheus alerting and monitoring. 
+Auther - Sean Bradley
+--> Below url has all related links
+https://sbcode.net/prometheus/delete-timeseries/
 
 ----------------------------------------------------------------------------------------------------------------------------
 1. Installations. 
@@ -14,6 +17,13 @@ prometheus, version 2.31.2+ds1 (branch: debian/sid, revision: 2.31.2+ds1-1ubuntu
   go version:       go1.18.1
   platform:         linux/amd64
 root@ip-172-31-88-43:~#
+
+User will be created : 
+
+root@ip-172-31-88-43:~# cat /etc/passwd | grep -i prom
+prometheus:x:115:122:Prometheus daemon,,,:/var/lib/prometheus:/usr/sbin/nologin
+root@ip-172-31-88-43:~#
+
 
 d. systemctl status prometheus
 e. systemctl prometheus-node-exporter status
@@ -101,8 +111,48 @@ There, we can see the new node details under the endpoint.
 
 
 ---------------------------------------------------------------------------------------------------------------------------- 0405 - HitachiSreTraining
+8. Deleting time series data . 
+graph -> go_threads -> (there you can see couple of entries.)
+
+You need to enable the admin API in Prometheus before you can.
+sudo nano /etc/default/prometheus
+Add --web.enable-admin-api to the ARGS="" variable. E.g.,
+ARGS="--web.enable-admin-api"
+
+sudo service prometheus restart
+sudo service prometheus status
+
+Beofre : 
+status -> command-line flags -> web.enable-admin-api 	false
+--> set above line (ARGS) at prometheus file and restart the service. 
+then web.enable-admin-api becomes true. 
+
+Run below command : 
+curl -X POST -g 'http://localhost:9090/api/v1/admin/tsdb/delete_series?match[]={instance="sbcode.net:9100"}'
+--> Here we need to give the exact one (need to copy from the graph (go_threads) instead of sbcode.net:9100.. 
+
+
+
 
 ----------------------------------------------------------------------------------------------------------------------------
+9. promoql : 
+scrape_duration_seconds --> give this at expressions. 
+It gives 3 situations. = scrapes 
+scrape_duration_seconds{job="node"}
+scrape_duration_seconds{instance="3.80.75.50:9100"}
+Above one will give only one entry. This way we can see the details of an entry . 
+Now search for - 
+a. node_cpu_seconds_total
+b. node_cpu_seconds_total{mode=~".*irq"} ----------> for specific set. 
+c. soft.* --> we can use any regular expression. 
+d. scrape_duration_seconds{instance="localhost:9100"} 
+e. scrape_duration_seconds{instance="localhost:9100"}[2m]
+f. scrape_duration_seconds[5m] --> gives for all of the instances. 
+g. 
+
+
+
+
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
