@@ -372,13 +372,13 @@
 
 | S.No | Command | Description |
 | ---- | ------- | ----------- |
-| 1    |Install Urls         |https://www.openwriteup.com/             |
-| 2    |Install Urls         |https://github.com/lerndevops/kubernetes             |
-| 3    |         |             |
-| 4    |         |             |
-| 5    |         |             |
-| 6    |         |             |
-| 7    |         |             |
+| 1    |Install Urls|https://www.openwriteup.com/             |
+| 2    |Install Urls|https://github.com/lerndevops/kubernetes             |
+| 3    |kubectl get all --all-namespaces|Gets info from all NSs|
+| 4    |kubectl get nodes -o wide|Gets node details + Master|
+| 5    |kubeadm token create --print-join-command|OP should be run on worker nodes|
+| 6    |kubectl get pods --all-namespaces -o wide|             |
+| 7    |kubectl run nginx --image=nginx|             |
 | 8    |         |             |
 | 9    |         |             |
 | 10   |         |             |
