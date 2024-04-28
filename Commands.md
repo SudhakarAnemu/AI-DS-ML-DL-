@@ -370,4 +370,20 @@
 
 # Kubernets commands
 
-runheof 808080is for thvolumeansibl/ynt
+| S.No | Command | Description |
+| ---- | ------- | ----------- |
+| 1    |Install Urls         |https://www.openwriteup.com/             |
+| 2    |Install Urls         |https://github.com/lerndevops/kubernetes             |
+| 3    |         |             |
+| 4    |         |             |
+| 5    |         |             |
+| 6    |         |             |
+| 7    |         |             |
+| 8    |         |             |
+| 9    |         |             |
+| 10   |         |             |
+| 11   |         |             |
+| 12   |         |             |
+| 13   |         |             |
+| 14   |         |             |
+| 15   |         |             |
