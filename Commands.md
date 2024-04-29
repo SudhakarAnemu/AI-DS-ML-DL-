@@ -378,11 +378,11 @@
 | 4    |kubectl get nodes -o wide|Gets node details + Master|
 | 5    |kubeadm token create --print-join-command|OP should be run on worker nodes|
 | 6    |kubectl get pods --all-namespaces -o wide|             |
-| 7    |kubectl run nginx --image=nginx|             |
-| 8    |         |             |
-| 9    |         |             |
-| 10   |         |             |
-| 11   |         |             |
+| 7    |kubectl run nginx --image=nginx -n ns|             |
+| 8    |kubectl get namespaces, kubectl get ns|             |
+| 9    |kubectl get pods -n kube-system|             |
+| 10   |kubectl create ns jsns|             |
+| 11   |kubectl describe pod nginx -n jsns|             |
 | 12   |         |             |
 | 13   |         |             |
 | 14   |         |             |
