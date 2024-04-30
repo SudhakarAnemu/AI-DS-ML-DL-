@@ -383,7 +383,29 @@
 | 9    |kubectl get pods -n kube-system|             |
 | 10   |kubectl create ns jsns|             |
 | 11   |kubectl describe pod nginx -n jsns|             |
+| 12   |kubectl describe pod jsmypod -n jsns|             |
 | 12   |kubectl run nginx2 --image nginx -n jsns|             |
-| 13   |         |             |
-| 14   |         |             |
-| 15   |         |             |
+| 13   |kubectl api-resources |             |
+| 14   |  kubectl explain      |   explain =pod, ingresses          |
+| 15   |  kubectl create -f pods.yaml   |    create of apply         |
+| 16   | kubectl run mynginx --image nginx -n jsns --dry-run=client -o yaml  |   Imperative commands       |
+| 17   |         |             |
+| 18   |         |             |
+| 19   |         |             |
+| 20   |         |             |
+| 21   |         |             |
+| 22   |         |             |
+| 23   |         |             |
+| 24   |         |             |
+| 25   |         |             |
+| 24   |         |             |
+| 25   |         |             |
+| 26   |         |             |
+| 27   |         |             |
+| 28   |         |             |
+| 29   |         |             |
+| 30   |         |             |
+| 31   |         |             |
+| 32   |         |             |
+| 33   |         |             |
+
