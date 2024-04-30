@@ -383,7 +383,7 @@
 | 9    |kubectl get pods -n kube-system|             |
 | 10   |kubectl create ns jsns|             |
 | 11   |kubectl describe pod nginx -n jsns|             |
-| 12   |         |             |
+| 12   |kubectl run nginx2 --image nginx -n jsns|             |
 | 13   |         |             |
 | 14   |         |             |
 | 15   |         |             |
