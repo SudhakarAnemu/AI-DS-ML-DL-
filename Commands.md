@@ -386,10 +386,10 @@
 | 12   |kubectl describe pod jsmypod -n jsns|             |
 | 12   |kubectl run nginx2 --image nginx -n jsns|             |
 | 13   |kubectl api-resources |             |
-| 14   |  kubectl explain      |   explain =pod, ingresses          |
+| 14   |  kubectl explain Pod      |   explain =pod, ingresses, ns          |
 | 15   |  kubectl create -f pods.yaml   |    create of apply         |
 | 16   | kubectl run mynginx --image nginx -n jsns --dry-run=client -o yaml  |   Imperative commands       |
-| 17   |         |             |
+| 17   |   kubectl describe pod -n jsns jsmypod |             |
 | 18   |         |             |
 | 19   |         |             |
 | 20   |         |             |
