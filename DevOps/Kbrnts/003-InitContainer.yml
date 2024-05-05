@@ -1,7 +1,7 @@
 #init container
 
 apiVersion: v1
-kind: pod
+kind: Pod
 metadata:
   name: myapp-pod
   labels:
