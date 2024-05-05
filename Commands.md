@@ -390,8 +390,9 @@
 | 15   |  kubectl create -f pods.yaml   |    create of apply         |
 | 16   | kubectl run mynginx --image nginx -n jsns --dry-run=client -o yaml  |   Imperative commands       |
 | 17   |   kubectl describe pod -n jsns jsmypod |             |
-| 18   |         |             |
-| 19   |         |             |
+| 18   |Single container pod|             |
+| 18   |Multi container pod|             |
+| 19   |Init container pod       |It starts before the actual container starts, it will destroy before starting the main container, we can have multiple init containers  |
 | 20   |         |             |
 | 21   |         |             |
 | 22   |         |             |
