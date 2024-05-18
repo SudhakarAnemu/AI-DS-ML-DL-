@@ -393,8 +393,8 @@
 | 18   |Single container pod|             |
 | 18   |Multi container pod|             |
 | 19   |Init container pod       |It starts before the actual container starts, it will destroy before starting the main container, we can have multiple init containers  |
-| 20   |         |             |
-| 21   |         |             |
+| 20   |Delete a pod|kubectl delete pod myapp-pod1 -n jsns|
+| 21   |watch command|gives output for every 2 seconds|
 | 22   |         |             |
 | 23   |         |             |
 | 24   |         |             |
