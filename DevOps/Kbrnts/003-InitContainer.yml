@@ -14,6 +14,8 @@ spec:
     ports:
     - containerPort: 8080
   initContainers:
-  - name: init-myservice
-    image: buysbox
+  - name: init-busybox
+    image: busybox
     command: ['sh', '-c', 'sleep 60']
+  - name: init-alpine
+    image: alpine
