@@ -399,8 +399,8 @@
 | 23   |paths|/var/lib/kubelet, /etc/kubernetes|
 | 24   |root@node2:/etc/kubernetes/manifests#|pods will be created for the yml file mentioned in this directory|
 | 25   |   How to find the difference between normal and static pod      |static pods will append with the name of node. Ex : tomcatpod-node2|
-| 24   |         |             |
-| 25   |         |             |
+| 24   |Types of multi containers|1. Ambassedor, 2. sidecar, 3. Adapter|
+| 25   | Check logs of pods        |     kubectl logs mc1 -n jsns        |
 | 26   |         |             |
 | 27   |         |             |
 | 28   |         |             |
