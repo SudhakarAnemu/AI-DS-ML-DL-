@@ -395,10 +395,10 @@
 | 19   |Init container pod       |It starts before the actual container starts, it will destroy before starting the main container, we can have multiple init containers  |
 | 20   |Delete a pod|kubectl delete pod myapp-pod1 -n jsns|
 | 21   |watch command|gives output for every 2 seconds|
-| 22   |         |             |
-| 23   |         |             |
-| 24   |         |             |
-| 25   |         |             |
+| 22   |     Static pod-will be create it on worker node    |Kubelet will create a pod and there is no involvement of api server|
+| 23   |paths|/var/lib/kubelet, /etc/kubernetes|
+| 24   |root@node2:/etc/kubernetes/manifests#|pods will be created for the yml file mentioned in this directory|
+| 25   |   How to find the difference between normal and static pod      |static pods will append with the name of node. Ex : tomcatpod-node2|
 | 24   |         |             |
 | 25   |         |             |
 | 26   |         |             |
