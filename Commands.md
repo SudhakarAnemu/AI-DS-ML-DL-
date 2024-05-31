@@ -401,12 +401,34 @@
 | 25   |   How to find the difference between normal and static pod      |static pods will append with the name of node. Ex : tomcatpod-node2|
 | 24   |Types of multi containers|1. Ambassedor, 2. sidecar, 3. Adapter|
 | 25   | Check logs of pods        |     kubectl logs mc1 -n jsns        |
-| 26   |         |             |
-| 27   |         |             |
-| 28   |         |             |
-| 29   |         |             |
-| 30   |         |             |
+| 26   | Check running logs of a pod        |  kubectl logs -f mc1 -n jsns           |
+| 27   | kubectl exec -it -n jsns mc1 -c 1st -- /bin/bash        |     Go inside the container, mc1 is a pod and 1st is a container        |
+| 28   |  kubectl explain replicaset       |   Shows all options of the replicaset          |
+| 29   |3 Imp points for the Replica set         | 1. replica 2. selector 3. template            |
+| 30   | kubectl get replicaset -n jsns -o wide        |    List out all replicasets         |
+| 31   |  kubectl scale replicaset myrs -n jsns --replicas 10 or we can update at the yml file      |  Increase or decrease the number of pods at the replicaset           |
+| 32   |     kubectl delete pod <pod> -n jsns    |  Delete a pod           |
+| 33   |         |             |
 | 31   |         |             |
 | 32   |         |             |
 | 33   |         |             |
+| 31   |         |             |
+| 32   |         |             |
+| 33   |         |             |
+| 31   |         |             |
+| 32   |         |             |
+| 33   |         |             |
+| 31   |         |             |
+| 32   |         |             |
+| 33   |         |             |
+| 31   |         |             |
+| 32   |         |             |
+| 33   |         |             |
+| 31   |         |             |
+| 32   |         |             |
+| 33   |         |             |
+| 31   |         |             |
+| 32   |         |             |
+| 33   |         |             |
+
 
