@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+   name: mc1
+   namespace: jsns
+spec:
+   volumes:
+   - name: html
+     emptyDir: {}
+   containers:
+   - name: 1st
+     image: nginx
+     volumeMounts:
+     - name: html
+       mountPath: /usr/share/nginx/html
+   - name: 2nd
+     image: debian
+     volumeMounts:
+     - name:  html
+       mountPath: /usr/share/nginx/html
+     command: ["/bin/sh", "-c"]
+     args:
+      - while true; do
+           date >> /html/index.html;
+           sleep 1;
+
+                        node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                From               Message
+  ----     ------     ----               ----               -------
+  Normal   Scheduled  44s                default-scheduler  Successfully assigned jsns/mc1 to node2
+  Normal   Pulling    44s                kubelet            Pulling image "nginx"
+  Normal   Pulled     33s                kubelet            Successfully pulled image "nginx" in 10.811s (10.811s including waiting)
+  Normal   Created    33s                kubelet            Created container 1st
+  Normal   Started    33s                kubelet            Started container 1st
+  Normal   Pulled     26s                kubelet            Successfully pulled image "debian" in 6.202s (6.202s including waiting)
+  Normal   Pulled     25s                kubelet            Successfully pulled image "debian" in 314ms (314ms including waiting)
+  Normal   Pulling    10s (x3 over 33s)  kubelet            Pulling image "debian"
+  Normal   Created    9s (x3 over 26s)   kubelet            Created container 2nd
+  Normal   Started    9s (x3 over 26s)   kubelet            Started container 2nd
+  Warning  BackOff    9s (x3 over 24s)   kubelet            Back-off restarting failed container 2nd in pod mc1_jsns(c3b32f09-b60f-4fc6-a77d-a950ddb799de)
+  Normal   Pulled     9s                 kubelet            Successfully pulled image "debian" in 304ms (304ms including waiting)
+root@master:~/kubernets#
