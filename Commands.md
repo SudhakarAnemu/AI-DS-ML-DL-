@@ -194,7 +194,7 @@
 | 7    | docker run --name ournginx -d -p 8080:80 nginx                                               | export the port of 80 container to outside 8080                                                          |
 | 8    | curl http://localhost:8080                                                                   |                                                                                                          |
 | 9    | docker run -p 8080:80 --name web_nginx2 -v ${PWD}/webpages:/usr/share/nginx/html:ro -d nginx | dash v is for the volume                                                                                 |
-| 10   |                                                                                              |                                                                                                          |
+| 10   | docker info                                                                                             |shows all details of the docker, number of images, run time|
 | 11   |                                                                                              |                                                                                                          |
 | 12   |                                                                                              |                                                                                                          |
 | 13   |                                                                                              |                                                                                                          |
