@@ -195,7 +195,7 @@
 | 8    | curl http://localhost:8080                                                                   |                                                                                                          |
 | 9    | docker run -p 8080:80 --name web_nginx2 -v ${PWD}/webpages:/usr/share/nginx/html:ro -d nginx | dash v is for the volume                                                                                 |
 | 10   | docker info                                                                                             |shows all details of the docker, number of images, run time|
-| 11   |                                                                                              |                                                                                                          |
+| 11   |docker container exec -it docker-exec bash|Login to the container|
 | 12   |                                                                                              |                                                                                                          |
 | 13   |                                                                                              |                                                                                                          |
 | 14   |                                                                                              |                                                                                                          |
