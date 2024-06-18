@@ -20,7 +20,7 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 echo \
   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
- 
+ h
  
 apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io
@@ -90,7 +90,13 @@ Server:
 
 root@master:~#
 
-----------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------- exec 
+root@master:~# docker container exec -it jsnginx /bin/bash
+root@247dc6fabebf:/# hostname
+247dc6fabebf
+root@247dc6fabebf:/#
+
+
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
