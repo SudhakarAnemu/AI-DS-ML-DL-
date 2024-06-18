@@ -98,7 +98,46 @@ root@247dc6fabebf:/#
 
 
 ----------------------------------------------------------------------------------------------------------------------------
+root@master:~# docker system df
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          1         1         187.7MB   0B (0%)
+Containers      11        0         5.465kB   5.465kB (100%)
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B
+root@master:~#
+
 ----------------------------------------------------------------------------------------------------------------------------
+root@master:~# docker system df -v
+Images space usage:
+
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE      SHARED SIZE   UNIQUE SIZE   CONTAINERS
+nginx        latest    4f67c83422ec   2 weeks ago   188MB     0B            187.7MB       11
+
+Containers space usage:
+
+CONTAINER ID   IMAGE     COMMAND                  LOCAL VOLUMES   SIZE      CREATED       STATUS                    NAMES
+a0636c19ec48   nginx     "/docker-entrypoint.…"   0               0B        5 days ago    Exited (0) 5 days ago     fervent_jepsen
+15abaaddb31a   nginx     "/docker-entrypoint.…"   0               0B        5 days ago    Exited (137) 5 days ago   js3
+aa19972525c0   nginx     "/docker-entrypoint.…"   0               0B        5 days ago    Exited (0) 5 days ago     js2
+3cd40887ec02   nginx     "/docker-entrypoint.…"   0               1.09kB    5 days ago    Exited (0) 5 days ago     js1
+2f24a0b580b0   nginx     "/docker-entrypoint.…"   0               0B        5 days ago    Exited (127) 5 days ago   infallible_keldysh
+fa276cc5f78c   nginx     "/docker-entrypoint.…"   0               0B        5 days ago    Exited (127) 5 days ago   unruffled_lederberg
+1a2d0ea0dfd4   nginx     "/docker-entrypoint.…"   0               0B        5 days ago    Exited (0) 5 days ago     lucid_hugle
+945e74e461f7   nginx     "/docker-entrypoint.…"   0               1.09kB    5 days ago    Exited (0) 5 days ago     naughty_hopper
+2f53d70e7310   nginx     "/docker-entrypoint.…"   0               1.09kB    5 days ago    Exited (0) 5 days ago     unruffled_feistel
+4830a8f4fbb7   nginx     "/docker-entrypoint.…"   0               1.09kB    5 days ago    Exited (0) 5 days ago     tender_mcnulty
+247dc6fabebf   nginx     "/docker-entrypoint.…"   0               1.09kB    13 days ago   Exited (0) 6 days ago     jsnginx
+
+Local Volumes space usage:
+
+VOLUME NAME   LINKS     SIZE
+
+Build cache usage: 0B
+
+CACHE ID   CACHE TYPE   SIZE      CREATED   LAST USED   USAGE     SHARED
+root@master:~#
+
+
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------

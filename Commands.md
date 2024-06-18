@@ -119,7 +119,7 @@
 | ---- | ---------- | ------------------------------ |
 | 1    | diff -wsru | Diff between old and new files |
 | 2    |/etc/init.d/nginx status|check the status of nginx|
-| 3    |            |                                |
+| 3    |dd if=/dev/zero of=bigfile.txt bs=1M count=500|creates a 500mb file|
 | 4    |            |                                |
 | 5    |            |                                |
 | 6    |            |                                |
@@ -200,12 +200,12 @@
 | 13   |Default container command|entry point, it shows under command|
 | 14   |Change the default container command|update CMD section at image file|
 | 15   |docker container run -d nginx sleep 20|it will change the default command|
-| 2    |                                                                                              |                                                                                                          |
-| 3    |                                                                                              |                                                                                                          |
-| 4    |                                                                                              |                                                                                                          |
-| 5    |                                                                                              |                                                                                                          |
-| 6    |                                                                                              |                                                                                                          |
-| 7    |                                                                                              |                                                                                                          |
+| 2    |docker container run -d --restart unless-stopped nginx|Its uses on prod, it restart unless it is stopped|
+| 3    |docker rm mynginx|mynginx is a container, this command is to delete a container|
+| 4    |docker system df|shows images, containers, local volumes, cache|
+| 5    |docker system df -v|shows per component, full details|
+| 6    |docker container run -dt --rm --name tecstcont busybox ping -c10 google.com|automatically delete the container after 10 pings|
+| 7    |docker container run --help - grep rm|shows rm only|
 | 8    |                                                                                              |                                                                                                          |
 | 9    |                                                                                              |                                                                                                          |
 | 10   |                                                                                              |                                                                                                          |

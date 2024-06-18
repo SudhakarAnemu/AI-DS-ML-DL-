@@ -199,7 +199,7 @@
 | 12   |  docker container exec -it jsnginx /bin/bash                                                                                          | i - stdin Interactive, t - tty |
 | 13   |Default container command|entry point, it shows under command|
 | 14   |Change the default container command|update CMD section at image file|
-| 15   |                                                                                              |                                                                                                          |
+| 15   |docker container run -d nginx sleep 20|it will change the default command|
 | 2    |                                                                                              |                                                                                                          |
 | 3    |                                                                                              |                                                                                                          |
 | 4    |                                                                                              |                                                                                                          |
