@@ -1,0 +1,76 @@
+# js 
+
+root@wnode2:~/dockerdemo/first# docker container run -dt --name busybox busybox sh
+Unable to find image 'busybox:latest' locally
+latest: Pulling from library/busybox
+ec562eabd705: Pull complete
+Digest: sha256:9ae97d36d26566ff84e8893c64a6dc4fe8ca6d1144bf5b87b2b85a32def253c7
+Status: Downloaded newer image for busybox:latest
+1e6ec7340b9dce634f7734174702d04dbed32cd11d6d6451ca3850546c12c46f
+root@wnode2:~/dockerdemo/first# docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+1e6ec7340b9d   busybox        "sh"                     6 seconds ago    Up 5 seconds                                            busybox
+671c653b807a   62e50731c26a   "/bin/sh -c 'nginx -…"   22 minutes ago   Up 22 minutes   0.0.0.0:8000->80/tcp, :::8000->80/tcp   mycustomnginx2
+6cbb2c42423c   62e50731c26a   "/bin/sh -c 'nginx -…"   22 minutes ago   Up 22 minutes                                           mycustomnginx1
+root@wnode2:~/dockerdemo/first# docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+<none>       <none>    62e50731c26a   57 minutes ago   124MB
+busybox      latest    65ad0d468eb1   13 months ago    4.26MB
+root@wnode2:~/dockerdemo/first#
+
+root@wnode2:~/dockerdemo/first# docker inspect busybox | grep -i ipaddress
+            "SecondaryIPAddresses": null,
+            "IPAddress": "172.17.0.4",
+                    "IPAddress": "172.17.0.4",
+root@wnode2:~/dockerdemo/first#
+
+root@wnode2:~/dockerdemo/first# docker build -t jsmonitor .
+[+] Building 0.1s (5/5) FINISHED                                                                                                                                 docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                       0.0s
+ => => transferring dockerfile: 101B                                                                                                                                       0.0s
+ => [internal] load metadata for docker.io/library/busybox:latest                                                                                                          0.0s
+ => [internal] load .dockerignore                                                                                                                                          0.0s
+ => => transferring context: 2B                                                                                                                                            0.0s
+ => CACHED [1/1] FROM docker.io/library/busybox:latest                                                                                                                     0.0s
+ => exporting to image                                                                                                                                                     0.0s
+ => => exporting layers                                                                                                                                                    0.0s
+ => => writing image sha256:0fb068e8df13ac0796c8d2ecc5725c16cf7335498b202aff89d6bbac5ef64bc2                                                                               0.0s
+ => => naming to docker.io/library/jsmonitor       
+
+root@wnode2:~/dockerdemo/first# cat Dockerfile
+FROM busybox
+HEALTHCHECK --interval=5s CMD ping -c 1 172.17.0.2
+root@wnode2:~/dockerdemo/first#
+
+root@wnode2:~/dockerdemo/first# docker container run -td --name monitor jsmonitor sh
+53a3c501e6ae1d5c0044d27d4da5949ba7c93d32d1e30857e7fc288061ed42ff
+root@wnode2:~/dockerdemo/first# docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                           PORTS                                   NAMES
+53a3c501e6ae   jsmonitor      "sh"                     2 seconds ago    Up 1 second (health: starting)                                           monitor
+1e6ec7340b9d   busybox        "sh"                     6 minutes ago    Up 6 minutes                                                             busybox
+671c653b807a   62e50731c26a   "/bin/sh -c 'nginx -…"   29 minutes ago   Up 29 minutes                    0.0.0.0:8000->80/tcp, :::8000->80/tcp   mycustomnginx2
+6cbb2c42423c   62e50731c26a   "/bin/sh -c 'nginx -…"   29 minutes ago   Up 29 minutes                                                            mycustomnginx1
+root@wnode2:~/dockerdemo/first#
+
+
+
+root@wnode2:~/dockerdemo/first# docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                    PORTS                                   NAMES
+53a3c501e6ae   jsmonitor      "sh"                     21 seconds ago   Up 20 seconds (healthy)                                           monitor
+1e6ec7340b9d   busybox        "sh"                     6 minutes ago    Up 6 minutes                                                      busybox
+671c653b807a   62e50731c26a   "/bin/sh -c 'nginx -…"   29 minutes ago   Up 29 minutes             0.0.0.0:8000->80/tcp, :::8000->80/tcp   mycustomnginx2
+6cbb2c42423c   62e50731c26a   "/bin/sh -c 'nginx -…"   29 minutes ago   Up 29 minutes                                                     mycustomnginx1
+
+
+--> Stopped the busy box container and then the status changed to unhealthy
+
+root@wnode2:~/dockerdemo/first# docker ps
+CONTAINER ID   IMAGE       COMMAND   CREATED              STATUS                        PORTS     NAMES
+53a3c501e6ae   jsmonitor   "sh"      About a minute ago   Up About a minute (healthy)             monitor
+root@wnode2:~/dockerdemo/first# docker ps
+CONTAINER ID   IMAGE       COMMAND   CREATED         STATUS                     PORTS     NAMES
+53a3c501e6ae   jsmonitor   "sh"      2 minutes ago   Up 2 minutes (unhealthy)             monitor
+root@wnode2:~/dockerdemo/first#
+
+
+

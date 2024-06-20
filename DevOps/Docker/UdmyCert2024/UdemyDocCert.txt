@@ -1,4 +1,4 @@
-js
+bjs
 
 --------------------------------------------------------Installations--------------------------------------------------------------------
 https://docs.docker.com/engine/install/ubuntu/
@@ -139,7 +139,46 @@ root@master:~#
 
 
 ----------------------------------------------------------------------------------------------------------------------------
+root@wnode2:~/dockerdemo/first# docker run -td --name tmp --health-cmd "curl -f http://localhost" busybox sh
+1bb34fa1fe270cdc5628177a5d6928818e11152c65a240ed1d7a5b95d049cbd8
+
+root@wnode2:~/dockerdemo/first# docker ps
+CONTAINER ID   IMAGE       COMMAND   CREATED              STATUS                                 PORTS     NAMES
+1bb34fa1fe27   busybox     "sh"      About a minute ago   Up About a minute (health: starting)             tmp
+53a3c501e6ae   jsmonitor   "sh"      23 minutes ago       Up 23 minutes (healthy)                          monitor
+root@wnode2:~/dockerdemo/first# docker ps
+CONTAINER ID   IMAGE       COMMAND   CREATED              STATUS                          PORTS     NAMES
+1bb34fa1fe27   busybox     "sh"      About a minute ago   Up About a minute (unhealthy)             tmp
+53a3c501e6ae   jsmonitor   "sh"      23 minutes ago       Up 23 minutes (healthy)                   monitor
+root@wnode2:~/dockerdemo/first#
+
+root@wnode2:~# docker run -td --name tmp --health-cmd "curl -f http://localhost" --health-interval=5s busybox sh
+2268ad0c48802c06b91b06b96cc71e6c2dfcbae215bb35758d8a3c6a0044b2ae
+root@wnode2:~# docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                      PORTS     NAMES
+2268ad0c4880   busybox   "sh"      44 seconds ago   Up 43 seconds (unhealthy)             tmp
+root@wnode2:~#
+
+
+
 ----------------------------------------------------------------------------------------------------------------------------
+Document - HealtCheck Document Resource
+Documentation Referred:
+
+https://docs.docker.com/engine/reference/builder/
+
+https://docs.docker.com/engine/reference/run/#healthcheck
+
+Code Used:
+
+docker run -dt --name tmp  --health-cmd "curl --fail http://localhost" --health-interval=5s busybox sh
+ 
+docker run -dt --name tmp2 --health-cmd "curl -f http://localhost" --health-interval=5s --health-retries=1 busybox sh
+ 
+curl  http://dexter.kplabs.in/test
+ 
+curl -f http://dexter.kplabs.in/test214.txt
+
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
