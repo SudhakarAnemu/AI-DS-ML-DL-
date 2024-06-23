@@ -306,7 +306,12 @@
 | 12   |                                                                          |                      |
 | 13   |                                                                          |                      |
 | 14   |                                                                          |                      |
+<<<<<<< HEAD
 | 15   |                                                                          |                      |
+=======
+| 15   |    zzzzzzz                                                                     |                      |
+| 15   |this is a new linge |updated by deepa|
+>>>>>>> 8c808233e7787fe738736f032cc4dfddb8cd7037
 
 # Git commands (Git and Git actions)
 
