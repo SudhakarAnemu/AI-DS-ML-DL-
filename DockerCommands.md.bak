@@ -69,7 +69,7 @@
 | 64    |ENV key value|This key can be used as an environment varibale.|
 | 65    |docker run -itd --name ennvm --env USER=JSSUDHA ubuntu sh |This way we can define environment variables. |
 | 66   |docker build -t demo:v1|Build an image with a tag|
-| 67   |docker tag ubunut:latest myubuntu:v1 |Change the name of the tag of an image|
+| 67   |                                                                                              |                                                                                                          |
 | 68   |                                                                                              |                                                                                                          |
 | 69   |                                                                                              |                                                                                                          |
 | 70   |                                                                                              |                                                                                                          |

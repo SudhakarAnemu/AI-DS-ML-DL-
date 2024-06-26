@@ -1,3 +1,10 @@
+# chat gpt :
+
+1.  open ai :https://chatgpt.com
+2.  g
+
+# google. :
+
 # Sample
 
 | S.No | Command | Description |
@@ -74,13 +81,13 @@
 | 5    |                                                                      |                                                                                                                  |
 | 6    |                                                                      |                                                                                                                  |
 | 7    |                                                                      |                                                                                                                  |
-| 8    |galaxy creates empty role, folder structure|ansible-galaxy init testing|
-| 9    |ansible-galaxy search elasticsearch|                                                                                                                  |
-| 10   |ansible-galaxy install geerling|It download entire playbook and store it in the local|
-| 11   |Install path|root ->  .ansible -> roles -> folder or files|
-| 12   |ansible-galaxy info user or rolename|                                                                                                                  |
-| 13   |ansible-galaxy collection init test|Creates a folder structure|
-| 14   |ansible-galaxy collection build|Creates a gz file|
+| 8    | galaxy creates empty role, folder structure                          | ansible-galaxy init testing                                                                                      |
+| 9    | ansible-galaxy search elasticsearch                                  |                                                                                                                  |
+| 10   | ansible-galaxy install geerling                                      | It download entire playbook and store it in the local                                                            |
+| 11   | Install path                                                         | root -> .ansible -> roles -> folder or files                                                                     |
+| 12   | ansible-galaxy info user or rolename                                 |                                                                                                                  |
+| 13   | ansible-galaxy collection init test                                  | Creates a folder structure                                                                                       |
+| 14   | ansible-galaxy collection build                                      | Creates a gz file                                                                                                |
 | 15   |                                                                      |                                                                                                                  |
 | 1    |                                                                      |                                                                                                                  |
 | 2    |                                                                      |                                                                                                                  |
@@ -115,23 +122,23 @@
 
 # Linux :
 
-| S.No | Command    | Description                    |
-| ---- | ---------- | ------------------------------ |
-| 1    | diff -wsru | Diff between old and new files |
-| 2    |/etc/init.d/nginx status|check the status of nginx|
-| 3    |dd if=/dev/zero of=bigfile.txt bs=1M count=500|creates a 500mb file|
-| 4    |netstat -ntlp|Shows port and status|
-| 5    |apt-get install -y nginx|Automatic installations|
-| 6    |/etc/init.d/nginx status|shows the status of the nginx|
-| 7    |curl -f url|fail silently|
-| 8    |curl -f url pipe pipe exit 1|two pipes|
-| 9    |curl -f url piple exit 1|one pipe which shows some data|
-| 10   |            |                                |
-| 11   |            |                                |
-| 12   |            |                                |
-| 13   |            |                                |
-| 14   |            |                                |
-| 15   |            |                                |
+| S.No | Command                                        | Description                    |
+| ---- | ---------------------------------------------- | ------------------------------ |
+| 1    | diff -wsru                                     | Diff between old and new files |
+| 2    | /etc/init.d/nginx status                       | check the status of nginx      |
+| 3    | dd if=/dev/zero of=bigfile.txt bs=1M count=500 | creates a 500mb file           |
+| 4    | netstat -ntlp                                  | Shows port and status          |
+| 5    | apt-get install -y nginx                       | Automatic installations        |
+| 6    | /etc/init.d/nginx status                       | shows the status of the nginx  |
+| 7    | curl -f url                                    | fail silently                  |
+| 8    | curl -f url pipe pipe exit 1                   | two pipes                      |
+| 9    | curl -f url piple exit 1                       | one pipe which shows some data |
+| 10   |                                                |                                |
+| 11   |                                                |                                |
+| 12   |                                                |                                |
+| 13   |                                                |                                |
+| 14   |                                                |                                |
+| 15   |                                                |                                |
 
 # httUrls and abbrevations
 
@@ -155,79 +162,79 @@
 
 # Docker
 
-| S.No | Command   rm                                                                                   | Description                                                                                              |
-| ---- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| 1    | /var/lib/docker                                                                              | Working dir                                                                                              |
-| 2    | systemctl enable docker                                                                      |                                                                                                          |
-| 3    | systemctl start docker                                                                       |                                                                                                          |
-| 4    | systemctl stop docker                                                                        |                                                                                                          |
-| 5    | docker version                                                                               |                                                                                                          |
-| 7    | docker ps, docker ps -a                                                                      |                                                                                                          |
-| 8    | docker stop \<container id>                                                                  |                                                                                                          |
-| 9    | docker ps -a                                                                                 |                                                                                                          |
-| 11   | docker images                                                                                |                                                                                                          |
-| 12   | docker inspect \<container id>                                                               |                                                                                                          |
-| 13   | docker -help                                                                                 |                                                                                                          |
-| 14   | docker pull nginx                                                                            |                                                                                                          |
-| 15   | docker history nginx                                                                         |                                                                                                          |
-| 16   | docker images --no-trunc                                                                     |                                                                                                          |
-| 17   | docker tag nginx:latest nginx:myblog_stable                                                  |                                                                                                          |
-| 18   | docker build -t mynginx .                                                                    | Build an image by using docker file                                                                      |
-| 19   | docker rmi nginx:myblog                                                                      | Remove an image                                                                                          |
-| 20   | docker rmi -f \<name of the image>                                                           |delete an image|
-| 7    | docker image prune                                                                           | delete images which does not have containers                                                             |
-| 8    | docker system prune -a                                                                       |                                                                                                          |
-| 9    | docker system df                                                                             |                                                                                                          |
-| 10   | docker search jenkins                                                                        |                                                                                                          |
-| 11   | docker search -- limit 5                                                                     |                                                                                                          |
-| 13   | docker ps -l                                                                                 | Shows latest container                                                                                   |
-| 14   | docker stop, start                                                                           |                                                                                                          |
-| 15   | docker rm \<container number>                                                                |                                                                                                          |
-| 3    | docker kill \<container id>                                                                  | Forcibly stop a container                                                                                |
-| 5    | docker logs -t \<cont id>                                                                    |                                                                                                          |
-| 6    | docker logs -tf \<cont id>                                                                   |                                                                                                          |
-| 8    | curl http://localhost:8080                                                                   |                                                                                                          |
-| 10   | docker info                                                                                             |shows all details of the docker, number of images, run time|
-| 11   |docker container exec -it docker-exec bash|Login to the container|loging to the container
-| 12   |  docker container exec -it jsnginx /bin/bash                                                                                          | i - stdin Interactive, t - tty |
-| 13   |Default container command|entry point, it shows under command|
-| 14   |Change the default container command|update CMD section at image file|
-| 10   | docker run debian (will die)                                                                 |                                                                                                          |
-| 6    | docker run -itd debian                                                                       |                                                                                                          |
-| 15   |docker container run -d nginx sleep 20|it will change the default command|
-| 2    |docker container run -d --restart unless-stopped nginx|Its uses on prod, it restart unless it is stopped|
-| 4    | docker run -rm hello-world                                                                   | Automatically delete the docker once it stops                                                            |
-| 2    | docker run -itd --restart=always --name=web debian                                           | To restart automatically when it is stop,Restart policy will be configured. When the system got rebooted |
-| 7    | docker run --name ournginx -d -p 8080:80 nginx                                               | export the port of 80 container to outside 8080                                                          |
-| 6    |docker container run -dt --rm --name tecstcont busybox ping -c10 google.com|automatically delete the container after 10 pings|
-| 7    |docker container run --help - grep rm|shows rm only|
-| 12   | docker run -itd --name=web debian                                                            |                                                                                                          |
-| 9    | docker run -p 8080:80 --name web_nginx2 -v ${PWD}/webpages:/usr/share/nginx/html:ro -d nginx | dash v is for the volume                                                                                 |
-| 8    |docker container exec -it 1a04ce261eda /bin/bash|Login to a container|
-| 9    |docker rmi <image id>|removal of an image|
-| 3    |docker rm mynginx|mynginx is a container, this command is to delete a container|
-| 4    |docker system df|shows images, containers, local volumes, cache|
-| 5    |docker system df -v|shows per component, full details|
-| 10   |docker build .|Build - create an image|
-| 11   |docker images|List out all images|
-| 12   |docker build -t jsmonitor .|build an image|
-| 13   |docker run -td --name tmp --health-cmd "curl -f http://localhost" busybox sh|run with health-command |
-| 14   |docker run -td --name tmp --health-cmd "curl -f http://localhost" --health-interval=5s busybox sh|with health interval|
-| 15   |docker run -td --name tmp --health-cmd "curl -f http://localhost" --health-interval=5s --health-retries=1 busybox sh|with health retries|
-| 2    |                                                                                              |                                                                                                          |
-| 3    |                                                                                              |                                                                                                          |
-| 4    |                                                                                              |                                                                                                          |
-| 5    |                                                                                              |                                                                                                          |
-| 6    |                                                                                              |                                                                                                          |
-| 7    |                                                                                              |                                                                                                          |
-| 8    |                                                                                              |                                                                                                          |
-| 9    |                                                                                              |                                                                                                          |
-| 10   |                                                                                              |                                                                                                          |
-| 11   |                                                                                              |                                                                                                          |
-| 12   |                                                                                              |                                                                                                          |
-| 13   |                                                                                              |                                                                                                          |
-| 14   |                                                                                              |                                                                                                          |
-| 15   |                                                                                              |                                                                                                          |
+| S.No | Command rm                                                                                                           | Description                                                                                              |
+| ---- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 1    | /var/lib/docker                                                                                                      | Working dir                                                                                              |
+| 2    | systemctl enable docker                                                                                              |                                                                                                          |
+| 3    | systemctl start docker                                                                                               |                                                                                                          |
+| 4    | systemctl stop docker                                                                                                |                                                                                                          |
+| 5    | docker version                                                                                                       |                                                                                                          |
+| 7    | docker ps, docker ps -a                                                                                              |                                                                                                          |
+| 8    | docker stop \<container id>                                                                                          |                                                                                                          |
+| 9    | docker ps -a                                                                                                         |                                                                                                          |
+| 11   | docker images                                                                                                        |                                                                                                          |
+| 12   | docker inspect \<container id>                                                                                       |                                                                                                          |
+| 13   | docker -help                                                                                                         |                                                                                                          |
+| 14   | docker pull nginx                                                                                                    |                                                                                                          |
+| 15   | docker history nginx                                                                                                 |                                                                                                          |
+| 16   | docker images --no-trunc                                                                                             |                                                                                                          |
+| 17   | docker tag nginx:latest nginx:myblog_stable                                                                          |                                                                                                          |
+| 18   | docker build -t mynginx .                                                                                            | Build an image by using docker file                                                                      |
+| 19   | docker rmi nginx:myblog                                                                                              | Remove an image                                                                                          |
+| 20   | docker rmi -f \<name of the image>                                                                                   | delete an image                                                                                          |
+| 7    | docker image prune                                                                                                   | delete images which does not have containers                                                             |
+| 8    | docker system prune -a                                                                                               |                                                                                                          |
+| 9    | docker system df                                                                                                     |                                                                                                          |
+| 10   | docker search jenkins                                                                                                |                                                                                                          |
+| 11   | docker search -- limit 5                                                                                             |                                                                                                          |
+| 13   | docker ps -l                                                                                                         | Shows latest container                                                                                   |
+| 14   | docker stop, start                                                                                                   |                                                                                                          |
+| 15   | docker rm \<container number>                                                                                        |                                                                                                          |
+| 3    | docker kill \<container id>                                                                                          | Forcibly stop a container                                                                                |
+| 5    | docker logs -t \<cont id>                                                                                            |                                                                                                          |
+| 6    | docker logs -tf \<cont id>                                                                                           |                                                                                                          |
+| 8    | curl http://localhost:8080                                                                                           |                                                                                                          |
+| 10   | docker info                                                                                                          | shows all details of the docker, number of images, run time                                              |
+| 11   | docker container exec -it docker-exec bash                                                                           | Login to the container                                                                                   |
+| 12   | docker container exec -it jsnginx /bin/bash                                                                          | i - stdin Interactive, t - tty                                                                           |
+| 13   | Default container command                                                                                            | entry point, it shows under command                                                                      |
+| 14   | Change the default container command                                                                                 | update CMD section at image file                                                                         |
+| 10   | docker run debian (will die)                                                                                         |                                                                                                          |
+| 6    | docker run -itd debian                                                                                               |                                                                                                          |
+| 15   | docker container run -d nginx sleep 20                                                                               | it will change the default command                                                                       |
+| 2    | docker container run -d --restart unless-stopped nginx                                                               | Its uses on prod, it restart unless it is stopped                                                        |
+| 4    | docker run -rm hello-world                                                                                           | Automatically delete the docker once it stops                                                            |
+| 2    | docker run -itd --restart=always --name=web debian                                                                   | To restart automatically when it is stop,Restart policy will be configured. When the system got rebooted |
+| 7    | docker run --name ournginx -d -p 8080:80 nginx                                                                       | export the port of 80 container to outside 8080                                                          |
+| 6    | docker container run -dt --rm --name tecstcont busybox ping -c10 google.com                                          | automatically delete the container after 10 pings                                                        |
+| 7    | docker container run --help - grep rm                                                                                | shows rm only                                                                                            |
+| 12   | docker run -itd --name=web debian                                                                                    |                                                                                                          |
+| 9    | docker run -p 8080:80 --name web_nginx2 -v ${PWD}/webpages:/usr/share/nginx/html:ro -d nginx                         | dash v is for the volume                                                                                 |
+| 8    | docker container exec -it 1a04ce261eda /bin/bash                                                                     | Login to a container                                                                                     |
+| 9    | docker rmi                                                                                                           | removal of an image                                                                                      |
+| 3    | docker rm mynginx                                                                                                    | mynginx is a container, this command is to delete a container                                            |
+| 4    | docker system df                                                                                                     | shows images, containers, local volumes, cache                                                           |
+| 5    | docker system df -v                                                                                                  | shows per component, full details                                                                        |
+| 10   | docker build .                                                                                                       | Build - create an image                                                                                  |
+| 11   | docker images                                                                                                        | List out all images                                                                                      |
+| 12   | docker build -t jsmonitor .                                                                                          | build an image                                                                                           |
+| 13   | docker run -td --name tmp --health-cmd "curl -f http://localhost" busybox sh                                         | run with health-command                                                                                  |
+| 14   | docker run -td --name tmp --health-cmd "curl -f http://localhost" --health-interval=5s busybox sh                    | with health interval                                                                                     |
+| 15   | docker run -td --name tmp --health-cmd "curl -f http://localhost" --health-interval=5s --health-retries=1 busybox sh | with health retries                                                                                      |
+| 2    |                                                                                                                      |                                                                                                          |
+| 3    |                                                                                                                      |                                                                                                          |
+| 4    |                                                                                                                      |                                                                                                          |
+| 5    |                                                                                                                      |                                                                                                          |
+| 6    |                                                                                                                      |                                                                                                          |
+| 7    |                                                                                                                      |                                                                                                          |
+| 8    |                                                                                                                      |                                                                                                          |
+| 9    |                                                                                                                      |                                                                                                          |
+| 10   |                                                                                                                      |                                                                                                          |
+| 11   |                                                                                                                      |                                                                                                          |
+| 12   |                                                                                                                      |                                                                                                          |
+| 13   |                                                                                                                      |                                                                                                          |
+| 14   |                                                                                                                      |                                                                                                          |
+| 15   |                                                                                                                      |                                                                                                          |
 
 # npm
 
@@ -370,65 +377,4 @@
 
 # Kubernets commands
 
-| S.No | Command | Description |
-| ---- | ------- | ----------- |
-| 1    |Install Urls|https://www.openwriteup.com/             |
-| 2    |Install Urls|https://github.com/lerndevops/kubernetes             |
-| 3    |kubectl get all --all-namespaces|Gets info from all NSs|
-| 4    |kubectl get nodes -o wide|Gets node details + Master|
-| 5    |kubeadm token create --print-join-command|OP should be run on worker nodes|
-| 6    |kubectl get pods --all-namespaces -o wide|             |
-| 7    |kubectl run nginx --image=nginx -n ns|             |
-| 8    |kubectl get namespaces, kubectl get ns|             |
-| 9    |kubectl get pods -n kube-system|             |
-| 10   |kubectl create ns jsns|             |
-| 11   |kubectl describe pod nginx -n jsns|             |
-| 12   |kubectl describe pod jsmypod -n jsns|             |
-| 12   |kubectl run nginx2 --image nginx -n jsns|             |
-| 13   |kubectl api-resources |             |
-| 14   |  kubectl explain Pod      |   explain =pod, ingresses, ns          |
-| 15   |  kubectl create -f pods.yaml   |    create of apply         |
-| 16   | kubectl run mynginx --image nginx -n jsns --dry-run=client -o yaml  |   Imperative commands       |
-| 17   |   kubectl describe pod -n jsns jsmypod |             |
-| 18   |Single container pod|             |
-| 18   |Multi container pod|             |
-| 19   |Init container pod       |It starts before the actual container starts, it will destroy before starting the main container, we can have multiple init containers  |
-| 20   |Delete a pod|kubectl delete pod myapp-pod1 -n jsns|
-| 21   |watch command|gives output for every 2 seconds|
-| 22   |     Static pod-will be create it on worker node    |Kubelet will create a pod and there is no involvement of api server|
-| 23   |paths|/var/lib/kubelet, /etc/kubernetes|
-| 24   |root@node2:/etc/kubernetes/manifests#|pods will be created for the yml file mentioned in this directory|
-| 25   |   How to find the difference between normal and static pod      |static pods will append with the name of node. Ex : tomcatpod-node2|
-| 24   |Types of multi containers|1. Ambassedor, 2. sidecar, 3. Adapter|
-| 25   | Check logs of pods        |     kubectl logs mc1 -n jsns        |
-| 26   | Check running logs of a pod        |  kubectl logs -f mc1 -n jsns           |
-| 27   | kubectl exec -it -n jsns mc1 -c 1st -- /bin/bash        |     Go inside the container, mc1 is a pod and 1st is a container        |
-| 28   |  kubectl explain replicaset       |   Shows all options of the replicaset          |
-| 29   |3 Imp points for the Replica set         | 1. replica 2. selector 3. template            |
-| 30   | kubectl get replicaset -n jsns -o wide        |    List out all replicasets         |
-| 31   |  kubectl scale replicaset myrs -n jsns --replicas 10 or we can update at the yml file      |  Increase or decrease the number of pods at the replicaset           |
-| 32   |     kubectl delete pod <pod> -n jsns    |  Delete a pod           |
-| 33   |         |             |
-| 31   |         |             |
-| 32   |         |             |
-| 33   |         |             |
-| 31   |         |             |
-| 32   |         |             |
-| 33   |         |             |
-| 31   |         |             |
-| 32   |         |             |
-| 33   |         |             |
-| 31   |         |             |
-| 32   |         |             |
-| 33   |         |             |
-| 31   |         |             |
-| 32   |         |             |
-| 33   |         |             |
-| 31   |         |             |
-| 32   |         |             |
-| 33   |         |             |
-| 31   |         |             |
-| 32   |         |             |
-| 33   |         |             |
-
-
+https://gemini.google.com/app
