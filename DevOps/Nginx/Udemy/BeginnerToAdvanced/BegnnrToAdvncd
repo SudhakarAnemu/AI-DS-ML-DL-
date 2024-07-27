@@ -30,7 +30,18 @@ systemctl start nginx
 systemctl enable nginx
 nginx -V
 
-2. --------------------------------------------------------------------------------------------------
+2. -------------------------------------------------------------------------------------------------- Call the webpage 
+
+http://34.132.249.98/sudha.html
+http://34.132.249.98/saketh.html
+
+root@workernode1:/var/www/html# cat saketh.html
+WelCome Saketh
+root@workernode1:/var/www/html# cat sudha.html
+JS Sudha
+root@workernode1:/var/www/html# pwd
+/var/www/html
+root@workernode1:/var/www/html#
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
