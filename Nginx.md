@@ -6,7 +6,7 @@ Nginix
 | ---- | ------- | ----------- |
 | 1    |  /usr/sbin/nginx -v       |  Verify the version|
 | 2    |     systemctl status nginx    |     status, stop, start      |
-| 3    |    http://34.132.249.98/sudha.html     |    Crate this file at /var/www/html         |
+| 3    |    http://34.132.249.98/sudha.html     |    Crate this file at /var/www/html   (public ip)      |
 | 4    |         |             |
 | 5    |         |             |
 | 6    |         |             |
