@@ -5,16 +5,8 @@ Nginix
 | S.No | Command | Description |
 | ---- | ------- | ----------- |
 | 1    |  /usr/sbin/nginx -v       |  Verify the version|
-<<<<<<< HEAD
-| 2    |     systemctl status nginx    |     status, stop, start, enable, disable      |
-| 3    |   http://34.132.249.98/      |    Call the public ip to access Nginx home page      |
-=======
-| 2    |     systemctl status nginx    |     status, stop, start      |
-| 3    |    http://34.132.249.98/sudha.html     |    Crate this file at /var/www/html   (public ip)      |
->>>>>>> a9e2bfad1a15df138e2875afaee2149480f476db
-| 4    |         |             |
-| 5    |         |             |
-| 6    |         |             |
+| 5    |   systemctl status nginx      |      status, stop, start, enable, disable       |
+| 6    |   http://34.132.249.98/      |     Call the public ip to access Nginx home page        |
 | 7    |         |             |
 | 8    |         |             |
 | 9    |         |             |
