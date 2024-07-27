@@ -1,0 +1,8 @@
+JS 
+
+1. How to access GCP instance from putty. 
+
+a. Instance -> Edit -> SSH -> Add below key : 
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxLDjvXYSe51qS0RvmWH85Niddcl4GclEwVdiYU3NcnuqfMijGtG/9sWKzPypiwN4GxGI3aTnlRaxHBNtXkEw92VGIDh0eDieIRAbStWgOoFzp0iTcYZKknI2k7BTY9/uZ7pdgSU7iRqUPJv+SjC46OZNuQ3O02wrjtLGPCCmP0E4ndnZgMaqtHdvzD4yIh9ELrlNSpxipHTcCVxzfaOhdUbpZM9P+foqYq1sSJO8G9aLXNHG+N5+FLKj5tjqortr3H1m6yV+PPm3Rr48Tq/PZCBPQMGCtFl4Ve101LHLUmn8taafMTSIv6FNdIKkqYyBsmo9i+jhCUSHOWRjxX9h1 jssudha
+
