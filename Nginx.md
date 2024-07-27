@@ -5,8 +5,8 @@ Nginix
 | S.No | Command | Description |
 | ---- | ------- | ----------- |
 | 1    |  /usr/sbin/nginx -v       |  Verify the version|
-| 2    |     systemctl status nginx    |     status, stop, start      |
-| 3    |         |             |
+| 2    |     systemctl status nginx    |     status, stop, start, enable, disable      |
+| 3    |   http://34.132.249.98/      |    Call the public ip to access Nginx home page      |
 | 4    |         |             |
 | 5    |         |             |
 | 6    |         |             |
