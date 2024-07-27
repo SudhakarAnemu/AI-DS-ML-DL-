@@ -4,10 +4,10 @@ Nginix
 
 | S.No | Command | Description |
 | ---- | ------- | ----------- |
-| 1    |  /usr/sbin/nginx -v       |  Verify the version|
-| 5    |   systemctl status nginx      |      status, stop, start, enable, disable       |
-| 6    |   http://34.132.249.98/      |     Call the public ip to access Nginx home page        |
-| 7    |         |             |
+| 1    |/usr/sbin/nginx -v                 |Verify the version|
+| 5    |systemctl status nginx             |status, stop, start, enable, disable       |
+| 6    |http://34.132.249.98/              |Call the public ip to access Nginx home page        |
+| 7    |http://34.132.249.98/sudha.html    |Call the page path is /var/www/html|
 | 8    |         |             |
 | 9    |         |             |
 | 10   |         |             |
