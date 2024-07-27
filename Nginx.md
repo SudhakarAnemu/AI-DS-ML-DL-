@@ -4,8 +4,8 @@ Nginix
 
 | S.No | Command | Description |
 | ---- | ------- | ----------- |
-| 1    |         |             |
-| 2    |         |             |
+| 1    |  /usr/sbin/nginx -v       |  Verify the version|
+| 2    |     systemctl status nginx    |     status, stop, start      |
 | 3    |         |             |
 | 4    |         |             |
 | 5    |         |             |
