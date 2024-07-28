@@ -7,7 +7,7 @@ Nginix
 | 1    |/usr/sbin/nginx -v                 |Verify the version|
 | 5    |systemctl status nginx             |status, stop, start, enable, disable       |
 | 6    |http://34.132.249.98/              |Call the public ip to access Nginx home page        |
-| 7    |http://34.132.249.98/sudha.html    |Call the page, path is /var/www/html|
+| 7    |http://34.132.249.98/sudha.html, http://54.162.143.66:8080/sudha.html    |Call the page, path is /var/www/html - ubuntu, /usr/share/nginx/html - centos|
 | 8    |/usr/sbin/nginx                    |Nginx installation path|
 | 9    |/etc/nginx/nginx.conf              |Configuraton file|
 | 10   |Master process running with root                  |             |
@@ -22,7 +22,7 @@ Nginix
 | 4    |/etc/nginx/conf.d/*.conf;         |Has all configuration files             |
 | 5    |/etc/nginx/sites-available/default         |This file has port 80, index files             |
 | 6    |netstat -ntlp         |Shows current running ports             |
-| 7    |         |             |
+| 7    |Reverse proxy         |is type of proxy server which retrieves resources on behalf of a client from one or more servers.             |
 | 8    |         |             |
 | 9    |         |             |
 | 10   |         |             |
