@@ -43,14 +43,129 @@ root@workernode1:/var/www/html# pwd
 /var/www/html
 root@workernode1:/var/www/html#
 
+-------------------------------------------------------------------------------------------------- curl 
+root@workernode1:/var/www/html# curl http://34.132.249.98/saketh.html
+WelCome Saketh
+root@workernode1:/var/www/html#
+
+curl http://34.132.249.98/partial.html --> Gives all numbers
+
+root@workernode1:/var/www/html# curl -I http://34.132.249.98/partial.html -------------------> I : shows the response header. 
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Sat, 27 Jul 2024 19:30:24 GMT
+Content-Type: text/html
+Content-Length: 112
+Last-Modified: Sat, 27 Jul 2024 19:29:24 GMT
+Connection: keep-alive
+ETag: "66a54a94-70"
+Accept-Ranges: bytes
+
+root@workernode1:/var/www/html#
+
+root@workernode1:~# curl --header "Range: bytes=0-20" http://34.132.249.98/partial.html
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+root@workernode1:~#
+
+
+
+
+
 --------------------------------------------------------------------------------------------------
+root@workernode1:~# systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2024-07-27 17:58:17 UTC; 2h 54min ago
+       Docs: man:nginx(8)
+   Main PID: 2333 (nginx)
+      Tasks: 3 (limit: 4680)
+     Memory: 5.7M
+     CGroup: /system.slice/nginx.service
+             ├─2333 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+             ├─2334 nginx: worker process
+             └─2335 nginx: worker process
+
+Jul 27 17:58:17 workernode1 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Jul 27 17:58:17 workernode1 systemd[1]: Started A high performance web server and a reverse proxy server.
+root@workernode1:~#
+
 --------------------------------------------------------------------------------------------------
+root@workernode1:/etc/nginx# id www-data
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+root@workernode1:/etc/nginx# cat -n nginx.conf | grep user
+     1  user www-data;
+root@workernode1:/etc/nginx# ps -ef | grep nginx
+root        2333       1  0 17:58 ?        00:00:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process                 on;
+www-data    2334    2333  0 17:58 ?        00:00:00 nginx: worker process
+www-data    2335    2333  0 17:58 ?        00:00:00 nginx: worker process
+root        2958    1542  0 21:01 pts/0    00:00:00 grep --color=auto nginx
+root@workernode1:/etc/nginx#
+
 --------------------------------------------------------------------------------------------------
+Important Note
+There is a little difference in the configuration structure between Nginx installed via RPM (from official nginx repos) and Nginx installed from Application Repos that officially are part of RedHat-based systems.
+If you want a consistent environment similar to that of our video, we recommend installing Nginx from official Nginx repos.
+Here is the command to install Nginx that we use in our videos:
+yum -y install wget
+wget https://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.20.1-1.el8.ngx.x86_64.rpm
+yum -y install nginx-1.20.1-1.el8.ngx.x86_64.rpm
+systemctl start nginx
 --------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
+root@workernode1:/etc/nginx# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+root@workernode1:/etc/nginx#
+
+-------------------------------------------------------------------------------------------------- Change port from 80 to 8080 
+I tried to change the port on below file but there is no change. **** NOT WORKING ****
+
+/etc/nginx/sites-available/default
+-------------------------------------------------------------------------------------------------- Reverse proxy : 
+
+AWS - Configurations - Fedora. 
+
+1. dnf update
+
+2. dnf install nginx
+
+3. Check the configuration files. 
+[root@ip-172-31-37-195 ~]# nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+[root@ip-172-31-37-195 ~]#
+
+4.  Added below rule to accept 8080 : 
+sgr-076b14423956a2447	IPv4	Custom TCP	TCP	8080	0.0.0.0/0
+
+5. Updated configuration file at the server level. 
+
+[root@ip-172-31-37-195 nginx]# diff nginx.conf nginx.conf.07292024
+38,39c38,39
+<         listen       8080;
+<         listen       [::]:8080;
+---
+>         listen       80;
+>         listen       [::]:80;
+[root@ip-172-31-37-195 nginx]#
+
+6. Now I am able to access 8080 port - page from above AWS server. 
+Solution is adding 8080 port as custom TCP. 
+
+7. 
+
+
+
+
+-------------------------------------------------------------------------------------------------- AWS - 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
