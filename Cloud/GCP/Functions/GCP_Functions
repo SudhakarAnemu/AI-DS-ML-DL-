@@ -1,0 +1,134 @@
+JS 
+
+------------------------------------------------------------------------------------------------------------First cloud function
+1. Open cloud function. 
+2. select env : gen1 or gen2 
+3. leave default (http) -> check all properties
+4. give name of the funciton 
+5. Copy the url : 
+https://us-central1-jssudeepa.cloudfunctions.net/jsmyfirstfunction
+6. Select (au authenticated)
+7. Click on next. 
+8. Select (python 9)
+9. Update the code 
+10. Build it. 
+11. Test it --> Goto "Testing" block
+12. then real testing : 
+    https://us-central1-jssudeepa.cloudfunctions.net/jsmyfirstfunction (call the URL)
+
+
+import functions_framework
+
+@functions_framework.http
+def hello_http(request):
+    """HTTP Cloud Function.
+    Args:
+        request (flask.Request): The request object.
+        <https://flask.palletsprojects.com/en/1.1.x/api/#incoming-request-data>
+    Returns:
+        The response text, or any set of values that can be turned into a
+        Response object using `make_response`
+        <https://flask.palletsprojects.com/en/1.1.x/api/#flask.make_response>.
+    """
+    request_json = request.get_json(silent=True)
+    request_args = request.args
+
+    if request_json and 'name' in request_json:
+        name = request_json['name']
+    elif request_args and 'name' in request_args:
+        name = request_args['name']
+    else:
+        name = 'JS Hello World - jssudha'
+    return 'Hello {}!'.format(name)
+
+
+------------------------------------------------------------------------------------------------------------
+
+from google.cloud import iam_v1
+
+def list_service_accounts(project_id):
+  """Lists all service accounts in a given project.
+
+  Args:
+    project_id: The ID of the project to list service accounts for.
+
+  Returns:
+    A list of service account names.
+  """
+
+  client = iam_v1.IAMServiceClient()
+  parent = f"projects/{project_id}"
+  request = iam_v1.ListServiceAccountsRequest(parent=parent)
+  response = client.list_service_accounts(request=request)
+  service_accounts = [account.name for account in response.accounts]
+  return service_accounts
+
+#project_id = "your-project-id"
+project_id = "jssudeepa"
+service_accounts = list_service_accounts(project_id)
+print(service_accounts)
+------------------------------------------------------------------------------------------------------------ Java function : 
+
+import com.google.api.gax.core.FixedCredentialsProvider;
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.cloud.iam.v1.IAMServiceClient;   
+
+import com.google.cloud.iam.v1.ListServiceAccountsRequest;
+import com.google.cloud.iam.v1.ServiceAccount;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.List;
+
+public class ListServiceAccounts {
+    public static void main(String[] args) throws IOException {
+        // Replace with the path to your service account key file
+        String keyFilePath = "/path/to/your/key.json";
+
+        // Load the service account credentials
+        GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream(keyFilePath))
+                .createScoped(IAMServiceClient.getDefaultScopes());
+
+        // Create an IAM client
+        IAMServiceClient client = IAMServiceClient.create(FixedCredentialsProvider.create(credentials));
+
+        // Specify the parent resource (your project ID)
+        String parent = "projects/" + "jssudeepa";
+        #String parent = "projects/" + "your-project-id";
+
+        // Create the request
+        ListServiceAccountsRequest request = ListServiceAccountsRequest.newBuilder().setParent(parent).build();
+
+        // List service accounts
+        List<ServiceAccount> serviceAccounts = client.listServiceAccounts(request).iterateAll();
+
+        // Print service account names
+        for (ServiceAccount account : serviceAccounts) {
+            System.out.println(account.getName());
+        }
+
+        client.close();
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------

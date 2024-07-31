@@ -1,0 +1,9 @@
+JS 
+
+echo "dis ql(*) WHERE(DESCR LK 'MAGENTO_CUSA*')"|runmqsc IIBQAAA34 | grep QUEUE | sort
+
+echo "dis ql(*) WHERE(DESCR LK 'MAGENTO_CCI_NO_MOM*')"|runmqsc IIBPRAA34 | grep QUEUE | sort
+
+ echo "dis ql(*) WHERE(DESCR LK 'MAGENTO_CCI_NO_MOM*')"|runmqsc IIBPRAA34 | grep QUEUE | sort | awk -F"(" '{print $2}' | awk -F")" '{print $1}'
+
+echo "dis ql(*) WHERE(DESCR LK 'MAGENTO_CCI_NO_MOM*') maxdepth maxmsgl"|runmqsc IIBPRAA34 
