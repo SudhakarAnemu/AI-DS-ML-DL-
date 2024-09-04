@@ -1,0 +1,421 @@
+js
+
+
+10.138.0.2 (nic0)	35.203.186.85  (nic0) 
+
+gcloud storage buckets create -l $LOCATION gs://$DEVSHELL_PROJECT_ID
+
+gcloud storage cp gs://cloud-training/gcpfci/my-excellent-blog.png my-excellent-blog.png
+
+gcloud storage cp my-excellent-blog.png gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png
+
+gsutil acl ch -u allUsers:R gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png
+
+gcloud auth list
+
+gcloud config list project
+
+gcloud services enable run.googleapis.com
+
+gcloud config set compute/region us-east1
+
+gcloud builds submit --tag gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld --> create an image for a container. 
+
+gcloud container images list
+
+
+gcloud auth configure-docker
+
+docker run -d -p 8080:8080 gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
+
+student_00_01933e32add4@cloudshell:~/helloworld (qwiklabs-gcp-03-c3d9c0100ec7)$ curl localhost:8080
+Hello World!student_00_01933e32add4@cloudshell:~/helloworld (qwiklabs-gcp-03-c3d9c0100ec7)$ 
+
+deploying to clud run : 
+gcloud run deploy --image gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld --allow-unauthenticated --region=$LOCATION
+
+-> cloud storage will charge so that better you remove image 
+
+gcloud container images delete gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
+
+gcloud run services delete helloworld --region=us-east1
+
+--
+
+elcome to Cloud Shell! Type "help" to get started.
+Your Cloud Platform project in this session is set to qwiklabs-gcp-01-4e871f41d3e3.
+Use “gcloud config set project [PROJECT_ID]” to change to a different project.
+student_04_5beb5ce8912c@cloudshell:~ (qwiklabs-gcp-01-4e871f41d3e3)$ export LOCATION=US
+student_04_5beb5ce8912c@cloudshell:~ (qwiklabs-gcp-01-4e871f41d3e3)$ gcloud storage buckets create -l $LOCATION gs://$DEVSHELL_PROJECT_ID
+Creating gs://qwiklabs-gcp-01-4e871f41d3e3/...
+student_04_5beb5ce8912c@cloudshell:~ (qwiklabs-gcp-01-4e871f41d3e3)$ gcloud storage cp gs://cloud-training/gcpfci/my-excellent-blog.png my-excellent-blog.png
+Copying gs://cloud-training/gcpfci/my-excellent-blog.png to file://my-excellent-blog.png
+  Completed files 1/1 | 8.2kiB/8.2kiB                                                                                                                                                                            
+student_04_5beb5ce8912c@cloudshell:~ (qwiklabs-gcp-01-4e871f41d3e3)$ gcloud storage cp my-excellent-blog.png gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png
+Copying file://my-excellent-blog.png to gs://qwiklabs-gcp-01-4e871f41d3e3/my-excellent-blog.png
+  Completed files 1/1 | 8.2kiB/8.2kiB                                                                                                                                                                            
+student_04_5beb5ce8912c@cloudshell:~ (qwiklabs-gcp-01-4e871f41d3e3)$ gsutil acl ch -u allUsers:R gs://$DEVSHELL_PROJECT_ID/my-excellent-blog.png
+Updated ACL on gs://qwiklabs-gcp-01-4e871f41d3e3/my-excellent-blog.png
+student_04_5beb5ce8912c@cloudshell:~ (qwiklabs-gcp-01-4e871f41d3e3)$ 
+
+
+
+MySQL 8.0	34.169.77.2
+
+gcloud storage buckets create gs://[BUCKET_NAME]
+gcloud storage cp [MY_FILE] gs://[BUCKET_NAME]
+
+gcloud storage cp ‘my file.txt' gs://[BUCKET_NAME]
+
+gcloud storage cp 'Krishna.jpg'  gs://buk083020241132
+
+gcloud compute regions list
+
+us-west4
+INFRACLASS_REGION=us-west4
+INFRACLASS_PROJECT_ID=[YOUR_PROJECT_ID]
+INFRACLASS_PROJECT_ID=qwiklabs-gcp-03-65d538a5ffdc
+
+source infraclass/config
+echo $INFRACLASS_PROJECT_ID
+
+---- Create the privatenet network
+ 
+ gcloud compute networks create privatenet --subnet-mode=custom
+ gcloud compute networks subnets create privatesubnet-us --network=privatenet --region=us-east4 --range=172.16.0.0/24
+ 
+ gcloud compute networks subnets create privatesubnet-eu --network=privatenet --region=europe-west4 --range=172.20.0.0/20
+ 
+ To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+Welcome to Cloud Shell! Type "help" to get started.
+Your Cloud Platform project in this session is set to qwiklabs-gcp-02-7403b2254d00.
+Use “gcloud config set project [PROJECT_ID]” to change to a different project.
+student_00_ba0ca38b5805@cloudshell:~ (qwiklabs-gcp-02-7403b2254d00)$ gcloud compute networks create privatenet --subnet-mode=custom
+Created [https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-02-7403b2254d00/global/networks/privatenet].
+NAME: privatenet
+SUBNET_MODE: CUSTOM
+BGP_ROUTING_MODE: REGIONAL
+IPV4_RANGE: 
+GATEWAY_IPV4: 
+
+Instances on this network will not be reachable until firewall rules
+are created. As an example, you can allow all internal traffic between
+instances as well as SSH, RDP, and ICMP by running:
+
+$ gcloud compute firewall-rules create <FIREWALL_NAME> --network privatenet --allow tcp,udp,icmp --source-ranges <IP_RANGE>
+$ gcloud compute firewall-rules create <FIREWALL_NAME> --network privatenet --allow tcp:22,tcp:3389,icmp
+
+student_00_ba0ca38b5805@cloudshell:~ (qwiklabs-gcp-02-7403b2254d00)$ gcloud compute networks subnets create privatesubnet-us --network=privatenet --region=us-east4 --range=172.16.0.0/24
+Created [https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-02-7403b2254d00/regions/us-east4/subnetworks/privatesubnet-us].
+NAME: privatesubnet-us
+REGION: us-east4
+NETWORK: privatenet
+RANGE: 172.16.0.0/24
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+student_00_ba0ca38b5805@cloudshell:~ (qwiklabs-gcp-02-7403b2254d00)$ gcloud compute networks subnets create privatesubnet-eu --network=privatenet --region=europe-west4 --range=172.20.0.0/20
+Created [https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-02-7403b2254d00/regions/europe-west4/subnetworks/privatesubnet-eu].
+NAME: privatesubnet-eu
+REGION: europe-west4
+NETWORK: privatenet
+RANGE: 172.20.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+student_00_ba0ca38b5805@cloudshell:~ (qwiklabs-gcp-02-7403b2254d00)$ gcloud compute networks list
+NAME: managementnet
+SUBNET_MODE: CUSTOM
+BGP_ROUTING_MODE: REGIONAL
+IPV4_RANGE: 
+GATEWAY_IPV4: 
+
+NAME: mynetwork
+SUBNET_MODE: CUSTOM
+BGP_ROUTING_MODE: REGIONAL
+IPV4_RANGE: 
+GATEWAY_IPV4: 
+
+NAME: privatenet
+SUBNET_MODE: CUSTOM
+BGP_ROUTING_MODE: REGIONAL
+IPV4_RANGE: 
+GATEWAY_IPV4: 
+student_00_ba0ca38b5805@cloudshell:~ (qwiklabs-gcp-02-7403b2254d00)$ gcloud compute networks subnets list --sort-by=NETWORK
+NAME: managementsubnet-us
+REGION: us-east4
+NETWORK: managementnet
+RANGE: 10.240.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: us-central1
+NETWORK: mynetwork
+RANGE: 10.128.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: europe-west1
+NETWORK: mynetwork
+RANGE: 10.132.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: us-west1
+NETWORK: mynetwork
+RANGE: 10.138.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: asia-east1
+NETWORK: mynetwork
+RANGE: 10.140.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: us-east1
+NETWORK: mynetwork
+RANGE: 10.142.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: asia-northeast1
+NETWORK: mynetwork
+RANGE: 10.146.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: asia-southeast1
+NETWORK: mynetwork
+RANGE: 10.148.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: us-east4
+NETWORK: mynetwork
+RANGE: 10.150.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: australia-southeast1
+NETWORK: mynetwork
+RANGE: 10.152.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: europe-west2
+NETWORK: mynetwork
+RANGE: 10.154.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: europe-west3
+NETWORK: mynetwork
+RANGE: 10.156.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: asia-south1
+NETWORK: mynetwork
+RANGE: 10.160.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: europe-west4
+NETWORK: mynetwork
+RANGE: 10.164.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: europe-north1
+NETWORK: mynetwork
+RANGE: 10.166.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: us-west2
+NETWORK: mynetwork
+RANGE: 10.168.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: us-west3
+NETWORK: mynetwork
+RANGE: 10.180.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: us-west4
+NETWORK: mynetwork
+RANGE: 10.182.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: europe-central2
+NETWORK: mynetwork
+RANGE: 10.186.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: southamerica-west1
+NETWORK: mynetwork
+RANGE: 10.194.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: us-east5
+NETWORK: mynetwork
+RANGE: 10.202.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: us-south1
+NETWORK: mynetwork
+RANGE: 10.206.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: me-west1
+NETWORK: mynetwork
+RANGE: 10.208.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: europe-west12
+NETWORK: mynetwork
+RANGE: 10.210.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: me-central1
+NETWORK: mynetwork
+RANGE: 10.212.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: europe-west10
+NETWORK: mynetwork
+RANGE: 10.214.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: mynetwork
+REGION: africa-south1
+NETWORK: mynetwork
+RANGE: 10.218.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: privatesubnet-us
+REGION: us-east4
+NETWORK: privatenet
+RANGE: 172.16.0.0/24
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+
+NAME: privatesubnet-eu
+REGION: europe-west4
+NETWORK: privatenet
+RANGE: 172.20.0.0/20
+STACK_TYPE: IPV4_ONLY
+IPV6_ACCESS_TYPE: 
+INTERNAL_IPV6_PREFIX: 
+EXTERNAL_IPV6_PREFIX: 
+student_00_ba0ca38b5805@cloudshell:~ (qwiklabs-gcp-02-7403b2254d00)$ 
+
+
+gcloud compute --project=qwiklabs-gcp-02-7403b2254d00 firewall-rules create managementnet-allow-icmp-ssh-rdp --direction=INGRESS --priority=1000 --network=managementnet --action=ALLOW --rules=tcp:22,tcp:3389,icmp --source-ranges=0.0.0.0/0
+
+gcloud compute firewall-rules create privatenet-allow-icmp-ssh-rdp --direction=INGRESS --priority=1000 --network=privatenet --action=ALLOW --rules=icmp,tcp:22,tcp:3389 --source-ranges=0.0.0.0/0
+
+gcloud compute firewall-rules list --sort-by=NETWORK
+
+gcloud compute instances create privatenet-us-vm --zone=us-east4-c --machine-type=e2-micro --subnet=privatesubnet-us --image-family=debian-12 --image-project=debian-cloud --boot-disk-size=10GB --boot-disk-type=pd-standard --boot-disk-device-name=privatenet-us-vm
+
+gcloud compute instances list --sort-by=ZONE
+
