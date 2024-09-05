@@ -438,7 +438,31 @@ gcloud compute ssh vm-internal --zone europe-west4-b --tunnel-through-iap
 
 Note: The Cloud NAT gateway implements outbound NAT, but not inbound NAT. In other words, hosts outside of your VPC network can only respond to connections initiated by your instances; they cannot initiate their own, new connections to your instances via NAT.
 
+-------------> Disk : 
 
+sudo mkdir -p /home/minecraft
+sudo mkfs.ext4 -F -E lazy_itable_init=0,\
+lazy_journal_init=0,discard \
+/dev/disk/by-id/google-minecraft-disk
+
+sudo mount -o discard,defaults /dev/disk/by-id/google-minecraft-disk /home/minecraft
+
+sudo apt-get update
+sudo apt-get install -y default-jre-headless
+
+cd /home/minecraft
+
+sudo apt-get install wget
+
+sudo wget https://launcher.mojang.com/v1/objects/d0d0fe2b1dc6ab4c65554cb734270872b72dadd6/server.jar
+
+sudo java -Xmx1024M -Xms1024M -jar server.jar nogui
+
+sudo ls -l
+
+sudo apt-get install -y screen
+
+gcloud storage buckets create gs://$YOUR_BUCKET_NAME-minecraft-backup
 
 
 
