@@ -34,7 +34,9 @@ c.
 
 # Commands
 
-## . stop and start
+## . enable, stop, start
+
+systemctl enable nginx
 
 systemctl stop nginix
 
@@ -46,8 +48,46 @@ systemctl status nginx
 
   /usr/sbin/nginx -v
 
-## nginx
+nginx -v
 
+## Configfile and paths
+
+nginx.conf
+
+/etc/nginx
+
+log=/var/log/nginx/
+
+/var/log/nginx/error.log
+
+/var/log/nginx/access.log
+
+worker_process 2 --> Here 2 worker processes will run
+
+/usr/share/nginx/html -> it has all required html files. 
+
+## Command Lline options
+
+nginx -v  - gives version
+
+nginx -V  - shows varias config details
+
+nginx -t -. shows whether config file is okay or not
+
+nginx -h : help
+
+## Include directive
+
+Multiple other config files can be define at the specified path. 
+
+include /etc/nginx/conf.d/*.conf;
+
+
+# Other
+
+---
+
+## nginx
 
 Nginix
 

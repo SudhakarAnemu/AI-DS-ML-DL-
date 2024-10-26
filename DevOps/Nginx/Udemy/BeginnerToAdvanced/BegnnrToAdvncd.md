@@ -10,10 +10,37 @@ load balancer
 
 we-application firewall
 
-cachy 
+cachy
 
 # Installations
 
+## on Amazon Linux
+
+a  yum install nginx
+    b  systemctl enable nginx
+    c  systemctl status nginx
+    d  systemctl start nginx
+   e  systemctl status nginx
+
+[root@ip-172-31-24-112 ~]# yum install nginx
+
+Last metadata expiration
+
+check: 0:03:04 ago on Fri Oct 25 17:46:21 2024.Dependencies resolved.Package
+
+Arch     Version                     Repository     Size
+
+Installing:
+ nginx                 x86_64   1:1.24.0-1.amzn2023.0.4     amazonlinux    33 k
+Installing dependencies:
+ generic-logos-httpd   noarch   18.0.0-12.amzn2023.0.3      amazonlinux    19 k
+ gperftools-libs       x86_64   2.9.1-1.amzn2023.0.3        amazonlinux   308 k
+ libunwind             x86_64   1.4.0-5.amzn2023.0.2        amazonlinux    66 k
+ nginx-core            x86_64   1:1.24.0-1.amzn2023.0.4     amazonlinux   586 k
+ nginx-filesystem      noarch   1:1.24.0-1.amzn2023.0.4     amazonlinux   9.8 k
+ nginx-mimetypes       noarch   2.1.49-3.amzn2023.0.3       amazonlinux    21 k
+
+## Rhl - rocky linux
 
 a. apt-get update
 b. apt-get install nginx
@@ -32,7 +59,7 @@ systemctl enable nginx
 nginx -V
 Approach 2 (Recommended):
 
-Documentation Referred:
+### Download and install
 
 https://www.nginx.com/resources/wiki/start/topics/tutorials/install/
 
@@ -43,372 +70,227 @@ systemctl start nginx
 systemctl enable nginx
 nginx -V
 
--------------------------------------------------------------------------------------------------------- Update the /etc/hosts.
+## Protocols
 
-[root@ip-172-31-39-225 html]# cat -n /etc/hosts
-     1  127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-     2  ::1         localhost6 localhost6.localdomain6
-     3
-     4  127.0.0.1   jsudha.internal
+FTP : File transfer protocol
 
-[root@ip-172-31-39-225 html]# curl http://jsudha.internal
-This is Application server
-[root@ip-172-31-39-225 html]#
+DNS : Domain name system protocal
 
-2. -------------------------------------------------------------------------------------------------- Call the webpage
+TCP : Transmission control protocal
 
-http://34.132.249.98/sudha.html
-http://34.132.249.98/saketh.html
+SFTP : secure file transfer protocol
 
-root@workernode1:/var/www/html# cat saketh.html
-WelCome Saketh
-root@workernode1:/var/www/html# cat sudha.html
-JS Sudha
-root@workernode1:/var/www/html# pwd
-/var/www/html
-root@workernode1:/var/www/html#
+HTTP : Hyper text transfer protocol
 
--------------------------------------------------------------------------------------------------- curl
-root@workernode1:/var/www/html# curl http://34.132.249.98/saketh.html
-WelCome Saketh
-root@workernode1:/var/www/html#
+IP : Internet protocl
 
-curl http://34.132.249.98/partial.html --> Gives all numbers
+## curl
 
-root@workernode1:/var/www/html# curl -I http://34.132.249.98/partial.html -------------------> I : shows the response header.
+1. curl dexter.kplabs.in/partial.txt
+2. curl with response header
+
+C:\Users\sanemu>curl -I dexter.kplabs.in/partial.txt
 HTTP/1.1 200 OK
-Server: nginx/1.18.0 (Ubuntu)
-Date: Sat, 27 Jul 2024 19:30:24 GMT
-Content-Type: text/html
-Content-Length: 112
-Last-Modified: Sat, 27 Jul 2024 19:29:24 GMT
-Connection: keep-alive
-ETag: "66a54a94-70"
-Accept-Ranges: bytes
 
-root@workernode1:/var/www/html#
+3. curl with partial data :
 
-root@workernode1:~# curl --header "Range: bytes=0-20" http://34.132.249.98/partial.html
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-root@workernode1:~#
+   C:\Users\sanemu>curl --header "Range: bytes=0-20" dexter.kplabs.in/partial.txt
+   1
+   2
+4. trace - command : curl -X "TRACE" dexter.kplabs.in/partial.txt
 
----
+   C:\Users\sanemu>curl -X "TRACE" dexter.kplabs.in/partial.txt
 
-root@workernode1:~# systemctl status nginx
-● nginx.service - A high performance web server and a reverse proxy server
-     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
-     Active: active (running) since Sat 2024-07-27 17:58:17 UTC; 2h 54min ago
-       Docs: man:nginx(8)
-   Main PID: 2333 (nginx)
-      Tasks: 3 (limit: 4680)
-     Memory: 5.7M
-     CGroup: /system.slice/nginx.service
-             ├─2333 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
-             ├─2334 nginx: worker process
-             └─2335 nginx: worker process
+   5. http head : curl -X "OPTIONS" http://`<ip address> -i `
 
-Jul 27 17:58:17 workernode1 systemd[1]: Starting A high performance web server and a reverse proxy server...
-Jul 27 17:58:17 workernode1 systemd[1]: Started A high performance web server and a reverse proxy server.
-root@workernode1:~#
+# Codes
 
----
+## HTTP Request Methods
 
-root@workernode1:/etc/nginx# id www-data
-uid=33(www-data) gid=33(www-data) groups=33(www-data)
-root@workernode1:/etc/nginx# cat -n nginx.conf | grep user
-     1  user www-data;
-root@workernode1:/etc/nginx# ps -ef | grep nginx
-root        2333       1  0 17:58 ?        00:00:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process                 on;
-www-data    2334    2333  0 17:58 ?        00:00:00 nginx: worker process
-www-data    2335    2333  0 17:58 ?        00:00:00 nginx: worker process
-root        2958    1542  0 21:01 pts/0    00:00:00 grep --color=auto nginx
-root@workernode1:/etc/nginx#
+GET- to retrieve data from the server
 
----
+POST-send input data to the server
 
-Important Note
-There is a little difference in the configuration structure between Nginx installed via RPM (from official nginx repos) and Nginx installed from Application Repos that officially are part of RedHat-based systems.
-If you want a consistent environment similar to that of our video, we recommend installing Nginx from official Nginx repos.
-Here is the command to install Nginx that we use in our videos:
-yum -y install wget
-wget https://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.20.1-1.el8.ngx.x86_64.rpm
-yum -y install nginx-1.20.1-1.el8.ngx.x86_64.rpm
-systemctl start nginx
----------------------
+HEAD-exactly like GET, but server only responds with headers
 
-root@workernode1:/etc/nginx# nginx -t
-nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-nginx: configuration file /etc/nginx/nginx.conf test is successful
-root@workernode1:/etc/nginx#
+PUT-write documents to the server
 
--------------------------------------------------------------------------------------------------- Change port from 80 to 8080
-I tried to change the port on below file but there is no change. **** NOT WORKING ****
+DELETE-deletes resource from the server
 
-/etc/nginx/sites-available/default
--------------------------------------------------------------------------------------------------- Reverse proxy :
+OPTIONS-assks server on which methods it supports
 
-AWS - Configurations - Fedora.
+TRACE-ECHOS the receive request from the Web server
 
-1. dnf update
-2. dnf install nginx
+## HTTP Respose status code
 
-systemctl start nginx
-systemctl status nginx
+100 to 199 - informational status codes
 
-3. Check the configuration files.
-   [root@ip-172-31-37-195 ~]# nginx -t
-   nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-   nginx: configuration file /etc/nginx/nginx.conf test is successful
-   [root@ip-172-31-37-195 ~]#
-4. Added below rule to accept 8080 :
-   sgr-076b14423956a2447	IPv4	Custom TCP	TCP	8080	0.0.0.0/0
-5. Updated configuration file at the server level.
+200 to 299 - success status codes
 
-[root@ip-172-31-37-195 nginx]# diff nginx.conf nginx.conf.07292024
-38,39c38,39
-<         listen       8080;
-<         listen       [::]:8080;
----------------------------------
+300-399 - redirection status codes
 
-> listen       80;
-> listen       [::]:80;
-> [root@ip-172-31-37-195 nginx]#
+400-499 : client error status codes
 
-6. Now I am able to access 8080 port - page from above AWS server.
-   Solution is adding 8080 port as custom TCP.
-7. 
+500-599 : server error status codes
 
-Servers :
+# Getting started with Nginx
 
-1. applicationserver :
-2. authentication :
-3. nginxproxy :
+## Contexts
 
---> Actions on below three servers :
+main, events, http, mail
 
-Servers :  -------------------> Actions
+# Reverse proxy
 
-1. applicationserver :  ---------------------------------------> Created below file under this directory
-   [root@ip-172-31-39-225 admin]# pwd
-   /usr/share/nginx/html/admin
-   [root@ip-172-31-39-225 admin]# cat index.html ---> Content.
-   I am from App server and I am under admin file
-   [root@ip-172-31-39-225 admin]#
-2. authentication :
-3. nginxproxy :
-   File : /etc/nginx/nginx.conf
-   Added below lines :
-   53          location / {
-   54             proxy_pass http://172.31.43.255; #Authentication server
-   55          }
-   56
-   57          location /admin {
-   58             proxy_pass http://172.31.39.225; #Application server
-   59          }
+is type of proxy server which retreves resourcs on behalf of a client from one or more servers
 
--------------------------------------------------------------------------------------------------- Doc of Reverse proxy :  Udemy
-Document - Reverse Proxy Setup
-Step 1: Launch 3 Servers
-1st - Nginx Reverse Proxy
-2nd - Application Server
-3rd - Authentication Server
+![1729970653952](image/BegnnrToAdvncd/1729970653952.png)
 
-Step 2: Install Nginx using RPM Method
-yum -y install wget
-wget https://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.20.1-1.el8.ngx.x86_64.rpm
-yum -y install nginx-1.20.1-1.el8.ngx.x86_64.rpm
-systemctl start nginx
+it hides the existence of the original backend servers
 
-Step 3: Installing net-tools
-yum -y install net-tools
-ifconfig
+can protect the back-end servers from web-based attacks, DOS attac
 
-Step 4: Adding contents to html file
+can provide great caching functionality
 
-Admin Server:
+can optimize the content by compressing it
 
-cd /usr/share/nginx/html
-echo "This is application server backend" > index.html
+can act as a SSL termination proxy
 
-Auth Server:
+request routing and many more
 
-cd /usr/share/nginx/html
-mkdir admin
-echo "This is auth server file under admin" > index.html
+## Implementation
 
-Disable SELinux:
+using proxy_pass directive
 
-getenforce
-setenforce 0
+### step 1 
 
-Final Configuration:
+ server detals
 
-cd /etc/nginx/conf.d
-nano proxy.conf
-server {
-    listen       80;
-    server_name  localhost;
+3 servers : 
+
+a. Nginxproxy (reverse proxy)
+
+b. Application
+
+c. Authentication
+
+### step 2 
+
+install nginx on all 3 servers
+
+### step 3 
+
+Update index.html with assoicated text as below
+
+I am proxy server, I am application server and I am authentication server. 
+
+For auth server : create an admin dir and html under this dir. Verify with http://18.219.83.193/admin/
+
+#### config of reverse proxy : add below lines under server tag :
+
 
     location / {
-        proxy_pass http://10.139.0.3;
+        proxy_pass http://172.31.16.42;   #application server 
     }
 
     location /admin {
-        proxy_pass http://139.59.11.125;
+        proxy_pass http://172.31.31.68;  #authentication server
       }
-}
-nginx -t
-systemctl restart nginx
--------------------------------------------------------------------------------------------------- X-Real IP.
-3rid server will not get the ip address of the First server.
-Getting, watching ip of first server on 3rd server nothing but a X-Real IP.
 
-Document - X-Real-IP Configuration
-Reverse Proxy Side
+### step 4 : testing
 
-nano /etc/nginx/conf.d/proxy.conf
+http://`<reverse proxy ip> --> it will hit application server`
 
-proxy_set_header X-Real-IP $remote_addr; ---> Add this line after proxy_pass.
+http://`<reverse proxy ip> /admin/ --> it will hit Authentication server `
 
-Backend Server Side
+#### Doc from course
 
-nano /etc/nginx/nginx.conf
 
-"$http_x_real_ip" --> Add this line at the end of the line : log_format
+Document - Reverse Proxy Setup
 
--------------------------------------------------------------------------------------------------- Proxy host header :
-Install tcpdump and analyze it.
+**Step 1: Launch 3 Servers**
+
+1st - Nginx Reverse Proxy
+
+2nd - Application Server
+
+3rd - Authentication Server
+
+**Step 2: Install Nginx using RPM Method**
+
+<pre class="prettyprint linenums prettyprinted" role="presentation"><ol class="linenums"><li class="L0"><p><span class="pln">yum </span><span class="pun">-</span><span class="pln">y install wget</span></p></li><li class="L1" data-node-id="20241026171516-ckbiqif"><p><span class="pln">wget https</span><span class="pun">:</span><span class="com">//nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.20.1-1.el8.ngx.x86_64.rpm</span></p></li><li class="L2"><p><span class="pln">yum </span><span class="pun">-</span><span class="pln">y install nginx</span><span class="pun">-</span><span class="lit">1.20</span><span class="pun">.</span><span class="lit">1</span><span class="pun">-</span><span class="lit">1.el8.ngx</span><span class="pun">.</span><span class="pln">x86_64</span><span class="pun">.</span><span class="pln">rpm</span></p></li><li class="L3" data-node-id="20241026171516-iol43n0"><p><span class="pln">systemctl start nginx</span></p></li></ol></pre>
+
+**Step 3: Installing net-tools**
+
+<pre class="prettyprint linenums prettyprinted" role="presentation"><ol class="linenums"><li class="L0"><p><span class="pln">yum </span><span class="pun">-</span><span class="pln">y install net</span><span class="pun">-</span><span class="pln">tools</span></p></li><li class="L1" data-node-id="20241026171516-bukzutf"><p><span class="pln">ifconfig</span></p></li></ol></pre>
+
+**Step 4: Adding contents to html file**
+
+Admin Server:
+
+<pre class="prettyprint linenums prettyprinted" role="presentation"><ol class="linenums"><li class="L0"><p><span class="pln">cd </span><span class="pun">/</span><span class="pln">usr</span><span class="pun">/</span><span class="pln">share</span><span class="pun">/</span><span class="pln">nginx</span><span class="pun">/</span><span class="pln">html</span></p></li><li class="L1" data-node-id="20241026171516-ttgrvvs"><p><span class="pln">echo </span><span class="str">"This is application server backend"</span><span class="pln"></span><span class="pun">></span><span class="pln"> index</span><span class="pun">.</span><span class="pln">html</span></p></li></ol></pre>
+
+Auth Server:
+
+<pre class="prettyprint linenums prettyprinted" role="presentation"><ol class="linenums"><li class="L0"><p><span class="pln">cd </span><span class="pun">/</span><span class="pln">usr</span><span class="pun">/</span><span class="pln">share</span><span class="pun">/</span><span class="pln">nginx</span><span class="pun">/</span><span class="pln">html</span></p></li><li class="L1" data-node-id="20241026171516-gup08e6"><p><span class="pln">mkdir admin</span></p></li><li class="L2"><p><span class="pln">echo </span><span class="str">"This is auth server file under admin"</span><span class="pln"></span><span class="pun">></span><span class="pln"> index</span><span class="pun">.</span><span class="pln">html</span></p></li></ol></pre>
+
+**Disable SELinux:**
+
+<pre class="prettyprint linenums prettyprinted" role="presentation"><ol class="linenums"><li class="L0"><p><span class="pln">getenforce</span></p></li><li class="L1" data-node-id="20241026171516-2q0r2t4"><p><span class="pln">setenforce </span><span class="lit">0</span></p></li></ol></pre>
+
+**Final Configuration:**
+
+<pre class="prettyprint linenums prettyprinted" role="presentation"><ol class="linenums"><li class="L0"><p><span class="pln">cd </span><span class="pun">/</span><span class="pln">etc</span><span class="pun">/</span><span class="pln">nginx</span><span class="pun">/</span><span class="pln">conf</span><span class="pun">.</span><span class="pln">d</span></p></li><li class="L1" data-node-id="20241026171516-38lhdjt"><p><span class="pln">nano proxy</span><span class="pun">.</span><span class="pln">conf</span></p></li></ol></pre>
+
+<pre class="prettyprint linenums prettyprinted" role="presentation"><ol class="linenums"><li class="L0"><p><span class="pln">server </span><span class="pun">{</span></p></li><li class="L1" data-node-id="20241026171516-331ebpd"><p><span class="pln">    listen       </span><span class="lit">80</span><span class="pun">;</span></p></li><li class="L2"><p><span class="pln">    server_name  localhost</span><span class="pun">;</span></p></li><li class="L3" data-node-id="20241026171516-nfu3h4s"><p><span class="pln"> </span></p></li><li class="L4"><p><span class="pln">    location </span><span class="pun">/</span><span class="pln"></span><span class="pun">{</span></p></li><li class="L5" data-node-id="20241026171516-w3orld8"><p><span class="pln">        proxy_pass http</span><span class="pun">:</span><span class="com">//10.139.0.3;</span></p></li><li class="L6"><p><span class="pln"></span><span class="pun">}</span></p></li><li class="L7" data-node-id="20241026171516-9q055jp"><p><span class="pln"> </span></p></li><li class="L8"><p><span class="pln">    location </span><span class="pun">/</span><span class="pln">admin </span><span class="pun">{</span></p></li><li class="L9" data-node-id="20241026171516-j1h2g9a"><p><span class="pln">        proxy_pass http</span><span class="pun">:</span><span class="com">//139.59.11.125;</span></p></li><li class="L0"><p><span class="pln"></span><span class="pun">}</span></p></li><li class="L1" data-node-id="20241026171516-ed1f6qe"><p><span class="pun">}</span></p></li></ol></pre>
+
+<pre class="prettyprint linenums prettyprinted" role="presentation"><ol class="linenums"><li class="L0"><p><span class="pln">nginx </span><span class="pun">-</span><span class="pln">t</span></p></li><li class="L1" data-node-id="20241026171516-myx6xng"><p><span class="pln">systemctl restart nginx</span></p></li></ol></pre>
+
+
+## X-Real-Ip
+
+Architecture : Web browser -> Nginx -> Webserver (backend server)
+
+This way client ip will be logged in at the backend server.
+
+by defualt, client ip will not be logged in at the backend server.
+
+we need to add additional params at below of proxy_pass, it will promote ip addres at logs. 
+
+### Document - X-Real-IP Configuration
+
+**Reverse Proxy Side (proxy server))**
+
+`nano /etc/nginx/conf.d/proxy.conf`
+
+`proxy_set_header X-Real-IP $remote_addr;`
+
+**Backend Server Side (Application server)**
+
+`nano /etc/nginx/nginx.conf`
+
+`"$http_x_real_ip"`
+
+## Proxy Host Header
+
+By default header details will not send, it can be achive by this way 
+
+### Document - Proxy Host Header Commands
+
+**Reverse Proxy Level**
+
+`proxy_set_header Host $host`
+
+**Backend Server Level**
+
+<pre class="prettyprint linenums prettyprinted" role="presentation"><ol class="linenums"><li class="L0"><p><span class="pln">yum </span><span class="pun">-</span><span class="pln">y install tcpdump</span></p></li><li class="L1" data-node-id="20241026172828-m62qt8v"><p><span class="pln">tcpdump </span><span class="pun">-</span><span class="pln">A </span><span class="pun">-</span><span class="pln">vvvv </span><span class="pun">-</span><span class="pln">s </span><span class="lit">9999</span><span class="pln"></span><span class="pun">-</span><span class="pln">i eth1 port </span><span class="lit">80</span><span class="pln"></span><span class="pun">></span><span class="pln"></span><span class="str">/tmp/</span><span class="pln">headers</span></p></li></ol></pre>
+
 
 Document - Proxy Host Header Commands
-Reverse Proxy Level
 
-proxy_set_header Host $host -----------------------> Add this line after the proxy_pass.
+**Reverse Proxy Level**
 
-Backend Server Level
+`proxy_set_header Host $host`
 
-yum -y install tcpdump
-tcpdump -A -vvvv -s 9999 -i eth1 port 80 > /tmp/headers
+**Backend Server Level**
 
---------------------------------------------------------------------------------------------------  Load balancers.
-Document - Load Balancing Configuration
-
-Create 3 servers and install nginx on all 3 servers.
-
-1. app01
-2. app02
-3. Loadbalancer
-
-upstream backend {
-  server 172.31.47.207;
-  server 172.31.41.106;
-}
-
-server {
-    listen       80;
-    server_name  localhost;
-
-    location / {
-        proxy_pass http://backend;
- }
-}
-
---------------------------> Updated at below file with the content on the Loadbalanceer.
-
-[root@ip-172-31-41-217 nginx]# vi nginx.conf
-[root@ip-172-31-41-217 nginx]# diff  nginx.conf nginx.conf.07282024
-37,41d36
-<     upstream backend {
-<        server 172.31.47.207; #private ip of app server 1
-<        server 172.31.41.106; #private ip of app server 2
-<     }
-<
-57,60d51
-<         }
-<
-<       location / {
-<            proxy_pass http://backend;
-[root@ip-172-31-41-217 nginx]# pwd
-/etc/nginx
-[root@ip-172-31-41-217 nginx]#
-
---------------------------------------------------------------------------------------------------   Same server : /sudha (diff output)  /saketh (diff output)
---------------------------------------------------------------------------------------------------------------------------------------------------------------
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
--------------------------------------------------------------------------------------------------- Required tasks.
-
-1. Monitroing.
-2. SSL, cypher handling.
-
-VIP - One servcie on 81 port  ---> http://localhost/
-another service on 82 port.   --->
-
-EG1, eg2 ---> http node, http reply
-EG1 - /eg1
-eg2 - /eg2
-
---->
-
-http://ip/cusa/test1   -->
-
-http://ip/cusa/test2   -->
-
-----> How can we call MB from nginx.
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
+<pre class="prettyprint linenums prettyprinted" role="presentation"><ol class="linenums"><li class="L0"><p><span class="pln">yum </span><span class="pun">-</span><span class="pln">y install tcpdump</span></p></li><li class="L1" data-node-id="20241026172830-7ctqirf"><p><span class="pln">tcpdump </span><span class="pun">-</span><span class="pln">A </span><span class="pun">-</span><span class="pln">vvvv </span><span class="pun">-</span><span class="pln">s </span><span class="lit">9999</span><span class="pln"></span><span class="pun">-</span><span class="pln">i eth1 port </span><span class="lit">80</span><span class="pln"></span><span class="pun">></span><span class="pln"></span><span class="str">/tmp/</span><span class="pln">headers</span></p></li></ol></pre>
