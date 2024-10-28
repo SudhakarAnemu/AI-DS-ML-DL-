@@ -34,7 +34,7 @@ c.
 
 # Commands
 
-## . enable, stop, start
+## enable, stop, start, reload
 
 systemctl enable nginx
 
@@ -43,6 +43,8 @@ systemctl stop nginix
 systemctl start nginx
 
 systemctl status nginx
+
+systemctl reload nginx
 
 ## * Version :
 
@@ -64,7 +66,7 @@ log=/var/log/nginx/
 
 worker_process 2 --> Here 2 worker processes will run
 
-/usr/share/nginx/html -> it has all required html files. 
+/usr/share/nginx/html -> it has all required html files.
 
 ## Command Lline options
 
@@ -78,10 +80,9 @@ nginx -h : help
 
 ## Include directive
 
-Multiple other config files can be define at the specified path. 
+Multiple other config files can be define at the specified path.
 
 include /etc/nginx/conf.d/*.conf;
-
 
 # Other
 

@@ -8,10 +8,24 @@ Roles : Middleware administrator, SRE, DevOps, Cloud Eng
 
 ## Middleware
 
-IBM WebSphere MQ, MB, IIB, ACE
+### Messaging
+
+IBM WebSphere MQ, 
+
+### Transformation
+
+Message Broker, IBM Integration Bus, IBM App Connect Enterprise
+
+### Webserver
+
+Nginx : Installations, configurations of proxy, loadbalancer,
 
 ## SRE
 
 ## DevOps
+
+### Webserver
+
+Nginx
 
 ## Cloud
