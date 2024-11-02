@@ -8,7 +8,7 @@ reverse proxy
 
 load balancer
 
-we-application firewall
+web-application firewall
 
 cachy
 
@@ -329,7 +329,7 @@ upstream backend {
 ## Based on weight-un equal traffic
 
 upstream backend {
-  server 10.139.0.3 weitht=2;
+  server 10.139.0.3 weight=2;
   server 10.139.0.4;
 }
 
@@ -348,9 +348,9 @@ upstream backend {
 
 Client<-> Cache server(DB) <-> App server (backend server)
 
-requests can be manage by Cache server it has data. 
+requests can be manage by Cache server it has data.
 
-Cache server -> can be a dedicated server or browser can be manage. 
+Cache server -> can be a dedicated server or browser can be manage.
 
 ## Uses
 
@@ -362,13 +362,13 @@ Pages are loaded much more faster
 
 ### Cache Control Header
 
-Banging, Finance, Share market - we should not maintain cache. 
+Banking, Finance, Share market - we should not maintain cache.
 
-do not sotre any kind of cache at all 
+do not store any kind of cache at all
 
-store the cache, but verify with webserver whether file is modified 
+store the cache, but verify with webserver whether file is modified
 
-store the cache for 24 hours. 
+store the cache for 24 hours.
 
 Example : Cache-Control of google.co.in
 

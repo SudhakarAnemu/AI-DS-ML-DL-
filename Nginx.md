@@ -2,7 +2,7 @@
 
 # Features
 
-a. Webserver
+a. Webserver (tomcat)
 
 b. Proxy and mail proxy
 
