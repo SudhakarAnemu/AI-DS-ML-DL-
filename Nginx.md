@@ -16,6 +16,10 @@ e. Proxy can compress the response
 
 f. Load balancer (load balancing)
 
+g. High performance
+
+h. Low resource usage
+
 ## Kubernets
 
 a. Ingress controller
