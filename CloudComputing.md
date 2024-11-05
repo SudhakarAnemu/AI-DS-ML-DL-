@@ -66,6 +66,18 @@ On-premise: software that’s installed in the same building as your business.
 
 # Compute Service Options
 
+IaaS - VM Instances
+
+CaaS - GKE - Kubernetes Engine (Container as a service)
+
+PaaS -  App engine 
+
+FaaS - Cloud functions, Function as a servie 
+
+FaaS - Serverless for Containers -- Cloud Run - Fully managed compute platform for containerized apps. Built ok Knative
+
+
+
 **Compute Engine**
 
 * Virtual Machines (VMs) called instances, Choose region and zone to
@@ -114,3 +126,8 @@ On-premise: software that’s installed in the same building as your business.
 * Known as serverless for containers
 * Any language, any library, any binary
 * Considered Function as a service(FaaS)
+
+
+
+
+# Final

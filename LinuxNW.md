@@ -8,6 +8,10 @@ getenforce
 
 setenforce 0
 
+ssh-keygen -R `<ip> --> it will update known_hosts file with the appropriate ip address. `
+
+apt-get install build-essential
+
 ### hashing
 
 base64

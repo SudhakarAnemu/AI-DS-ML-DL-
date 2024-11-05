@@ -20,6 +20,10 @@ g. High performance
 
 h. Low resource usage
 
+i, Faster static resources
+
+j, higer concurrency 
+
 ## Kubernets
 
 a. Ingress controller
