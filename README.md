@@ -11,3 +11,5 @@ KubernetsCommands
 LinuxNW
 
 Nginx
+
+Terraform
