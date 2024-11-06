@@ -4,7 +4,6 @@ Youtube : Andrew - https://www.youtube.com/watch?v=jpno8FSqpc8&t=3674s
 
 https://app.exampro.co/
 
-
 # Characteristics
 
 a. Ondemand self service - automatic creation(minimal efforts)
@@ -247,8 +246,6 @@ No-SQL - Bigtable, Datastore, Firestore and Memorystore
 * Highly available in-memory service for Redis and Memcached
 * Fully Managed
 
-
-
 # Networking Services
 
 **Virtual Private Cloud (VPC)**
@@ -303,7 +300,6 @@ No-SQL - Bigtable, Datastore, Firestore and Memorystore
 **Carrier Peering**
 
 * Connect your infrastructure to Google's network edge through highly available, lower-latency connections by using service providers
-
 
 # Resource Hierarchy
 
