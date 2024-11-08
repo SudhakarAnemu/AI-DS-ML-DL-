@@ -4,6 +4,34 @@ Youtube : Andrew - https://www.youtube.com/watch?v=jpno8FSqpc8&t=3674s
 
 https://app.exampro.co/
 
+
+
+# What Is Cloud Computing?
+
+**Cloud Computing**
+
+The delivery of a shared pool of on-demand computing services over the public internet, that can be rapidly provisioned and released with minimal management effort or service provider interaction.
+
+**The 5 Characteristics of Cloud**
+
+1. On-demand Self Service - Provision resources automatically without requiring human interaction
+2. Broad Network Access - Available over the network
+3. Resource Pooling - Pooled resources to support a multi-tenant model allowing multiple customers to share the same applications or the same physical infrastructure
+4. Rapid Elasticity - Rapidly provision and de-provision any of the cloud computing resources
+5. Measured Service - Resource usage can be monitored, controlled and reported using metering capabilities
+
+**Benefits of Cloud**
+
+Agility - Flexibility for provisioning resources, Innovate faster
+
+Cost - Pay as you go, Trade capital expenditure for variable expense
+
+Speed - Resources on demand, Scriptable infrastructure
+
+Global - Global data centres, Disaster recovery becomes easier, High availability
+
+Security - Always up-to-date, Physical security, Encryption at rest and in transit, Compliance
+
 # Characteristics
 
 a. Ondemand self service - automatic creation(minimal efforts)
@@ -348,5 +376,68 @@ No-SQL - Bigtable, Datastore, Firestore and Memorystore
 
 * Categorize resources
 
+# Controlling Costs and Budget Alerts
+
+![1730949475316](image/CloudComputing/1730949475316.png)
+
+**Committed Use Discounts (CUD’s)**
+
+* Discounted prices when you commit to using a minimum level of resource for a specified term
+* 1- or 3-year Commitment
+
+**Commitment Types** - The commitment fee is billed monthly
+
+**Spend-based commitment**
+
+* Discount for a commitment to spend a minimum amount for a service (hours) in a particular region
+* 25% discount for 1 year – 52% discount on a 3 year
+* Available for Cloud SQL database instances and Google Cloud VMWare Engine
+* Applies only to CPU and memory usage
+
+**Resource-based commitment**
+
+* Discount for commitment to spend a minimum amount for Compute Engine resource in a particular region.
+* Available for vCPU, Memory, GPU and Local SSD
+* 57% discount for most resources
+* 70% for memory-optimized machine types
+* For use across Projects
+
+**Sustained-use discounts**
+
+* Automatic discounts of running Compute Engine resources a significant portion of the billing month
+* Applies to VCPUs and memory for most Compute Engine instance types
+* Includes VM’s created by GKE
+* Does not apply to App Engine flexible, Dataflow and E2 machine types
+
+**GCP Pricing Calculator** – Quick estimate of what your usage will cost on Google Cloud
+
+**Cloud Billing Budgets**
+
+* Enables you to track your actual Google Cloud spend against your planned spend
+* Budget alert threshold rules that are used to trigger email notifications to help you stay informed about your spending
+
+
+# Cloud SDK and CLI
+
+**Cloud SDK**
+
+Set of command line tools that allow you to manage resources through the terminal
+
+* gcloud
+* gsutil
+* bq
+* Kubectl
+
+A user account is a Google account that allows end-users to authenticate directly to your application. For most common use cases on a single machine, using a user account is best practice.
+
+A service account is a Google account associated with your GCP project and not a specific user. A service account can be used by providing a service account key to your application and is recommended to script Cloud SDK tools for use on multiple machines.
+
+**Gcloud Init** - Authorizes access and performs other common Cloud SDK setup steps.
+
+**gcloud auth login** - Authorize access for gcloud with Google user credentials
+
+**Gcloud config** - Allows you to configure accounts and projects
+
+**gcloud components** - Allow you to install, update and delete the components of the sdk
 
 # Final
