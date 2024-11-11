@@ -4,7 +4,9 @@ Youtube : Andrew - https://www.youtube.com/watch?v=jpno8FSqpc8&t=3674s
 
 https://app.exampro.co/
 
-# What Is Cloud Computing?
+# Cloud computing
+
+## What Is Cloud Computing?
 
 **Cloud Computing**
 
@@ -30,7 +32,7 @@ Global - Global data centres, Disaster recovery becomes easier, High availabilit
 
 Security - Always up-to-date, Physical security, Encryption at rest and in transit, Compliance
 
-# Characteristics
+## Characteristics
 
 a. Ondemand self service - automatic creation(minimal efforts)
 
@@ -44,7 +46,7 @@ d. Rapic elasticity
 
 e. Measured service  (monitoirng and alerting)
 
-# Cloud deployment models
+## Cloud deployment models
 
 public (1 public cloud), private (on-prem cloud)), multi-cloud (2 or more public cloud),
 
@@ -52,7 +54,7 @@ hybrid cloud - (private cloud+public clud)
 
 Hybrid cloud and Hybrid environments are both different.
 
-# Cloud Service Models (XaaS)
+## Cloud Service Models (XaaS)
 
 IaaS: IaaS businesses offer services such as pay-as-you-go storage,
 networking, and virtualization. IaaS gives users cloud-based
@@ -69,7 +71,7 @@ On-premise: software that’s installed in the same building as your business.
 
 ![1730737187023](image/CloudComputing/1730737187023.png)
 
-# Google Cloud Global Infrastructure
+## Google Cloud Global Infrastructure
 
 **Geography and Regions**
 
@@ -92,7 +94,7 @@ On-premise: software that’s installed in the same building as your business.
 * Allows Google services to maximize redundancy and distribution within and across regions
 * High availability (geo-redundant)
 
-# Compute Service Options
+## Compute Service Options
 
 IaaS - VM Instances
 
@@ -151,9 +153,7 @@ FaaS - Serverless for Containers -- Cloud Run - Fully managed compute platform f
 * Abstracts away all infrastructure management
 * Known as serverless for containers
 * Any language, any library, any binary
-* Considered Function as a service(FaaS)
-
-# Storage and Database Options
+* Considered Function as a service(FaaS)# Cloud fundamentalsStorage and Database Options
 
 **Cloud Storage**
 
@@ -537,5 +537,94 @@ Conditions - Condition attributes are either based on resource or based on detai
 **AuditConfig Logs**
 
 Specifies the audit configuration for a service. The configuration determines which permission types are logged, and what identities, if any, are exempted from logging. An AuditConfig must have one or more AuditLogConfigs.
+
+## Service Accounts
+
+![1731327214936](image/GCPCloudComputing/1731327214936.png)
+
+![1731327660296](image/GCPCloudComputing/1731327660296.png)
+
+![1731327787030](image/GCPCloudComputing/1731327787030.png)
+
+![1731328002595](image/GCPCloudComputing/1731328002595.png)
+
+![1731328071126](image/GCPCloudComputing/1731328071126.png)
+
+A service account is a special kind of account used by an application or a virtual machine (VM) instance, not a person.
+
+An application uses the service account to authenticate between the application and GCP services so that the users aren't directly involved
+
+A special type of Google account intended to represent a non-human user that needs to authenticate and be authorized to access data in Google APIs.
+
+**Service Account types**
+
+* User-managed, User created, You choose the name
+  service-account-name@project-id.iam.gserviceaccount.com
+
+**Default**
+
+* ~Using some GCP services create user-managed service accounts~
+* ~Automatically granted the Editor role for the project~
+* When using certain GCP services, default service accounts are automatically created. These are user-managed service accounts.
+* These default service accounts are automatically granted the **Editor** role for the project
+  project-id@appspot.gserviceaccount.com
+  project-number-compute@developer.gservcieaccount.com
+
+**Google-managed**
+
+* Managed by Google, and they are used by Google services
+* Some are visible, some hidden
+* Name ends with "Service Agent" or "Service Account”
+
+**Service Account Keys**
+
+**Key Management** – None, All handled by Google
+
+**User managed**
+
+**Key Management** - Key storage, Key distribution, Key revocation, Key rotation, Protecting the keys from unauthorized users, Key recovery
+
+**Access scopes**
+
+* Service Account scopes are the legacy method of specifying permissions for your instance
+* And they are used in substitution of IAM roles
+* These are used specifically for default
+* Or automatically created service accounts
+* Based on enabled API's
+
+## Cloud Identity
+
+![1731343652938](image/GCPCloudComputing/1731343652938.png)
+
+**loud Identity** is an Identity as a Service (IDaaS) solution that centrally manages users and groups. This would be the sole system for authentication and that provides a single sign-on experience for all employees of an organization to be used for all your internal and external applications.
+
+**Device management** - lets people in any organization access their work accounts from mobile devices while keeping the organization's data more secure.
+
+**Security** - Helps by applying security best practices along with being able to deploy 2SV for the whole company along with enforcement controls and can also manage passwords to make sure they are meeting the enforced password requirements automatically.
+
+**Single Sign-on** - With single sign-on (SSO), users can access many applications without having to enter their username and password for each application
+
+**Reporting** - This covers audit logs for logins, groups, devices and even tokens. You are even able to export these logs to BigQuery for analysis. You can then create reports from these logs that cover security, applications and activity.
+
+**Directory Management** - Provides profile information for users in your organization, email and group addresses, and shared external contacts in the Directory. Using Google Cloud Directory Sync (GCDS), you can synchronize the data in your Google Account with your Microsoft Active Directory or LDAP server. GCDS doesn't migrate any content (such as email messages, calendar events, or files) to your Google Account. You use GCDS to synchronize all your users, groups, and shared contacts to match the information in your LDAP server.
+
+**Google Cloud Directory Sync** is a free Google-provided tool that implements the synchronization process and can be run either on Google Cloud or in your on-premises environment. Synchronization is one-way so that Active Directory remains the source of truth.
+
+
+## Cloud IAM Best Practices
+
+![1731344796546](image/GCPCloudComputing/1731344796546.png)
+
+![1731345021497](image/GCPCloudComputing/1731345021497.png)
+
+![1731346849961](image/GCPCloudComputing/1731346849961.png)
+
+![1731346923206](image/GCPCloudComputing/1731346923206.png)
+
+**Policy Management**
+
+* To grant access to all projects in your Organization, use an organization-level policy
+* Grant roles to a Google group instead of individual users where possible
+* When granting multiple roles to a particular task, create a Google group instead
 
 # Final
