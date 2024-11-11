@@ -610,7 +610,6 @@ A special type of Google account intended to represent a non-human user that nee
 
 **Google Cloud Directory Sync** is a free Google-provided tool that implements the synchronization process and can be run either on Google Cloud or in your on-premises environment. Synchronization is one-way so that Active Directory remains the source of truth.
 
-
 ## Cloud IAM Best Practices
 
 ![1731344796546](image/GCPCloudComputing/1731344796546.png)
@@ -627,4 +626,55 @@ A special type of Google account intended to represent a non-human user that nee
 * Grant roles to a Google group instead of individual users where possible
 * When granting multiple roles to a particular task, create a Google group instead
 
-# Final
+# Networking services
+
+## Networking Refresher PART 1
+
+ **Correction** : ~3:30 Timestamp. IPv6 (Internet Protocol version 6) was **not** designed in 2017. It was actually developed in the mid-1990s to address IPv4 address exhaustion. The initial specification of IPv6 was published in 1998 as RFC 2460.
+
+![1731355351734](image/GCPCloudComputing/1731355351734.png)
+
+![1731355672202](image/GCPCloudComputing/1731355672202.png)
+
+![1731355784582](image/GCPCloudComputing/1731355784582.png)
+
+![1731355948924](image/GCPCloudComputing/1731355948924.png)
+
+![1731355985418](image/GCPCloudComputing/1731355985418.png)
+
+![1731356032898](image/GCPCloudComputing/1731356032898.png)
+
+
+![1731356050666](image/GCPCloudComputing/1731356050666.png)
+
+
+![1731356122254](image/GCPCloudComputing/1731356122254.png)
+
+
+
+![1731356497308](image/GCPCloudComputing/1731356497308.png)
+
+
+![1731356680564](image/GCPCloudComputing/1731356680564.png)
+
+
+
+![1731356812725](image/GCPCloudComputing/1731356812725.png)
+
+
+![1731356883600](image/GCPCloudComputing/1731356883600.png)
+
+![1731357005784](image/GCPCloudComputing/1731357005784.png)
+
+## VPC-Virtual Private Cloud
+
+
+![1731361066494](image/GCPCloudComputing/1731361066494.png)
+
+
+![1731361271403](image/GCPCloudComputing/1731361271403.png)
+
+
+![1731361357460](image/GCPCloudComputing/1731361357460.png)
+
+![1731361386578](image/GCPCloudComputing/1731361386578.png)
