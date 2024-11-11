@@ -32,7 +32,7 @@ Js-Om
 | 26     |                     |                                                                                             |                |
 |  27    |                     |                                                                                             |                |
 | 28     |                     |                                                                                             |                |
-|      |                     |                                                                                             |                |
+|  29    |                     |                                                                                             |                |
 |      |                     |                                                                                             |                |
 |      | Project             | https://github.com/SudhakarAnemu/HackITOn2024                                               | AWS, Terraform |
 |      |                     |                                                                                             |                |
