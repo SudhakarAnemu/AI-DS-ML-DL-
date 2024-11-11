@@ -23,15 +23,15 @@ Js-Om
 | 17   |                     |                                                                                             |                |
 | 18   | Roadmap for Devops  | https://github.com/piyushsachdeva/DevOps-Roadmap                                            |                |
 | 19   |                     |                                                                                             |                |
-|      |                     |                                                                                             |                |
-|      |                     |                                                                                             |                |
-|      |                     |                                                                                             |                |
-|      |                     |                                                                                             |                |
-|      |                     |                                                                                             |                |
-|      |                     |                                                                                             |                |
-|      |                     |                                                                                             |                |
-|      |                     |                                                                                             |                |
-|      |                     |                                                                                             |                |
+| 20     |                     |                                                                                             |                |
+| 21     |                     |                                                                                             |                |
+|  22    |                     |                                                                                             |                |
+|  23    |                     |                                                                                             |                |
+| 24     |                     |                                                                                             |                |
+| 25     |                     |                                                                                             |                |
+| 26     |                     |                                                                                             |                |
+|  27    |                     |                                                                                             |                |
+| 28     |                     |                                                                                             |                |
 |      |                     |                                                                                             |                |
 |      |                     |                                                                                             |                |
 |      | Project             | https://github.com/SudhakarAnemu/HackITOn2024                                               | AWS, Terraform |
