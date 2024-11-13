@@ -644,23 +644,15 @@ A special type of Google account intended to represent a non-human user that nee
 
 ![1731356032898](image/GCPCloudComputing/1731356032898.png)
 
-
 ![1731356050666](image/GCPCloudComputing/1731356050666.png)
-
 
 ![1731356122254](image/GCPCloudComputing/1731356122254.png)
 
-
-
 ![1731356497308](image/GCPCloudComputing/1731356497308.png)
-
 
 ![1731356680564](image/GCPCloudComputing/1731356680564.png)
 
-
-
 ![1731356812725](image/GCPCloudComputing/1731356812725.png)
-
 
 ![1731356883600](image/GCPCloudComputing/1731356883600.png)
 
@@ -668,13 +660,74 @@ A special type of Google account intended to represent a non-human user that nee
 
 ## VPC-Virtual Private Cloud
 
-
 ![1731361066494](image/GCPCloudComputing/1731361066494.png)
 
-
 ![1731361271403](image/GCPCloudComputing/1731361271403.png)
-
 
 ![1731361357460](image/GCPCloudComputing/1731361357460.png)
 
 ![1731361386578](image/GCPCloudComputing/1731361386578.png)
+
+## VPC NW Subnets
+
+![1731378335944](image/GCPCloudComputing/1731378335944.png)
+
+![1731378488146](image/GCPCloudComputing/1731378488146.png)
+
+prefix length must be smaller in number.
+
+auto mode starts with /20 can me made in /16 at custom.
+
+auto mode can be convert to custom but not vice versa
+
+![1731378712273](image/GCPCloudComputing/1731378712273.png)
+
+## Routing and Private google access
+
+![1731378907884](image/GCPCloudComputing/1731378907884.png)
+
+![1731378935231](image/GCPCloudComputing/1731378935231.png)![1731378951287](image/GCPCloudComputing/1731378951287.png)
+
+![1731379040330](image/GCPCloudComputing/1731379040330.png)
+
+
+
+![1731416735001](image/GCPCloudComputing/1731416735001.png)![1731418178348](image/GCPCloudComputing/1731418178348.png)'
+
+
+![1731418214268](image/GCPCloudComputing/1731418214268.png)
+
+
+![1731418882362](image/GCPCloudComputing/1731418882362.png)
+
+
+![1731419086151](image/GCPCloudComputing/1731419086151.png)
+
+![1731419393346](image/GCPCloudComputing/1731419393346.png)
+
+
+## IP Addressing
+
+![1731425339970](image/GCPCloudComputing/1731425339970.png)
+
+![1731425358857](image/GCPCloudComputing/1731425358857.png)
+
+![1731426904530](image/GCPCloudComputing/1731426904530.png)
+
+![1731436064891](image/GCPCloudComputing/1731436064891.png)
+
+![1731436110047](image/GCPCloudComputing/1731436110047.png)
+
+![1731436134661](image/GCPCloudComputing/1731436134661.png)
+
+![1731436518531](image/GCPCloudComputing/1731436518531.png)
+
+![1731436540905](image/GCPCloudComputing/1731436540905.png)
+
+
+![1731436765379](image/GCPCloudComputing/1731436765379.png)
+
+
+![1731437226981](image/GCPCloudComputing/1731437226981.png)
+
+![1731437266764](image/GCPCloudComputing/1731437266764.png)
