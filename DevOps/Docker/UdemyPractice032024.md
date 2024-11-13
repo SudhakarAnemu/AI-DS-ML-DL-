@@ -1,7 +1,0 @@
-. abc
-
-abcccccc
-
-.def
-
-deeeeeeeeee
